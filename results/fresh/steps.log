@@ -1,0 +1,178 @@
+queued fr_4b_untouched
+queued fr_4b_warmup
+queued fr_4b_ctrl_0
+queued fr_4b_ctrl_1
+queued fr_4b_ctrl_2
+queued fr_4b_wide_0
+queued fr_4b_wide_1
+queued fr_4b_wide_2
+queued fr_4b_wide1_0
+queued fr_4b_wide1_1
+queued fr_4b_wide1_2
+queued fr_4b_ctrlpm_0
+queued fr_4b_ctrlpm_1
+queued fr_4b_ctrlpm_2
+queued fr_2b_untouched
+queued fr_2b_ctrl_0
+queued fr_2b_ctrl_1
+queued fr_2b_ctrl_2
+queued fr_2b_ctrl_3
+queued fr_2b_ctrl_4
+queued fr_2b_ctrl_5
+queued fr_2b_wide_0
+queued fr_2b_wide_1
+queued fr_2b_wide_2
+queued fr_2b_wide_3
+queued fr_2b_wide_4
+queued fr_2b_wide_5
+queued fr_2b_wide1_0
+queued fr_2b_wide1_1
+queued fr_2b_wide1_2
+queued fr_2b_wide1_3
+queued fr_2b_wide1_4
+queued fr_2b_wide1_5
+=== readouts queued 2026-10-12T02:34:43+00:00: fr_4b_untouched fr_4b_warmup fr_4b_ctrl_0 fr_4b_ctrl_1 fr_4b_ctrl_2 fr_4b_wide_0 fr_4b_wide_1 fr_4b_wide_2 fr_4b_wide1_0 fr_4b_wide1_1 fr_4b_wide1_2 fr_4b_ctrlpm_0 fr_4b_ctrlpm_1 fr_4b_ctrlpm_2 fr_2b_untouched fr_2b_ctrl_0 fr_2b_ctrl_1 fr_2b_ctrl_2 fr_2b_ctrl_3 fr_2b_ctrl_4 fr_2b_ctrl_5 fr_2b_wide_0 fr_2b_wide_1 fr_2b_wide_2 fr_2b_wide_3 fr_2b_wide_4 fr_2b_wide_5 fr_2b_wide1_0 fr_2b_wide1_1 fr_2b_wide1_2 fr_2b_wide1_3 fr_2b_wide1_4 fr_2b_wide1_5
+=== 4b_ctrl_0 start 2026-10-12T02:39:39+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_0.json
+=== 4b_ctrl_1 start 2026-10-12T02:39:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_1.json
+=== 4b_ctrlpm_0 start 2026-10-12T02:39:39+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrlpm_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 20 --out <repo>/results/fresh/readout_fresh_4b_ctrlpm_0.json
+=== 4b_ctrl_2 start 2026-10-12T02:39:39+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_2.json
+=== 4b_ctrl_0 FAIL rc=1 wall=14s
+=== 4b_ctrl_2 FAIL rc=1 wall=82s
+=== 4b_ctrl_1 FAIL rc=1 wall=121s
+=== 4b_untouched start 2026-10-12T02:42:09+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm stock --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_untouched.json
+=== 4b_ctrlpm_2 start 2026-10-12T02:42:09+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrlpm_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 20 --out <repo>/results/fresh/readout_fresh_4b_ctrlpm_2.json
+=== 4b_ctrlpm_1 start 2026-10-12T02:42:09+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrlpm_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 20 --out <repo>/results/fresh/readout_fresh_4b_ctrlpm_1.json
+=== 4b_warmup start 2026-10-12T02:42:09+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s0_cap512_fmt_box/ckpt_step40.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_warmup.json
+=== 4b_wide1_0 start 2026-10-12T02:44:39+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7_4b/grpo/wide1_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide1_0.json
+=== 4b_wide1_1 start 2026-10-12T02:44:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7_4b/grpo/wide1_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide1_1.json
+=== 4b_ctrl_0 start 2026-10-12T02:44:39+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_0.json
+=== 4b_wide1_0 FAIL rc=1 wall=13s
+=== 4b_wide1_1 FAIL rc=1 wall=14s
+=== 4b_ctrl_0 FAIL rc=1 wall=14s
+=== 4b_ctrl_1 start 2026-10-12T02:47:09+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_1.json
+=== 4b_ctrl_2 start 2026-10-12T02:47:09+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_2.json
+=== 4b_wide1_2 start 2026-10-12T02:47:09+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7_4b/grpo/wide1_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide1_2.json
+=== 4b_ctrl_2 FAIL rc=1 wall=14s
+=== 4b_wide1_2 FAIL rc=1 wall=14s
+=== 4b_ctrl_1 FAIL rc=1 wall=15s
+=== 4b_wide_1 start 2026-10-12T02:49:39+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.44 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_1.json
+=== 4b_wide_2 start 2026-10-12T02:49:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.44 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_2.json
+=== 4b_wide_2 FAIL rc=1 wall=130s
+=== 4b_wide_0 start 2026-10-12T02:52:09+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.44 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_0.json
+=== 4b_wide_0 FAIL rc=1 wall=14s
+=== 4b_ctrl_0 start 2026-10-12T02:52:39+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.44 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_0.json
+=== 4b_warmup start 2026-10-12T02:53:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s0_cap512_fmt_box/ckpt_step40.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_warmup.json
+=== 4b_wide1_1 start 2026-10-12T02:53:39+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7_4b/grpo/wide1_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide1_1.json
+=== 4b_untouched start 2026-10-12T02:54:39+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm stock --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_untouched.json
+=== 4b_wide1_0 start 2026-10-12T02:54:39+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7_4b/grpo/wide1_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide1_0.json
+=== 4b_wide1_0 ok wall=3705s gpu 2
+=== 4b_ctrl_0 start 2026-10-12T03:56:39+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_0.json
+=== 4b_wide1_1 ok wall=3983s gpu 3
+=== 4b_ctrl_1 start 2026-10-12T04:00:09+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_1.json
+=== 4b_ctrl_1 FAIL rc=1 wall=42s
+=== 4b_ctrl_2 start 2026-10-12T04:02:39+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_2.json
+=== 4b_untouched ok wall=4588s gpu 0
+=== 4b_ctrl_1 start 2026-10-12T04:11:09+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_1.json
+=== 4b_ctrl_1 FAIL rc=1 wall=42s
+=== 4b_warmup ok wall=4718s gpu 1
+=== 4b_ctrlpm_1 start 2026-10-12T04:12:24+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrlpm_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 20 --out <repo>/results/fresh/readout_fresh_4b_ctrlpm_1.json
+=== 4b_ctrlpm_0 start 2026-10-12T04:13:39+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrlpm_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 20 --out <repo>/results/fresh/readout_fresh_4b_ctrlpm_0.json
+=== 4b_ctrl_0 ok wall=4575s gpu 2
+=== 4b_ctrlpm_2 start 2026-10-12T05:12:54+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrlpm_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 20 --out <repo>/results/fresh/readout_fresh_4b_ctrlpm_2.json
+=== 4b_ctrl_2 ok wall=4466s gpu 3
+=== 4b_wide1_2 start 2026-10-12T05:17:09+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7_4b/grpo/wide1_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide1_2.json
+=== 4b_ctrlpm_1 ok wall=4449s gpu 1
+=== 4b_wide_0 start 2026-10-12T05:26:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_0.json
+=== 4b_ctrlpm_0 ok wall=4593s gpu 0
+=== 4b_wide_1 start 2026-10-12T05:30:25+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_1.json
+=== 4b_wide1_2 ok wall=3487s gpu 3
+=== 4b_wide_2 start 2026-10-12T06:15:25+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_2.json
+=== 4b_wide_2 FAIL rc=1 wall=45s
+=== 4b_ctrl_1 start 2026-10-12T06:23:55+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_1.json
+=== 4b_ctrlpm_2 ok wall=4323s gpu 2
+=== 4b_wide_2 start 2026-10-12T06:25:10+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_2.json
+=== 4b_wide_0 ok wall=3554s gpu 1
+=== 4b_wide_1 ok wall=3802s gpu 0
+=== 2b_ctrl_1 start 2026-10-12T06:45:25+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s1_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_1.json
+=== 2b_ctrl_0 start 2026-10-12T06:45:25+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_0.json
+=== 2b_ctrl_3 start 2026-10-12T07:10:43+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_3.json
+=== 4b_ctrl_1 start 2026-10-12T07:10:43+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_ctrl_1.json
+=== 2b_ctrl_1 start 2026-10-12T07:10:43+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s1_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_1.json
+=== 2b_ctrl_0 start 2026-10-12T07:10:43+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_0.json
+=== 4b_wide_2 start 2026-10-12T07:10:43+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7_4b/grpo/wide_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.05 --rank 16 --out <repo>/results/fresh/readout_fresh_4b_wide_2.json
+=== 2b_ctrl_5 start 2026-10-12T07:10:43+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_5.json
+=== 2b_ctrl_2 start 2026-10-12T07:10:43+00:00 gpu 4: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s2_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_2.json
+=== 2b_ctrl_4 start 2026-10-12T07:10:43+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_ctrl_4.json
+=== 4b_untouched kept
+=== 4b_warmup kept
+=== 4b_ctrl_0 kept
+queued fr_4b_ctrl_1 (running)
+=== 4b_ctrl_2 kept
+=== 4b_wide_0 kept
+=== 4b_wide_1 kept
+queued fr_4b_wide_2 (running)
+=== 4b_wide1_0 kept
+=== 4b_wide1_1 kept
+=== 4b_wide1_2 kept
+=== 4b_ctrlpm_0 kept
+=== 4b_ctrlpm_1 kept
+=== 4b_ctrlpm_2 kept
+queued fr_2b_untouched
+queued fr_2b_ctrl_0 (running)
+queued fr_2b_ctrl_1 (running)
+queued fr_2b_ctrl_2 (running)
+queued fr_2b_ctrl_3 (running)
+queued fr_2b_ctrl_4 (running)
+queued fr_2b_ctrl_5 (running)
+queued fr_2b_wide_0
+queued fr_2b_wide_1
+queued fr_2b_wide_2
+queued fr_2b_wide_3
+queued fr_2b_wide_4
+queued fr_2b_wide_5
+queued fr_2b_wide1_0
+queued fr_2b_wide1_1
+queued fr_2b_wide1_2
+queued fr_2b_wide1_3
+queued fr_2b_wide1_4
+queued fr_2b_wide1_5
+=== readouts queued 2026-10-12T07:10:50+00:00: fr_4b_ctrl_1 fr_4b_wide_2 fr_2b_untouched fr_2b_ctrl_0 fr_2b_ctrl_1 fr_2b_ctrl_2 fr_2b_ctrl_3 fr_2b_ctrl_4 fr_2b_ctrl_5 fr_2b_wide_0 fr_2b_wide_1 fr_2b_wide_2 fr_2b_wide_3 fr_2b_wide_4 fr_2b_wide_5 fr_2b_wide1_0 fr_2b_wide1_1 fr_2b_wide1_2 fr_2b_wide1_3 fr_2b_wide1_4 fr_2b_wide1_5
+=== 2b_ctrl_0 ok wall=2394s gpu 2
+=== 2b_ctrl_1 ok wall=2398s gpu 3
+=== 2b_untouched start 2026-10-12T07:50:43+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm stock --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_untouched.json
+=== 2b_wide1_0 start 2026-10-12T07:50:43+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide1_0.json
+=== 2b_ctrl_3 ok wall=2402s gpu 5
+=== 2b_ctrl_5 ok wall=2407s gpu 7
+=== 2b_wide1_2 start 2026-10-12T07:50:58+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s2_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide1_2.json
+=== 2b_wide1_1 start 2026-10-12T07:50:58+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s1_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide1_1.json
+=== 2b_ctrl_4 ok wall=2418s gpu 6
+=== 2b_ctrl_2 ok wall=2422s gpu 4
+=== 2b_wide1_3 start 2026-10-12T07:51:13+00:00 gpu 4: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide1_3.json
+=== 2b_wide1_4 start 2026-10-12T07:51:13+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide1_4.json
+=== 4b_wide_2 ok wall=3599s gpu 1
+=== 2b_wide1_5 start 2026-10-12T08:10:43+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide1_5.json
+=== 4b_ctrl_1 ok wall=4561s gpu 0
+=== 2b_wide_0 start 2026-10-12T08:26:58+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide_0.json
+=== 2b_untouched ok wall=2464s gpu 2
+=== 2b_wide1_1 ok wall=2453s gpu 5
+=== 2b_wide_1 start 2026-10-12T08:31:58+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s1_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide_1.json
+=== 2b_wide_2 start 2026-10-12T08:31:58+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s2_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide_2.json
+=== 2b_wide1_4 ok wall=2453s gpu 6
+=== 2b_wide_3 start 2026-10-12T08:32:13+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide_3.json
+=== 2b_wide1_3 ok wall=2470s gpu 4
+=== 2b_wide_4 start 2026-10-12T08:32:28+00:00 gpu 4: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide_4.json
+=== 2b_wide1_0 ok wall=2520s gpu 3
+=== 2b_wide1_2 ok wall=2507s gpu 7
+=== 2b_wide_5 start 2026-10-12T08:32:58+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_fresh.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 8 --seed 20261006 --gpu_mem 0.45 --probe_effect 0.2 --rank 16 --out <repo>/results/fresh/readout_fresh_2b_wide_5.json
+=== 2b_wide1_5 ok wall=2449s gpu 1
+=== 2b_wide_0 ok wall=2431s gpu 0
+=== 2b_wide_2 ok wall=2327s gpu 5
+=== 2b_wide_5 ok wall=2292s gpu 3
+=== 2b_wide_1 ok wall=2393s gpu 2
+=== 2b_wide_4 ok wall=2369s gpu 4
+=== 2b_wide_3 ok wall=2458s gpu 6
+wait: 21 jobs terminal, failed []
+=== analysis 4b start 2026-10-12T09:14:30+00:00
+=== analysis 4b ok
+=== analysis 2b start 2026-10-12T09:14:31+00:00
+=== analysis 2b ok

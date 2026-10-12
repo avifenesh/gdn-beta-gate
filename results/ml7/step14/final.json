@@ -1,0 +1,153 @@
+{
+ "step": 14,
+ "metric": "test_rows_read_by_all_models",
+ "score": 1.0,
+ "test_touches": 1,
+ "models": 11,
+ "samples": 2,
+ "created_utc": "2026-10-11T08:01:16+00:00",
+ "analysis": {
+  "gsm8k": {
+   "file": "<repo>/results/ml7/step14/analysis_gsm8k.json",
+   "sha256": "92d23791c84034ea55062e97df4c224bbdfe8d80f6291c8c0bd301e779507381"
+  },
+  "math500": {
+   "file": "<repo>/results/ml7/step14/analysis_math500.json",
+   "sha256": "ffea4f5f81eed36f1090b1ad25f010d180fe23e78741e3861b0b02d71fb1068e"
+  }
+ },
+ "readouts": {
+  "gsm8k_untouched": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_untouched.json",
+   "sha256": "c1ee29554472f37673ebcde765d19555c1acb173246008937141a202c4996c50",
+   "arm": "stock",
+   "ckpt": "none"
+  },
+  "gsm8k_warmup": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_warmup.json",
+   "sha256": "7954aa038887c4937564709e7805cfeac8302af03ef673c901b479de9cc2502c",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s0_cap512_fmt_gb10/ckpt_step40.pt"
+  },
+  "gsm8k_ctrl_0": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_ctrl_0.json",
+   "sha256": "dae554dff6f717405b32b4d7c8c54c4f250383f8ff99993f95ea461081cfeb72",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s0_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_ctrl_1": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_ctrl_1.json",
+   "sha256": "c72ac481f923742e37aae3f58fb66c20812cdbb9a5abd3376dc233a99e933b0b",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s1_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_ctrl_2": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_ctrl_2.json",
+   "sha256": "c8d130239f6861591864aa85dce9f79384165e3058a4dee0a5339f3929f3bbc7",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s2_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_wide_0": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_wide_0.json",
+   "sha256": "4b2523c6acc209d60447a748423010232bf74eb03bc1f0ed6c4981114e32e1d6",
+   "arm": "wide",
+   "ckpt": "<runs>/ml7/grpo/wide_s0_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_wide_1": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_wide_1.json",
+   "sha256": "626043b3459a0a7701c936e70054ce6ff0ebd860e4d960c12d1a831438b75ce7",
+   "arm": "wide",
+   "ckpt": "<runs>/ml7/grpo/wide_s1_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_wide_2": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_wide_2.json",
+   "sha256": "1d75a514b5080a8d37571d104aa634cc26ee105a467d9923fb1022dbfa965ac7",
+   "arm": "wide",
+   "ckpt": "<runs>/ml7/grpo/wide_s2_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_wide1_0": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_wide1_0.json",
+   "sha256": "ad0c16bfbb1d8574e94e2246ccbf1f9720d2347d68101e52ba5b881c2fcbd369",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s0_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_wide1_1": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_wide1_1.json",
+   "sha256": "e4fdc8582b1efe169ef3d51e3dc023e47d9eca08a7a10b2b8d94079fc367cd8f",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s1_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "gsm8k_wide1_2": {
+   "file": "<repo>/results/ml7/step14/readout_gsm8k_wide1_2.json",
+   "sha256": "0853ef6d120d05a597bf59136f7f931cac43f2a641af698e7b68edf45ac4611e",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s2_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_untouched": {
+   "file": "<repo>/results/ml7/step14/readout_math500_untouched.json",
+   "sha256": "c5b3d5ecf0d4a655c05c50a5d2567e92c8734c6b960206e7db562d16ba27cf3a",
+   "arm": "stock",
+   "ckpt": "none"
+  },
+  "math500_warmup": {
+   "file": "<repo>/results/ml7/step14/readout_math500_warmup.json",
+   "sha256": "d08613b236e742c2bc618ac10d2e6887b323f5914096cd86ec4833b59936ba49",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s0_cap512_fmt_gb10/ckpt_step40.pt"
+  },
+  "math500_ctrl_0": {
+   "file": "<repo>/results/ml7/step14/readout_math500_ctrl_0.json",
+   "sha256": "21190c6c377a2d87a3e261c524d6801ff93c35cf5eedc10006ca065e6c985ffb",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s0_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_ctrl_1": {
+   "file": "<repo>/results/ml7/step14/readout_math500_ctrl_1.json",
+   "sha256": "854b13b48c793f7265ec49d41fa89dfcdc9e8921e4a190fabd0b4f8db4bb75ba",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s1_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_ctrl_2": {
+   "file": "<repo>/results/ml7/step14/readout_math500_ctrl_2.json",
+   "sha256": "84cfec099c6327b7d807db46cb9c0706edfc417ac3d2cb1390e51f706188d123",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s2_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_wide_0": {
+   "file": "<repo>/results/ml7/step14/readout_math500_wide_0.json",
+   "sha256": "bb82bb001c1db6461871d542696e8d0072c5775c4f254ab856d783bf56bd42b6",
+   "arm": "wide",
+   "ckpt": "<runs>/ml7/grpo/wide_s0_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_wide_1": {
+   "file": "<repo>/results/ml7/step14/readout_math500_wide_1.json",
+   "sha256": "dc011ef36e890bd957a7784568c78e52a113eda46e50f8b2aafe5e7a8cf7f319",
+   "arm": "wide",
+   "ckpt": "<runs>/ml7/grpo/wide_s1_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_wide_2": {
+   "file": "<repo>/results/ml7/step14/readout_math500_wide_2.json",
+   "sha256": "5b2d7154dbaef346cb2e5b7b86d3c867961e402a69b6a745cbd7485a8164e2d2",
+   "arm": "wide",
+   "ckpt": "<runs>/ml7/grpo/wide_s2_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_wide1_0": {
+   "file": "<repo>/results/ml7/step14/readout_math500_wide1_0.json",
+   "sha256": "1bbf894f903bcd4acaab8060f3e267bc1ec8f5ab926ed509be9e092dd1e8cc48",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s0_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_wide1_1": {
+   "file": "<repo>/results/ml7/step14/readout_math500_wide1_1.json",
+   "sha256": "fbed4f651f2d8e3632c336755cc44d2aa0aa5874a8a9e9f93eb4f94e239554ea",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s1_cap512_r_gb10/ckpt_step150.pt"
+  },
+  "math500_wide1_2": {
+   "file": "<repo>/results/ml7/step14/readout_math500_wide1_2.json",
+   "sha256": "d6ee4deee91835acecf240aed7039ed4ffc8f0d22f17b8f04557fa4d68479593",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s2_cap512_r_gb10/ckpt_step150.pt"
+  }
+ }
+}

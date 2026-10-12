@@ -1,0 +1,80 @@
+{
+ "root": "<runs>/vcount/step6_32k",
+ "rows": [
+  {
+   "L": 32768,
+   "arm": "wide_s0",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.8834,
+   "arm_mean": 0.8694,
+   "diff": -0.014,
+   "p": 0.0311,
+   "better": 76,
+   "worse": 124,
+   "hash_mismatch": 0
+  },
+  {
+   "L": 32768,
+   "arm": "wide1_s0",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.8834,
+   "arm_mean": 0.8442,
+   "diff": -0.0392,
+   "p": 0.0,
+   "better": 62,
+   "worse": 155,
+   "hash_mismatch": 0
+  },
+  {
+   "L": 32768,
+   "arm": "base",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.8834,
+   "arm_mean": 0.7662,
+   "diff": -0.1172,
+   "p": 0.0,
+   "better": 52,
+   "worse": 390,
+   "hash_mismatch": 0
+  }
+ ],
+ "macro": [
+  {
+   "L": 32768,
+   "arm": "wide_s0",
+   "tasks": 1,
+   "diff": -0.014,
+   "ci95": [
+    -0.0266,
+    -0.0008
+   ],
+   "p": 0.0304
+  },
+  {
+   "L": 32768,
+   "arm": "wide1_s0",
+   "tasks": 1,
+   "diff": -0.0392,
+   "ci95": [
+    -0.0514,
+    -0.027
+   ],
+   "p": 0.0
+  },
+  {
+   "L": 32768,
+   "arm": "base",
+   "tasks": 1,
+   "diff": -0.1172,
+   "ci95": [
+    -0.1324,
+    -0.102
+   ],
+   "p": 0.0
+  }
+ ],
+ "base": "ctrl_s0"
+}

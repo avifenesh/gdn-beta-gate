@@ -1,0 +1,96 @@
+{
+ "results": {
+  "arc_challenge": {
+   "name": "arc_challenge",
+   "alias": "arc_challenge",
+   "sample_len": 1172,
+   "acc,none": 0.5273037542662116,
+   "acc_stderr,none": 0.014589589101986081,
+   "acc_norm,none": 0.5460750853242321,
+   "acc_norm_stderr,none": 0.014549221105171829
+  },
+  "gsm8k": {
+   "name": "gsm8k",
+   "alias": "gsm8k",
+   "sample_len": 1319,
+   "exact_match,strict-match": 0.7187263078089462,
+   "exact_match_stderr,strict-match": 0.012384789310940236,
+   "exact_match,flexible-extract": 0.7467778620166793,
+   "exact_match_stderr,flexible-extract": 0.011978125194299674
+  },
+  "humaneval": {
+   "name": "humaneval",
+   "alias": "humaneval",
+   "sample_len": 164,
+   "pass@1,create_test": 0.45121951219512196,
+   "pass@1_stderr,create_test": 0.03897619723598804
+  },
+  "mbpp_plus": {
+   "name": "mbpp_plus",
+   "alias": "mbpp_plus",
+   "sample_len": 378,
+   "pass_at_1,none": 0.7116402116402116,
+   "pass_at_1_stderr,none": 0.023330654054535882
+  },
+  "swde": {
+   "name": "swde",
+   "alias": "swde",
+   "sample_len": 1111,
+   "contains,none": 0.8955895589558955,
+   "contains_stderr,none": "N/A"
+  },
+  "fda": {
+   "name": "fda",
+   "alias": "fda",
+   "sample_len": 1102,
+   "contains,none": 0.7631578947368421,
+   "contains_stderr,none": "N/A"
+  },
+  "squad_completion": {
+   "name": "squad_completion",
+   "alias": "squad_completion",
+   "sample_len": 2984,
+   "contains,none": 0.6092493297587132,
+   "contains_stderr,none": "N/A"
+  }
+ },
+ "n-samples": {
+  "arc_challenge": {
+   "original": 1172,
+   "effective": 1172
+  },
+  "gsm8k": {
+   "original": 1319,
+   "effective": 1319
+  },
+  "humaneval": {
+   "original": 164,
+   "effective": 164
+  },
+  "mbpp_plus": {
+   "original": 378,
+   "effective": 378
+  },
+  "swde": {
+   "original": 1111,
+   "effective": 1111
+  },
+  "fda": {
+   "original": 1102,
+   "effective": 1102
+  },
+  "squad_completion": {
+   "original": 2984,
+   "effective": 2984
+  }
+ },
+ "configs_versions": {
+  "arc_challenge": 1.0,
+  "fda": 1,
+  "gsm8k": 3.0,
+  "humaneval": 1.0,
+  "mbpp_plus": 1.0,
+  "squad_completion": 1,
+  "swde": 1
+ }
+}

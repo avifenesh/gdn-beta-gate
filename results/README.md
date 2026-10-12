@@ -1,0 +1,49 @@
+# Results and receipts
+
+License: CC-BY-4.0 (LICENSES/CC-BY-4.0.txt). Every file here was written by the code in `src/` during the runs the
+paper reports, except the derived files marked below. Paths inside the files are placeholders: `<repo>` (this
+repository), `<runs>` (the run root, `WG_RUNS`), `<hf-cache>` (the Hugging Face cache), `<models>`, `<work>`,
+`<cache>`, `<venv>` (lab directories), `<host>` (a redacted host name), `<price>` (a redacted rental price).
+
+| Directory | Contents | Paper |
+|---|---|---|
+| `ml7/` | Qwen3.5-2B record: answer and training cap receipts, validation reads (`step12*`), test read 1 (`step14`), test read 2 for seeds 3 to 5 (`step14_ext`), readout parity fixtures for the CPU tests (`readout_parity`) | 5.2, 5.3 |
+| `ml7_4b/` | Qwen3.5-4B record: caps, cap pilots, validation (`step12_box`, `step12_ctrlpm`), test read 1 (`step14`), test read 2 with LoRA-r20 (`step14_ctrlpm`) | 5.1, 5.3, Table 2 |
+| `fresh/` | fresh held-out set (AIME 2024/2025/2026, AMC 2023): 33 per-item readouts (14 at 4B, 19 at 2B), both analyses (`analysis_fresh_4b.json`, `analysis_fresh_2b.json`), `final.json` (the single guarded read), `fresh_table.md`, the code lock before and after the amendment, two failed self-test records | Results (fresh set) |
+| `mech/` | mechanism, Qwen3.5-4B, GSM8K validation slice: G1 ablation readouts (`ablate/`), G2 dose readouts (`dose/`, inputs in `dose_receipt.json`; G1 hybrid inputs in `hybrid_receipt.json`), G3 teacher-forced beta statistics (`gate_stats/`, summary in `gate_stats_summary/`), `g1g2_summary.json`, text statistics, item-matched accuracy, training dynamics, gate weights, CPU probe checks | Mechanism |
+| `run_configs/` | the full argument set of every paper training run (`meta.json` / `result.json`), with its startup parity self-test | 4, 7 |
+| `run_logs/` | training logs of the RL runs, validation logs of the chat SFT runs, the Olmo MMLU-Pro cloze results; read by `paper/figs/derive.py` | 5.1, 7, 8 |
+| `rescore/`, `w1main/`, `vllm/step6_s0/` | HumanEval and battery scores of the forgetting and chat SFT adapters, item level; the Gate(0,1) comparison | 7 |
+| `unsloth/` | the check that the Unsloth SFT stack matches the plain trainer (losses and gradients within calibrated bounds, red arms) | 7 |
+| `olmo/` | Olmo-Hybrid-7B lesions: per-chunk NLL sums (`arms.jsonl`) and summary, CPU/GPU patch checks, vLLM battery (`vllm2/battery`), paired RULER receipts, beta usage | 8 |
+| `vcount/` | Qwen3.5 chat-SFT counting pointer at 32k | 8 |
+| `ENVIRONMENT.json` | derived: env blocks of every released readout (`scripts/collect_env.py`) | 4 |
+| `SCRUB_LEDGER.json` | derived: for every released file, the sha256 of the lab original and of the published copy | |
+
+Per step directory: `analysis_*.json` (the analysis receipt; its `receipt.argv` is the exact command),
+`readout_*.json.gz` (per-item scored rows, one per item and sample and budget; no generated text), `final.json`
+(read summary with the hashes of the lab files), `code.sha256` (the code lock of that read), `plan.tsv` (the
+readout plan), `env.txt` (GPU list and code lock at launch), `steps.log`, `*.parity_fail.json` (a failed startup
+parity self-test kept as a record), `DONE`.
+
+Derived, content-free files: `olmo/ruler_items/` and `vcount/ruler_items/` keep only `doc_id`, `doc_hash` and the
+score of each RULER item, in the layout `src/gdn_gate/olmo/ruler_paired.py` reads; the model outputs are not
+released. `scripts/rerun_ruler_pairing.py` reproduces the four paired receipts from them.
+
+The readouts in `mech/ablate/` and `mech/dose/` are plain JSON (no generated text), read directly by
+`src/gdn_gate/mech/g1g2_summary.py`. `mech/example_val_trace.json`, the lab's one paired example of generated text,
+is not released.
+
+Not here: the generation traces (`*.traces.jsonl.gz`, about 830 MB in total for the RL records, more for the fresh set
+and the mechanism readouts) that hold the sampled reasoning tokens
+and answer texts; they are planned as a separate archive. The four small trace files in `ml7/readout_parity/` are
+test fixtures.
+
+## Publication scrub
+
+The lab files carried absolute paths, internal project names and host names. Before release they were rewritten by
+fixed string replacements (paths to the placeholders above, names to their public equivalents, host values to
+`<host>`); numbers and structure are untouched, and JSON files stay valid. Hash values inside the receipts
+(`code.sha256`, readout `env.sha256`, `final.json`) refer to the lab files. `SCRUB_LEDGER.json` lists, per released
+file, `sha256_original` (lab file) and `sha256_released` (the published content; uncompressed for `.gz` files), so
+a hash recorded in a receipt can be followed to the file published here.

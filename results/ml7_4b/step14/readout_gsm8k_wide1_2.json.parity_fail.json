@@ -1,0 +1,138 @@
+{
+ "k": 2.0,
+ "floor_abs": 0.001,
+ "prompts": 8,
+ "samples": 2,
+ "tokens": 256,
+ "effect_corr_min": 0.9,
+ "effect_slope_tol": 0.1,
+ "effect_visible_x": 5.0,
+ "floor_decode": {
+  "n": 4096,
+  "mean": 0.007764677182376016,
+  "p99": 0.11189905405044559,
+  "max": 0.24295353889465332,
+  "bias": -0.00013507559083688302
+ },
+ "floor_prefill": {
+  "n": 4096,
+  "mean": 0.00856510331423915,
+  "p99": 0.11903810501098633,
+  "max": 0.23041439056396484,
+  "bias": 0.0005855721452548181
+ },
+ "probe": {
+  "target": 0.05,
+  "lora_B": {
+   "scale": 0.009313482379910927,
+   "effect": 0.04685420922572987
+  },
+  "gate_w": {
+   "scale": 0.0034422865945003237,
+   "effect": 0.04898889906436312
+  },
+  "abs_t_mean": 0.1549777357528607,
+  "beta_at_ceiling_frac_mean": 0.0002889349111683259
+ },
+ "probe_decode": {
+  "n": 4096,
+  "mean": 0.007218828663066007,
+  "p99": 0.11271418333053601,
+  "max": 0.24235200881958008,
+  "bias": -1.9361267742547608e-05
+ },
+ "prefill_floor_probe_tokens": {
+  "n": 4096,
+  "mean": 0.007207781683670077,
+  "p99": 0.11527301073074372,
+  "max": 0.24170327186584473,
+  "bias": 0.00013117269804579883
+ },
+ "prefill_lora": {
+  "n": 4096,
+  "mean": 0.007132499483791818,
+  "p99": 0.11393933296203614,
+  "max": 0.21714448928833008,
+  "bias": 0.00010543131480192196
+ },
+ "lora_effect": {
+  "n": 4096,
+  "slope": 0.966213676584186,
+  "corr": 0.9637613746771028,
+  "err_mean": 0.01111655425035336,
+  "effect_mean": 0.04151736240582849,
+  "engine_effect_mean": 0.04170250221463617
+ },
+ "red_lora_zeroed": {
+  "n": 4096,
+  "slope": 0.0,
+  "corr": 0.0,
+  "err_mean": 0.04151736240582849,
+  "effect_mean": 0.04151736240582849,
+  "engine_effect_mean": 0.0
+ },
+ "prefill_full": {
+  "n": 4096,
+  "mean": 0.007506790077972034,
+  "p99": 0.11107634305954003,
+  "max": 0.2587699890136719,
+  "bias": 0.0003756687190986756
+ },
+ "gate_effect": {
+  "n": 4096,
+  "slope": 0.9463886992703958,
+  "corr": 0.9620282324374462,
+  "err_mean": 0.011847347705948844,
+  "effect_mean": 0.0422520763088259,
+  "engine_effect_mean": 0.041635378674974445
+ },
+ "red_gate_not_synced": {
+  "n": 4096,
+  "slope": 0.0,
+  "corr": 0.0,
+  "err_mean": 0.0422520763088259,
+  "effect_mean": 0.0422520763088259,
+  "engine_effect_mean": 0.0
+ },
+ "bound_decode": 0.015529354364752033,
+ "bound_prefill": 0.0171302066284783,
+ "visible_min": 0.04282551657119575,
+ "checks": {
+  "probe_decode": true,
+  "prefill_lora": true,
+  "lora_visible": false,
+  "lora_effect_agrees": true,
+  "red_lora_fails": true,
+  "prefill_full": true,
+  "gate_visible": false,
+  "gate_effect_agrees": true,
+  "red_gate_fails": true
+ },
+ "pass": false,
+ "start": {
+  "n": 3338,
+  "mean": 0.006294836119825853,
+  "p99": 0.10416857004165672,
+  "max": 0.6050698757171631,
+  "bias": 5.635199569968692e-05
+ },
+ "start_effect": {
+  "n": 3338,
+  "slope": 1.0051867450724596,
+  "corr": 0.9993921348091155,
+  "err_mean": 0.011913561755700852,
+  "effect_mean": 0.3012387372496154,
+  "engine_effect_mean": 0.3027530812358495,
+  "visible": true
+ },
+ "start_pass": true,
+ "seconds": 52.5,
+ "train_kernel": "fla",
+ "gate_tensors": 24,
+ "gate_dropped": 0,
+ "sync": {
+  "lora_modules": 96,
+  "gate_layers": 24,
+  "sync_s": 0.07020926475524902
+ }
+}

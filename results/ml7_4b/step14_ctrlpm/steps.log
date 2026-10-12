@@ -1,0 +1,68 @@
+reuse: gsm8k untouched adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k warmup adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k ctrl_0 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k ctrl_1 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k ctrl_2 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k wide_0 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k wide_1 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k wide_2 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k wide1_0 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k wide1_1 adopted from <repo>/results/ml7_4b/step14
+reuse: gsm8k wide1_2 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 untouched adopted from <repo>/results/ml7_4b/step14
+reuse: math500 warmup adopted from <repo>/results/ml7_4b/step14
+reuse: math500 ctrl_0 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 ctrl_1 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 ctrl_2 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 wide_0 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 wide_1 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 wide_2 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 wide1_0 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 wide1_1 adopted from <repo>/results/ml7_4b/step14
+reuse: math500 wide1_2 adopted from <repo>/results/ml7_4b/step14
+=== gsm8k untouched kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_untouched.json)
+=== gsm8k warmup kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_warmup.json)
+=== gsm8k ctrl_0 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrl_0.json)
+=== gsm8k ctrl_1 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrl_1.json)
+=== gsm8k ctrl_2 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrl_2.json)
+=== gsm8k wide_0 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide_0.json)
+=== gsm8k wide_1 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide_1.json)
+=== gsm8k wide_2 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide_2.json)
+=== gsm8k wide1_0 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide1_0.json)
+=== gsm8k wide1_1 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide1_1.json)
+=== gsm8k wide1_2 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide1_2.json)
+queued p4s14_gsm8k_ctrlpm_0
+queued p4s14_gsm8k_ctrlpm_1
+queued p4s14_gsm8k_ctrlpm_2
+=== math500 untouched kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_untouched.json)
+=== math500 warmup kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_warmup.json)
+=== math500 ctrl_0 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_ctrl_0.json)
+=== math500 ctrl_1 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_ctrl_1.json)
+=== math500 ctrl_2 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_ctrl_2.json)
+=== math500 wide_0 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_wide_0.json)
+=== math500 wide_1 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_wide_1.json)
+=== math500 wide_2 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_wide_2.json)
+=== math500 wide1_0 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_wide1_0.json)
+=== math500 wide1_1 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_wide1_1.json)
+=== math500 wide1_2 kept (<repo>/results/ml7_4b/step14_ctrlpm/readout_math500_wide1_2.json)
+queued p4s14_math500_ctrlpm_0
+queued p4s14_math500_ctrlpm_1
+queued p4s14_math500_ctrlpm_2
+=== readouts queued 2026-10-11T23:18:26+00:00: p4s14_gsm8k_ctrlpm_0 p4s14_gsm8k_ctrlpm_1 p4s14_gsm8k_ctrlpm_2 p4s14_math500_ctrlpm_0 p4s14_math500_ctrlpm_1 p4s14_math500_ctrlpm_2
+=== math500 ctrlpm_0 start 2026-10-11T23:18:38+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_math500.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step14_ctrlpm/readout_math500_ctrlpm_0.json --probe_effect 0.05 --rank 20
+=== gsm8k ctrlpm_0 start 2026-10-11T23:18:38+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_gsm8k.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrlpm_0.json --probe_effect 0.05 --rank 20
+=== math500 ctrlpm_2 start 2026-10-11T23:18:38+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_math500.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step14_ctrlpm/readout_math500_ctrlpm_2.json --probe_effect 0.05 --rank 20
+=== gsm8k ctrlpm_2 start 2026-10-11T23:18:38+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_gsm8k.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrlpm_2.json --probe_effect 0.05 --rank 20
+=== math500 ctrlpm_1 start 2026-10-11T23:18:38+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_math500.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step14_ctrlpm/readout_math500_ctrlpm_1.json --probe_effect 0.05 --rank 20
+=== gsm8k ctrlpm_1 start 2026-10-11T23:18:38+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/test_gsm8k.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrlpm_1.json --probe_effect 0.05 --rank 20
+=== gsm8k ctrlpm_2 ok wall=1874s gpu 2
+=== gsm8k ctrlpm_1 ok wall=2263s gpu 2
+=== math500 ctrlpm_2 ok wall=4287s gpu 1
+=== gsm8k ctrlpm_0 ok wall=4509s gpu 1
+=== math500 ctrlpm_1 ok wall=4668s gpu 0
+=== math500 ctrlpm_0 ok wall=4944s gpu 0
+wait: 6 jobs terminal, failed []
+=== analysis gsm8k start 2026-10-12T00:42:26+00:00
+=== analysis gsm8k ok (<repo>/results/ml7_4b/step14_ctrlpm/analysis_gsm8k.json)
+=== analysis math500 start 2026-10-12T00:42:29+00:00
+=== analysis math500 ok (<repo>/results/ml7_4b/step14_ctrlpm/analysis_math500.json)

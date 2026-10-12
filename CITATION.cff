@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper below."
+title: "gdn-beta-gate: code and receipts for 'Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5'"
+version: 1.0.0
+date-released: 2026-10-12
+url: "https://github.com/avifenesh/gdn-beta-gate"
+repository-code: "https://github.com/avifenesh/gdn-beta-gate"
+license: Apache-2.0
+authors:
+  - family-names: "Fenesh"
+    given-names: "Avi"
+keywords:
+  - Gated DeltaNet
+  - delta rule
+  - reinforcement learning
+  - reasoning length
+  - LoRA
+  - Qwen3.5
+preferred-citation:
+  type: article
+  title: "Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5"
+  authors:
+    - family-names: "Fenesh"
+      given-names: "Avi"
+  year: 2026
+  url: "https://github.com/avifenesh/gdn-beta-gate"

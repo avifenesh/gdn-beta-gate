@@ -1,0 +1,68 @@
+{
+ "torch": "2.14.0+cu130",
+ "transformers": "5.17.0",
+ "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+ "host": "<host>",
+ "model": "<hf-cache>/models--allenai--Olmo-Hybrid-7B/snapshots/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf",
+ "data": "<runs>/olmo/nll_heldout_olmo.pt",
+ "data_meta": {
+  "chunk": 2048,
+  "tokens_per_domain": 5000000,
+  "sources": {
+   "web": {
+    "dataset": "HuggingFaceFW/fineweb-edu",
+    "config": "sample-10BT",
+    "field": "text",
+    "skip_docs": 200000,
+    "docs": 5053,
+    "chunks": 2441,
+    "seconds": 87.8
+   },
+   "code": {
+    "dataset": "codeparrot/codeparrot-clean-valid",
+    "config": null,
+    "field": "content",
+    "skip_docs": 20000,
+    "docs": 2466,
+    "chunks": 2441,
+    "seconds": 36.9
+   },
+   "wiki": {
+    "dataset": "wikimedia/wikipedia",
+    "config": "20231101.en",
+    "field": "text",
+    "skip_docs": 0,
+    "docs": 966,
+    "chunks": 2441,
+    "seconds": 59.5
+   },
+   "math": {
+    "dataset": "HuggingFaceTB/finemath",
+    "config": "finemath-4plus",
+    "field": "text",
+    "skip_docs": 0,
+    "docs": 3451,
+    "chunks": 2441,
+    "seconds": 21.9
+   }
+  }
+ },
+ "git": "f5dc762-dirty",
+ "argv": [
+  "lesion_nll.py",
+  "--model",
+  "<hf-cache>/models--allenai--Olmo-Hybrid-7B/snapshots/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf",
+  "--data",
+  "<runs>/olmo/nll_heldout_olmo.pt",
+  "--out",
+  "<runs>/olmo/lesion_nll_base",
+  "--arms",
+  "stock,half,erase,layers,heads:36,heads:72,rand:36:0,rand:72:0",
+  "--n_chunks",
+  "256",
+  "--n_chunks_sweep",
+  "128",
+  "--batch",
+  "4"
+ ]
+}

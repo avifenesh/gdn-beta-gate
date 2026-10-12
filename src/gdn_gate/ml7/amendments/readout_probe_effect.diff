@@ -1,0 +1,11 @@
+363a364,366
+>     ap.add_argument("--probe_effect", type=float, default=0.2,
+>                     help="probe size (nats per token) of the pre-readout parity self-test; 0.2 = the 2B record, "
+>                          "0.05 = the Qwen3.5-4B record (owner approval 2026-10-11 ~14:55)")
+439a443,444
+>         # probe_effect: --probe_effect (default 0.2, the value hard-coded before; owner approval 2026-10-11 ~14:55:
+>         # 0.05 for every readout of the Qwen3.5-4B record, where the 0.2 probe calibrator does not converge)
+441c446
+<                                     parity_k=pk, parity_floor=1e-3, probe_effect=0.2, effect_corr=0.9,
+---
+>                                     parity_k=pk, parity_floor=1e-3, probe_effect=a.probe_effect, effect_corr=0.9,

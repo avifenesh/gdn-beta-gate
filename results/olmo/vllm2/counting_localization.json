@@ -1,0 +1,99 @@
+{
+ "root": "<runs>/olmo/battery_vllm2_loc",
+ "rows": [
+  {
+   "L": 8192,
+   "arm": "erase_g0",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.5102,
+   "arm_mean": 0.4922,
+   "diff": -0.018,
+   "p": 0.0438,
+   "better": 109,
+   "worse": 136
+  },
+  {
+   "L": 8192,
+   "arm": "erase_g1",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.5102,
+   "arm_mean": 0.4842,
+   "diff": -0.026,
+   "p": 0.0011,
+   "better": 83,
+   "worse": 144
+  },
+  {
+   "L": 8192,
+   "arm": "erase_g2",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.5102,
+   "arm_mean": 0.5034,
+   "diff": -0.0068,
+   "p": 0.4078,
+   "better": 105,
+   "worse": 118
+  },
+  {
+   "L": 8192,
+   "arm": "erase_g3",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.5102,
+   "arm_mean": 0.4934,
+   "diff": -0.0168,
+   "p": 0.004,
+   "better": 77,
+   "worse": 114
+  }
+ ],
+ "macro": [
+  {
+   "L": 8192,
+   "arm": "erase_g0",
+   "tasks": 1,
+   "diff": -0.018,
+   "ci95": [
+    -0.0354,
+    -0.0004
+   ],
+   "p": 0.0392
+  },
+  {
+   "L": 8192,
+   "arm": "erase_g1",
+   "tasks": 1,
+   "diff": -0.026,
+   "ci95": [
+    -0.0422,
+    -0.0104
+   ],
+   "p": 0.002
+  },
+  {
+   "L": 8192,
+   "arm": "erase_g2",
+   "tasks": 1,
+   "diff": -0.0068,
+   "ci95": [
+    -0.022,
+    0.0086
+   ],
+   "p": 0.4008
+  },
+  {
+   "L": 8192,
+   "arm": "erase_g3",
+   "tasks": 1,
+   "diff": -0.0168,
+   "ci95": [
+    -0.0286,
+    -0.0052
+   ],
+   "p": 0.0048
+  }
+ ]
+}

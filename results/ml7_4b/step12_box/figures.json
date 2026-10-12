@@ -1,0 +1,26 @@
+{
+ "analysis": "<repo>/results/ml7_4b/step12_box/analysis_val.json",
+ "analysis_sha256": "c8eeaa4fecdb99b69cc9759c12abfc09cdabcd33c4a627397c2bb081ec092d07",
+ "partial": false,
+ "n_arm_runs": 9,
+ "figures": [
+  {
+   "file": "<repo>/ml_pipeline_4b/figures/12_val_accuracy_vs_budget.png",
+   "sha256": "dc109edf7557b644fd1e85ba119ab8e29b19a2f1ec6f76d155b9c97f31e88194",
+   "bytes": 117701,
+   "explanation": "Validation slice (500 held-out GSM8K train items x 2 samples, one GPU for every model): accuracy against reasoning budget 256 to 8,192 tokens for the untouched model, the shared format warm-up and each arm (thick line = mean of its seeds, thin = single seeds). Area under the curve: untouched 0.936; warm-up 0.942; ctrl 0.952 (seeds 0.952/0.951/0.954); wide 0.960 (seeds 0.958/0.961/0.960); wide1 0.957 (seeds 0.956/0.961/0.952). The arms start from the warm-up, so the warm-up curve is the bar: an arm above it at small budgets got more accuracy for fewer reasoning tokens. All 9 arm runs present (ctrl seeds 0/1/2, wide seeds 0/1/2, wide1 seeds 0/1/2)."
+  },
+  {
+   "file": "<repo>/ml_pipeline_4b/figures/12_val_area_contrasts.png",
+   "sha256": "6bcb3c3e358b9f167ad57b1805fd069785c24ca7da3381f4ae43a693b8fedb8d",
+   "bytes": 82799,
+   "explanation": "Validation slice (500 held-out GSM8K train items x 2 samples, one GPU for every model): every pre-registered contrast on the primary metric, as the seed-mean difference in area with its paired item bootstrap 95% interval and the single-seed differences. Rule: an arm effect needs all 3 seeds with the same sign and an interval that excludes 0; warm-up minus untouched has one readout per side, so it is descriptive. wide - ctrl +0.0071 [-0.0034, +0.0184] no effect; wide1 - ctrl +0.0041 [-0.0068, +0.0155] no effect; wide - wide1 +0.0030 [-0.0024, +0.0087] no effect; ctrl - untouched +0.0162 [+0.0081, +0.0250] effect, positive; wide - untouched +0.0233 [+0.0104, +0.0371] effect, positive; wide1 - untouched +0.0203 [+0.0077, +0.0338] effect, positive; ctrl - warmup +0.0109 [+0.0030, +0.0190] effect, positive; wide - warmup +0.0180 [+0.0045, +0.0324] effect, positive; wide1 - warmup +0.0150 [+0.0012, +0.0297] effect, positive; warmup - untouched +0.0053 [-0.0040, +0.0147] descriptive. All 9 arm runs present (ctrl seeds 0/1/2, wide seeds 0/1/2, wide1 seeds 0/1/2)."
+  },
+  {
+   "file": "<repo>/ml_pipeline_4b/figures/12_val_accuracy_vs_tokens.png",
+   "sha256": "7e022cbfb7913928a3edf19c15bf1ba0bf426dd26b625ae69d45b8d9f6959ec0",
+   "bytes": 84284,
+   "explanation": "Validation slice (500 held-out GSM8K train items x 2 samples, one GPU for every model): accuracy against the mean reasoning tokens each model actually spent at each budget, so a curve further left at the same height reasons less for the same accuracy. Natural length (mean reasoning tokens at 8,192) and budget to reach the untouched model's 8k accuracy (0.950): untouched 3110 tokens, cut off 0.089; warm-up 2694, cut off 0.050, reaches the untouched 8k accuracy at 2353; ctrl 1546, cut off 0.016, reaches it at 927; wide 265, cut off 0.001, reaches it at 263; wide1 302, cut off 0.000, reaches it at 329. All 9 arm runs present (ctrl seeds 0/1/2, wide seeds 0/1/2, wide1 seeds 0/1/2)."
+  }
+ ]
+}

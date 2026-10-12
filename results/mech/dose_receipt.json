@@ -1,0 +1,86 @@
+{
+ "wide1_s0_x0.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s0_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25",
+  "k": 0.0,
+  "gate_tensors": 24,
+  "sha256": "7389c334dc007b427617bd8739569765deff0e17b8cd869dbd8385bf62e63a6b"
+ },
+ "wide1_s0_x0.5.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s0_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25",
+  "k": 0.5,
+  "gate_tensors": 24,
+  "sha256": "bfb267c4e8ebf4bd3644658fda34e0ab871953452074270cb9e07a8a145ca2fe"
+ },
+ "wide1_s0_x1.5.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s0_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25",
+  "k": 1.5,
+  "gate_tensors": 24,
+  "sha256": "3fe4d0278aa5268adc9ae3b69a4dbf0f86b3a69abf2278da991ab6d42cdbc5bd"
+ },
+ "wide1_s0_x2.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s0_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25",
+  "k": 2.0,
+  "gate_tensors": 24,
+  "sha256": "ceb0cbf895926ab2144047a728ea79cc1574ca44e7613f1727da5867b7e2df93"
+ },
+ "wide1_s1_x0.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s1_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece",
+  "k": 0.0,
+  "gate_tensors": 24,
+  "sha256": "61dd3134a36d505cc26a24f7a1b1013d67b67d601f60823c3dfefe3a022e627c"
+ },
+ "wide1_s1_x0.5.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s1_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece",
+  "k": 0.5,
+  "gate_tensors": 24,
+  "sha256": "6fc3b7925c09a57c449ffbde93173b7b58f0e256f6302c46def9f1633fb616d5"
+ },
+ "wide1_s1_x1.5.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s1_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece",
+  "k": 1.5,
+  "gate_tensors": 24,
+  "sha256": "a75b492aac4fc3f738f24990bd2775b5257dafd2b76854d291581496c770de08"
+ },
+ "wide1_s1_x2.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s1_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece",
+  "k": 2.0,
+  "gate_tensors": 24,
+  "sha256": "3011553d4b67c9a78d7533ade322ee7d009d27fc08e8b359ddb4412dd01a746f"
+ },
+ "wide1_s2_x0.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s2_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6",
+  "k": 0.0,
+  "gate_tensors": 24,
+  "sha256": "8c283f54eec1c04ff41aaf86af44d17d79563d5b0a157eeeb771003a0777aee3"
+ },
+ "wide1_s2_x0.5.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s2_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6",
+  "k": 0.5,
+  "gate_tensors": 24,
+  "sha256": "870eb8ccf62eae634fdfdfd686c5faeeef03a0ee2ef05a64dad01ad925ddbbe4"
+ },
+ "wide1_s2_x1.5.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s2_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6",
+  "k": 1.5,
+  "gate_tensors": 24,
+  "sha256": "c8b177915577005ffc13c2eedeed6680885c32f4447d9a01114b27e5dd24e782"
+ },
+ "wide1_s2_x2.pt": {
+  "source": "<runs>/ml7_4b/grpo/wide1_s2_cap512_r_box/ckpt_step150.pt",
+  "source_sha256": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6",
+  "k": 2.0,
+  "gate_tensors": 24,
+  "sha256": "c0f1c123b56fdd0c70aec8d91ea7a7b27dd0acb5fa73aa447fe238e774a7649c"
+ }
+}

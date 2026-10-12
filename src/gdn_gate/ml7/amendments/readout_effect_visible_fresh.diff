@@ -1,0 +1,17 @@
+343a344,355
+> # effect_visible 5.0, except the (checkpoint, data file) pairs below: owner approval 2026-10-12 (relayed by the lane
+> # wg coordinator, "approve"): 4.0 for fresh-set readouts (test_fresh.jsonl) of Qwen3.5-4B checkpoints whose
+> # pre-readout self-test fails on the visibility checks alone (4B ctrl s1: lora effect 0.0405 vs bar 0.0419; 4B wide s2:
+> # lora 0.0433 vs 0.0436, gate 0.0398 vs 0.0436; every agreement, red-arm and start check passing). Every other check
+> # keeps its bar; the self-test runs before generation, so scored generations and scoring are unchanged.
+> EFFECT_VISIBLE_OVERRIDE = {("ml7_4b/grpo/ctrl_s1_cap512_r_box/ckpt_step150.pt", "test_fresh.jsonl"): 4.0,
+>                            ("ml7_4b/grpo/wide_s2_cap512_r_box/ckpt_step150.pt", "test_fresh.jsonl"): 4.0}
+> 
+> 
+> def effect_visible_of(ckpt: str, data: str) -> float:
+>     """The self-test's visibility bar (x the prefill floor) for this checkpoint and data file."""
+>     return next((v for (c, d), v in EFFECT_VISIBLE_OVERRIDE.items() if ckpt.endswith(c) and data.endswith(d)), 5.0)
+447c459
+<                                     effect_slope_tol=0.1, effect_visible=5.0)
+---
+>                                     effect_slope_tol=0.1, effect_visible=effect_visible_of(a.ckpt, a.data))

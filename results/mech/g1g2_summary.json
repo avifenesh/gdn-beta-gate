@@ -1,0 +1,862 @@
+{
+ "per_readout": {
+  "ctrl_s0": {
+   "norm_auc_log2": 0.9546,
+   "natural_len": 1900.756,
+   "acc_8192": 0.966,
+   "closed_share_8192": 0.972,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+  },
+  "ctrl_s1": {
+   "norm_auc_log2": 0.9514,
+   "natural_len": 1548.088,
+   "acc_8192": 0.962,
+   "closed_share_8192": 0.978,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+  },
+  "ctrl_s2": {
+   "norm_auc_log2": 0.9624000000000001,
+   "natural_len": 1352.304,
+   "acc_8192": 0.97,
+   "closed_share_8192": 0.982,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+  },
+  "warmup": {
+   "norm_auc_log2": 0.9428,
+   "natural_len": 2915.518,
+   "acc_8192": 0.958,
+   "closed_share_8192": 0.942,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+  },
+  "wide1_s0_full": {
+   "norm_auc_log2": 0.9608,
+   "natural_len": 306.978,
+   "acc_8192": 0.962,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+  },
+  "wide1_s0_hybrid": {
+   "norm_auc_log2": 0.955,
+   "natural_len": 982.358,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.98,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "9998ff00c6d867a5bd580ef2ad03d456a817854aa94a97ec7519bdb432c813a3"
+  },
+  "wide1_s0_strip": {
+   "norm_auc_log2": 0.9586,
+   "natural_len": 659.0,
+   "acc_8192": 0.968,
+   "closed_share_8192": 0.996,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+  },
+  "wide1_s1_full": {
+   "norm_auc_log2": 0.9554000000000001,
+   "natural_len": 379.916,
+   "acc_8192": 0.96,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+  },
+  "wide1_s1_hybrid": {
+   "norm_auc_log2": 0.9522,
+   "natural_len": 991.542,
+   "acc_8192": 0.96,
+   "closed_share_8192": 0.99,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "2c34adb16880e2f547b459af0e9b59dd0708a219d5786348858364635d406e67"
+  },
+  "wide1_s1_strip": {
+   "norm_auc_log2": 0.9584000000000001,
+   "natural_len": 832.044,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.996,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+  },
+  "wide1_s2_full": {
+   "norm_auc_log2": 0.9488,
+   "natural_len": 234.594,
+   "acc_8192": 0.952,
+   "closed_share_8192": 0.998,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+  },
+  "wide1_s2_hybrid": {
+   "norm_auc_log2": 0.9548,
+   "natural_len": 935.402,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.986,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "6e0d135cab40c7d9b17c6d515ae057adcf9f2f6079cb737d5e651204a83b197d"
+  },
+  "wide1_s2_strip": {
+   "norm_auc_log2": 0.96,
+   "natural_len": 505.094,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.994,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+  },
+  "wide_s0_full": {
+   "norm_auc_log2": 0.949,
+   "natural_len": 206.888,
+   "acc_8192": 0.952,
+   "closed_share_8192": 0.998,
+   "beta_gt1_share": 0.017886778064663204,
+   "beta_max": 1.65625,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+  },
+  "wide_s0_hybrid": {
+   "norm_auc_log2": 0.9663999999999999,
+   "natural_len": 647.122,
+   "acc_8192": 0.976,
+   "closed_share_8192": 0.988,
+   "beta_gt1_share": 0.016333722371826922,
+   "beta_max": 1.6640625,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "ecee57b6c2e6bdcedb82ca103b3fe01c5f4ed24f0d8fd5b7b31c21b178be5325"
+  },
+  "wide_s0_strip": {
+   "norm_auc_log2": 0.9638,
+   "natural_len": 774.956,
+   "acc_8192": 0.97,
+   "closed_share_8192": 0.988,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+  },
+  "wide_s1_full": {
+   "norm_auc_log2": 0.9632000000000001,
+   "natural_len": 313.664,
+   "acc_8192": 0.968,
+   "closed_share_8192": 0.998,
+   "beta_gt1_share": 0.01617341222419274,
+   "beta_max": 1.734375,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+  },
+  "wide_s1_hybrid": {
+   "norm_auc_log2": 0.9618,
+   "natural_len": 752.56,
+   "acc_8192": 0.968,
+   "closed_share_8192": 0.984,
+   "beta_gt1_share": 0.015400623036775161,
+   "beta_max": 1.7421875,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "949b88aa93d5b9e19d41a7ebb5921af9b2fde6fc988834022331948c3f07f37a"
+  },
+  "wide_s1_strip": {
+   "norm_auc_log2": 0.9548,
+   "natural_len": 1094.292,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.99,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+  },
+  "wide_s2_full": {
+   "norm_auc_log2": 0.9548,
+   "natural_len": 241.728,
+   "acc_8192": 0.956,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.019792646209099974,
+   "beta_max": 1.671875,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+  },
+  "wide_s2_hybrid": {
+   "norm_auc_log2": 0.9624000000000001,
+   "natural_len": 669.764,
+   "acc_8192": 0.966,
+   "closed_share_8192": 0.986,
+   "beta_gt1_share": 0.01874048330346716,
+   "beta_max": 1.6875,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "4278c9bc33e70d0e2f2f1676ecdf5c3bdaed5e4c615a4ce6ed198d4d41bb11a8"
+  },
+  "wide_s2_strip": {
+   "norm_auc_log2": 0.9558000000000001,
+   "natural_len": 882.962,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.986,
+   "beta_gt1_share": null,
+   "beta_max": null,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+  },
+  "wide1_s0_x0.5": {
+   "norm_auc_log2": 0.954,
+   "natural_len": 375.24,
+   "acc_8192": 0.962,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "bfb267c4e8ebf4bd3644658fda34e0ab871953452074270cb9e07a8a145ca2fe"
+  },
+  "wide1_s0_x0": {
+   "norm_auc_log2": 0.9632000000000001,
+   "natural_len": 712.008,
+   "acc_8192": 0.97,
+   "closed_share_8192": 0.992,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "7389c334dc007b427617bd8739569765deff0e17b8cd869dbd8385bf62e63a6b"
+  },
+  "wide1_s0_x1.5": {
+   "norm_auc_log2": 0.9616,
+   "natural_len": 247.544,
+   "acc_8192": 0.964,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "3fe4d0278aa5268adc9ae3b69a4dbf0f86b3a69abf2278da991ab6d42cdbc5bd"
+  },
+  "wide1_s0_x2": {
+   "norm_auc_log2": 0.9501999999999999,
+   "natural_len": 211.878,
+   "acc_8192": 0.952,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "ceb0cbf895926ab2144047a728ea79cc1574ca44e7613f1727da5867b7e2df93"
+  },
+  "wide1_s1_x0.5": {
+   "norm_auc_log2": 0.9604,
+   "natural_len": 496.562,
+   "acc_8192": 0.966,
+   "closed_share_8192": 0.998,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "6fc3b7925c09a57c449ffbde93173b7b58f0e256f6302c46def9f1633fb616d5"
+  },
+  "wide1_s1_x0": {
+   "norm_auc_log2": 0.9544,
+   "natural_len": 822.564,
+   "acc_8192": 0.964,
+   "closed_share_8192": 0.994,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "61dd3134a36d505cc26a24f7a1b1013d67b67d601f60823c3dfefe3a022e627c"
+  },
+  "wide1_s1_x1.5": {
+   "norm_auc_log2": 0.961,
+   "natural_len": 309.754,
+   "acc_8192": 0.964,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "a75b492aac4fc3f738f24990bd2775b5257dafd2b76854d291581496c770de08"
+  },
+  "wide1_s1_x2": {
+   "norm_auc_log2": 0.9528,
+   "natural_len": 298.654,
+   "acc_8192": 0.956,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "3011553d4b67c9a78d7533ade322ee7d009d27fc08e8b359ddb4412dd01a746f"
+  },
+  "wide1_s2_x0.5": {
+   "norm_auc_log2": 0.9586,
+   "natural_len": 295.992,
+   "acc_8192": 0.962,
+   "closed_share_8192": 0.998,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "870eb8ccf62eae634fdfdfd686c5faeeef03a0ee2ef05a64dad01ad925ddbbe4"
+  },
+  "wide1_s2_x0": {
+   "norm_auc_log2": 0.9562,
+   "natural_len": 540.504,
+   "acc_8192": 0.962,
+   "closed_share_8192": 0.992,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "8c283f54eec1c04ff41aaf86af44d17d79563d5b0a157eeeb771003a0777aee3"
+  },
+  "wide1_s2_x1.5": {
+   "norm_auc_log2": 0.958,
+   "natural_len": 182.956,
+   "acc_8192": 0.96,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "c8b177915577005ffc13c2eedeed6680885c32f4447d9a01114b27e5dd24e782"
+  },
+  "wide1_s2_x2": {
+   "norm_auc_log2": 0.953,
+   "natural_len": 179.196,
+   "acc_8192": 0.954,
+   "closed_share_8192": 1.0,
+   "beta_gt1_share": 0.0,
+   "beta_max": 1.0,
+   "parity_pass": true,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "ckpt_sha256": "c0f1c123b56fdd0c70aec8d91ea7a7b27dd0acb5fa73aa447fe238e774a7649c"
+  }
+ },
+ "n_items": 500,
+ "gpus": [
+  "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+ ],
+ "g1_contrasts_descriptive": {
+  "wide1: full - strip": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.002200000000000001,
+     -0.002999999999999999,
+     -0.011200000000000002
+    ],
+    "seed_mean": -0.004,
+    "ci95": [
+     -0.013399999999999999,
+     0.005133333333333333
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -352.022,
+     -452.128,
+     -270.5
+    ],
+    "seed_mean": -358.21666666666675,
+    "ci95": [
+     -410.61525,
+     -309.99549999999994
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide1: full - hybrid": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.005799999999999999,
+     0.003199999999999999,
+     -0.006
+    ],
+    "seed_mean": 0.0009999999999999998,
+    "ci95": [
+     -0.011066666666666667,
+     0.013333333333333334
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -675.38,
+     -611.626,
+     -700.808
+    ],
+    "seed_mean": -662.6046666666667,
+    "ci95": [
+     -755.4889499999999,
+     -574.7870166666667
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide1: strip - ctrl": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.003999999999999998,
+     0.006999999999999998,
+     -0.0024000000000000007
+    ],
+    "seed_mean": 0.0028666666666666667,
+    "ci95": [
+     -0.0067333333333333325,
+     0.012399999999999998
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -1241.756,
+     -716.044,
+     -847.21
+    ],
+    "seed_mean": -935.0033333333332,
+    "ci95": [
+     -1016.2085666666667,
+     -856.3472833333333
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide1: full - ctrl": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.006199999999999999,
+     0.003999999999999998,
+     -0.0136
+    ],
+    "seed_mean": -0.001133333333333333,
+    "ci95": [
+     -0.013601666666666665,
+     0.01166833333333331
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -1593.778,
+     -1168.172,
+     -1117.71
+    ],
+    "seed_mean": -1293.22,
+    "ci95": [
+     -1396.9743666666668,
+     -1193.5932
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide1: hybrid - warmup": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.012199999999999999,
+     0.009400000000000002,
+     0.012
+    ],
+    "seed_mean": 0.0112,
+    "ci95": [
+     0.00026666666666666673,
+     0.022266666666666667
+    ],
+    "rule_shape_effect": true
+   },
+   "natural_len": {
+    "per_seed": [
+     -1933.16,
+     -1923.976,
+     -1980.116
+    ],
+    "seed_mean": -1945.7506666666668,
+    "ci95": [
+     -2101.3166,
+     -1797.9840333333332
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide1: strip - warmup": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.0158,
+     0.0156,
+     0.0172
+    ],
+    "seed_mean": 0.0162,
+    "ci95": [
+     0.0036000000000000003,
+     0.029466666666666665
+    ],
+    "rule_shape_effect": true
+   },
+   "natural_len": {
+    "per_seed": [
+     -2256.518,
+     -2083.474,
+     -2410.424
+    ],
+    "seed_mean": -2250.138666666667,
+    "ci95": [
+     -2418.5811666666664,
+     -2087.222016666667
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide: full - strip": {
+   "norm_auc_log2": {
+    "per_seed": [
+     -0.014799999999999999,
+     0.008399999999999998,
+     -0.0010000000000000018
+    ],
+    "seed_mean": -0.0024666666666666682,
+    "ci95": [
+     -0.014666666666666666,
+     0.009466666666666665
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -568.068,
+     -780.628,
+     -641.234
+    ],
+    "seed_mean": -663.31,
+    "ci95": [
+     -743.7796166666666,
+     -591.8663166666668
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide: full - hybrid": {
+   "norm_auc_log2": {
+    "per_seed": [
+     -0.0174,
+     0.0014,
+     -0.0076
+    ],
+    "seed_mean": -0.007866666666666666,
+    "ci95": [
+     -0.01653333333333333,
+     0.0002666666666666675
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -440.234,
+     -438.896,
+     -428.036
+    ],
+    "seed_mean": -435.722,
+    "ci95": [
+     -522.6265666666667,
+     -357.65049999999997
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide: strip - ctrl": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.0092,
+     0.0033999999999999994,
+     -0.0066
+    ],
+    "seed_mean": 0.0019999999999999996,
+    "ci95": [
+     -0.005466666666666665,
+     0.009266666666666666
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -1125.8,
+     -453.796,
+     -469.342
+    ],
+    "seed_mean": -682.9793333333332,
+    "ci95": [
+     -757.9886333333334,
+     -610.7484833333333
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide: full - ctrl": {
+   "norm_auc_log2": {
+    "per_seed": [
+     -0.005600000000000002,
+     0.011800000000000001,
+     -0.0076
+    ],
+    "seed_mean": -0.00046666666666666677,
+    "ci95": [
+     -0.0132,
+     0.012266666666666665
+    ],
+    "rule_shape_effect": false
+   },
+   "natural_len": {
+    "per_seed": [
+     -1693.868,
+     -1234.424,
+     -1110.576
+    ],
+    "seed_mean": -1346.2893333333334,
+    "ci95": [
+     -1452.852483333333,
+     -1243.2245666666668
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide: hybrid - warmup": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.023600000000000003,
+     0.019,
+     0.0196
+    ],
+    "seed_mean": 0.020733333333333333,
+    "ci95": [
+     0.008066666666666666,
+     0.0342
+    ],
+    "rule_shape_effect": true
+   },
+   "natural_len": {
+    "per_seed": [
+     -2268.396,
+     -2162.958,
+     -2245.754
+    ],
+    "seed_mean": -2225.702666666667,
+    "ci95": [
+     -2389.6327333333334,
+     -2070.01085
+    ],
+    "rule_shape_effect": true
+   }
+  },
+  "wide: strip - warmup": {
+   "norm_auc_log2": {
+    "per_seed": [
+     0.021,
+     0.011999999999999999,
+     0.013
+    ],
+    "seed_mean": 0.015333333333333334,
+    "ci95": [
+     0.005266666666666668,
+     0.025799999999999997
+    ],
+    "rule_shape_effect": true
+   },
+   "natural_len": {
+    "per_seed": [
+     -2140.562,
+     -1821.226,
+     -2032.556
+    ],
+    "seed_mean": -1998.1146666666668,
+    "ci95": [
+     -2161.6847666666667,
+     -1842.1902833333334
+    ],
+    "rule_shape_effect": true
+   }
+  }
+ },
+ "g1_condition_means": {
+  "wide1_full": {
+   "norm_auc_log2": 0.9550000000000001,
+   "natural_len": 307.16266666666667,
+   "acc_8192": 0.9579999999999999,
+   "closed_share_8192": 0.9993333333333334
+  },
+  "wide_full": {
+   "norm_auc_log2": 0.9556666666666667,
+   "natural_len": 254.09333333333333,
+   "acc_8192": 0.9586666666666667,
+   "closed_share_8192": 0.9986666666666667
+  },
+  "wide1_strip": {
+   "norm_auc_log2": 0.9590000000000001,
+   "natural_len": 665.3793333333333,
+   "acc_8192": 0.9653333333333333,
+   "closed_share_8192": 0.9953333333333333
+  },
+  "wide_strip": {
+   "norm_auc_log2": 0.9581333333333334,
+   "natural_len": 917.4033333333333,
+   "acc_8192": 0.9659999999999999,
+   "closed_share_8192": 0.988
+  },
+  "wide1_hybrid": {
+   "norm_auc_log2": 0.9540000000000001,
+   "natural_len": 969.7673333333333,
+   "acc_8192": 0.9626666666666667,
+   "closed_share_8192": 0.9853333333333333
+  },
+  "wide_hybrid": {
+   "norm_auc_log2": 0.9635333333333334,
+   "natural_len": 689.8153333333333,
+   "acc_8192": 0.9700000000000001,
+   "closed_share_8192": 0.9860000000000001
+  },
+  "warmup": {
+   "norm_auc_log2": 0.9428,
+   "natural_len": 2915.518,
+   "acc_8192": 0.958,
+   "closed_share_8192": 0.942
+  },
+  "ctrl": {
+   "norm_auc_log2": 0.9561333333333334,
+   "natural_len": 1600.3826666666666,
+   "acc_8192": 0.9659999999999999,
+   "closed_share_8192": 0.9773333333333333
+  }
+ },
+ "g2_dose": {
+  "wide1_s0": {
+   "points": [
+    {
+     "scale": 0.0,
+     "natural_len": 712.008,
+     "norm_auc_log2": 0.9632000000000001
+    },
+    {
+     "scale": 0.5,
+     "natural_len": 375.24,
+     "norm_auc_log2": 0.954
+    },
+    {
+     "scale": 1.0,
+     "natural_len": 306.978,
+     "norm_auc_log2": 0.9608
+    },
+    {
+     "scale": 1.5,
+     "natural_len": 247.544,
+     "norm_auc_log2": 0.9616
+    },
+    {
+     "scale": 2.0,
+     "natural_len": 211.878,
+     "norm_auc_log2": 0.9501999999999999
+    }
+   ],
+   "natural_len_slope_per_unit_scale": -225.59120000000019
+  },
+  "wide1_s1": {
+   "points": [
+    {
+     "scale": 0.0,
+     "natural_len": 822.564,
+     "norm_auc_log2": 0.9544
+    },
+    {
+     "scale": 0.5,
+     "natural_len": 496.562,
+     "norm_auc_log2": 0.9604
+    },
+    {
+     "scale": 1.0,
+     "natural_len": 379.916,
+     "norm_auc_log2": 0.9554000000000001
+    },
+    {
+     "scale": 1.5,
+     "natural_len": 309.754,
+     "norm_auc_log2": 0.961
+    },
+    {
+     "scale": 2.0,
+     "natural_len": 298.654,
+     "norm_auc_log2": 0.9528
+    }
+   ],
+   "natural_len_slope_per_unit_scale": -246.92560000000017
+  },
+  "wide1_s2": {
+   "points": [
+    {
+     "scale": 0.0,
+     "natural_len": 540.504,
+     "norm_auc_log2": 0.9562
+    },
+    {
+     "scale": 0.5,
+     "natural_len": 295.992,
+     "norm_auc_log2": 0.9586
+    },
+    {
+     "scale": 1.0,
+     "natural_len": 234.594,
+     "norm_auc_log2": 0.9488
+    },
+    {
+     "scale": 1.5,
+     "natural_len": 182.956,
+     "norm_auc_log2": 0.958
+    },
+    {
+     "scale": 2.0,
+     "natural_len": 179.196,
+     "norm_auc_log2": 0.953
+    }
+   ],
+   "natural_len_slope_per_unit_scale": -167.13040000000012
+  }
+ }
+}

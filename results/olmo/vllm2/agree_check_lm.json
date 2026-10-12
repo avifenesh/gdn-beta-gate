@@ -1,0 +1,47 @@
+{
+ "hf": "<runs>/olmo/battery/stock",
+ "vllm": "<runs>/olmo/battery_vllm2_check/stock",
+ "vllm_engine_s": 75.0,
+ "groups": {
+  "lm": {
+   "parts": {
+    "fda:contains": {
+     "n": 1102,
+     "agree": 0.9945553539019963,
+     "score_hf": 0.7595281306715064,
+     "score_vllm": 0.7631578947368421,
+     "hf_higher": 1,
+     "vllm_higher": 5,
+     "sign_p": 0.21875,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.9301270417422868
+    },
+    "swde:contains": {
+     "n": 1111,
+     "agree": 0.9990999099909991,
+     "score_hf": 0.8964896489648965,
+     "score_vllm": 0.8955895589558955,
+     "hf_higher": 1,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.9963996399639964
+    }
+   },
+   "n_hf": 8230,
+   "n_vllm": 2213,
+   "sec_hf": 9310.8,
+   "sec_vllm": 1078.2,
+   "sec_per_item_hf": 1.1313244228432562,
+   "sec_per_item_vllm": 0.48721192950745595,
+   "sec_per_item_vllm_with_engine": 0.5211025756891098,
+   "speedup_with_engine": 2.1710205929172095,
+   "speedup_no_engine": 2.3220376068930864,
+   "all_parts_pass": true,
+   "switchable": true
+  }
+ },
+ "switchable": true
+}

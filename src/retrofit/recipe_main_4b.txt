@@ -1,0 +1,14 @@
+# Main runs, Qwen3.5-4B-Base: mixed tier 1 (16 parity + 64 swap + 64 codeswap per step), both arms at LoRA/gate
+# learning rate 1e-4 (the rate at which wide switched on every tier-1 task; ctrl at 1e-4 already lost 14.6
+# MMLU-Pro points on codeswap, so a higher control rate only costs more), constant after warmup, 1,200 steps,
+# 12 WikiText replay chunks per step. Seeds 0-2 per arm. GPUs 6-7: the same pair trained on 128-step sequences
+# (horizon test: the 64-step wide adapters are exact to about 2.5x and at chance by 5x; the tracking head's decay
+# alpha = 0.9968 per token matches that horizon). Tier 2 runs on the laptop.
+0 main_wide_s0 wide 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+1 main_ctrl_s0 ctrl 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+2 main_wide_s1 wide 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+3 main_ctrl_s1 ctrl 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+4 main_wide_s2 wide 1e-4 1e-4 1200 2 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+5 main_ctrl_s2 ctrl 1e-4 1e-4 1200 2 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+6 len128_wide_s0 wide 1e-4 1e-4 1200 0 --train_len 128 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 24 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+7 len128_ctrl_s0 ctrl 1e-4 1e-4 1200 0 --train_len 128 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 24 --replay_every 1 --replay_micro 4 --micro_tokens 24576

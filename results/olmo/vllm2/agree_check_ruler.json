@@ -1,0 +1,119 @@
+{
+ "hf": "<runs>/olmo/battery/half",
+ "vllm": "<runs>/olmo/battery_vllm2_check/half",
+ "vllm_engine_s": 164.6,
+ "groups": {
+  "ruler4096": {
+   "parts": {
+    "niah_multikey_1:4096": {
+     "n": 100,
+     "agree": 1.0,
+     "score_hf": 0.98,
+     "score_vllm": 0.98,
+     "hf_higher": 0,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.99
+    },
+    "niah_multiquery:4096": {
+     "n": 100,
+     "agree": 0.99,
+     "score_hf": 1.0,
+     "score_vllm": 0.9975,
+     "hf_higher": 1,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.88
+    },
+    "niah_multivalue:4096": {
+     "n": 100,
+     "agree": 1.0,
+     "score_hf": 1.0,
+     "score_vllm": 1.0,
+     "hf_higher": 0,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.85
+    },
+    "niah_single_1:4096": {
+     "n": 100,
+     "agree": 1.0,
+     "score_hf": 1.0,
+     "score_vllm": 1.0,
+     "hf_higher": 0,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 1.0
+    },
+    "niah_single_2:4096": {
+     "n": 100,
+     "agree": 1.0,
+     "score_hf": 1.0,
+     "score_vllm": 1.0,
+     "hf_higher": 0,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.99
+    },
+    "ruler_cwe:4096": {
+     "n": 100,
+     "agree": 0.91,
+     "score_hf": 0.335,
+     "score_vllm": 0.341,
+     "hf_higher": 3,
+     "vllm_higher": 6,
+     "sign_p": 0.5078125,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.86
+    },
+    "ruler_qa_squad:4096": {
+     "n": 100,
+     "agree": 0.99,
+     "score_hf": 0.7041666666666667,
+     "score_vllm": 0.6941666666666667,
+     "hf_higher": 1,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.96
+    },
+    "ruler_vt:4096": {
+     "n": 100,
+     "agree": 0.99,
+     "score_hf": 0.9540000000000001,
+     "score_vllm": 0.9520000000000001,
+     "hf_higher": 1,
+     "vllm_higher": 0,
+     "sign_p": 1.0,
+     "agree_bar": 0.9,
+     "pass": true,
+     "same_text": 0.99
+    }
+   },
+   "n_hf": 800,
+   "n_vllm": 800,
+   "sec_hf": 1693.8,
+   "sec_vllm": 1076.2,
+   "sec_per_item_hf": 2.11725,
+   "sec_per_item_vllm": 1.34525,
+   "sec_per_item_vllm_with_engine": 1.551,
+   "speedup_with_engine": 1.3650870406189555,
+   "speedup_no_engine": 1.5738710276900203,
+   "all_parts_pass": true,
+   "switchable": true
+  }
+ },
+ "switchable": true
+}

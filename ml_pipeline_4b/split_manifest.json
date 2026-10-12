@@ -1,0 +1,90 @@
+{
+ "created": "2026-10-08",
+ "out_dir": "<runs>/ml7/data",
+ "files": {
+  "rl_pool.jsonl": "1cc1ef6b8f8339cd84847ced1c52f799db0095984def0afbe6142d5afec6c448",
+  "val.jsonl": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+  "test_gsm8k.jsonl": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+  "test_math500.jsonl": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337"
+ },
+ "counts": {
+  "rl_pool.jsonl": 6965,
+  "val.jsonl": 500,
+  "test_gsm8k.jsonl": 1319,
+  "test_math500.jsonl": 500
+ },
+ "rules": {
+  "val": "500 smallest sha256(VAL_SALT + id) (VAL_SALT in ml_pipeline/02_prep.py) among GSM8K train items not dropped by rule 4.1",
+  "drop_4_1": "GSM8K train items that are near-duplicates or template siblings of a held-out item",
+  "drop_4_2": "GSM8K train items that are siblings of a validation item"
+ },
+ "dropped_4_1": [
+  "gsm8k_train:gsm8k_train1314",
+  "gsm8k_train:gsm8k_train20",
+  "gsm8k_train:gsm8k_train3726",
+  "gsm8k_train:gsm8k_train5162"
+ ],
+ "dropped_4_2": [
+  "gsm8k_train:gsm8k_train3252",
+  "gsm8k_train:gsm8k_train3849",
+  "gsm8k_train:gsm8k_train4079",
+  "gsm8k_train:gsm8k_train5168"
+ ],
+ "pilot50_math500_ids": [
+  "math500:test/algebra/1098.json",
+  "math500:test/algebra/1842.json",
+  "math500:test/algebra/1934.json",
+  "math500:test/algebra/2080.json",
+  "math500:test/algebra/2551.json",
+  "math500:test/algebra/297.json",
+  "math500:test/algebra/634.json",
+  "math500:test/algebra/853.json",
+  "math500:test/counting_and_probability/216.json",
+  "math500:test/counting_and_probability/339.json",
+  "math500:test/counting_and_probability/51.json",
+  "math500:test/geometry/183.json",
+  "math500:test/geometry/817.json",
+  "math500:test/geometry/947.json",
+  "math500:test/intermediate_algebra/128.json",
+  "math500:test/intermediate_algebra/1350.json",
+  "math500:test/intermediate_algebra/158.json",
+  "math500:test/intermediate_algebra/1849.json",
+  "math500:test/intermediate_algebra/1992.json",
+  "math500:test/intermediate_algebra/345.json",
+  "math500:test/intermediate_algebra/956.json",
+  "math500:test/intermediate_algebra/964.json",
+  "math500:test/intermediate_algebra/986.json",
+  "math500:test/number_theory/1032.json",
+  "math500:test/number_theory/1055.json",
+  "math500:test/number_theory/1287.json",
+  "math500:test/number_theory/13.json",
+  "math500:test/number_theory/156.json",
+  "math500:test/number_theory/46.json",
+  "math500:test/number_theory/521.json",
+  "math500:test/number_theory/686.json",
+  "math500:test/number_theory/753.json",
+  "math500:test/number_theory/864.json",
+  "math500:test/prealgebra/1761.json",
+  "math500:test/prealgebra/1908.json",
+  "math500:test/prealgebra/1961.json",
+  "math500:test/prealgebra/2019.json",
+  "math500:test/prealgebra/2086.json",
+  "math500:test/prealgebra/378.json",
+  "math500:test/prealgebra/65.json",
+  "math500:test/prealgebra/874.json",
+  "math500:test/prealgebra/914.json",
+  "math500:test/prealgebra/930.json",
+  "math500:test/precalculus/1252.json",
+  "math500:test/precalculus/1289.json",
+  "math500:test/precalculus/580.json",
+  "math500:test/precalculus/625.json",
+  "math500:test/precalculus/801.json",
+  "math500:test/precalculus/807.json",
+  "math500:test/precalculus/96.json"
+ ],
+ "code_sha256": {
+  "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+  "ml_pipeline/02_prep.py": "e2c0cf24698392011c8dfac9e9d9387511d8cee2fc408f98a7d3b2d6e62b06b3"
+ },
+ "test_fingerprint": "b28bc3d5cda5a27b30430c730ed381e95289e23f7a7c028616e3f6e8ce9de646"
+}

@@ -1,0 +1,48 @@
+{
+ "what": "olmo stream CPU checks, 2026-10-06 (replacement instance)",
+ "checks": {
+  "check_patch_tiny_cpu.json": {
+   "cmd": "timeout 900 nice -n 10 taskset -c 8-15 env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 <venv>/bin/python check_patch.py --tiny --out results/olmo/check_patch_tiny_cpu.json",
+   "result": "ALL PASS (34 checks, red arms included)"
+  },
+  "test_train_olmo_cpu.txt": {
+   "cmd": "timeout 900 nice -n 10 taskset -c 8-15 env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 <venv>/bin/python test_train_olmo_cpu.py",
+   "result": "ALL PASS (19 checks)"
+  },
+  "score_think synthetic": {
+   "result": "math_verify matches 0.5 vs \\frac{1}{2}; wrong answers score 0; paired deltas recover the injected -1.0 / +200 tokens"
+  },
+  "analyze_nll synthetic": {
+   "result": "injected +0.05 and +0.30 nats recovered: +0.065 [0.033, 0.096], +0.336 [0.299, 0.375] at 16 chunks"
+  },
+  "lm_eval precache": {
+   "result": "arc_challenge 1172, gsm8k 1319, humaneval 164, mbpp_plus 378, swde 1111, fda 1102, squad_completion 2984; RULER 8 tasks x 500 at 4096/8192/16384 build from cache (43/82/197 s CPU)"
+  }
+ },
+ "git_describe": "f5dc762-dirty",
+ "host": "<host>",
+ "venvs": {
+  "wg": "2.14.0+cu130 5.17.0 0.21.0",
+  "wg-olmo": "0.4.13 5.17.0 2.14.0+cu130"
+ },
+ "wg_olmo_venv_note": "sitecustomize.py added: getaddrinfo returns IPv4 first (workstation IPv6 to the HF CDN hangs in SYN-SENT)",
+ "code_md5": {
+  "analyze_nll.py": "a8e28d735d84c09a23fac97ea96fbf83",
+  "battery.py": "400bc9970b6b33c7bac795f48693fd40",
+  "check_patch.py": "cc0e4480bce3eb9b75d64e0716985683",
+  "check_vllm_arm.py": "f734a6deadaeaa3d3ae60c6001fc9797",
+  "lesion_nll.py": "d09f93eaa576c65465689219188cac6a",
+  "patch_olmo.py": "83e7869f2de4ee46e19079987a6fb660",
+  "prep_nll.py": "4c711a20dc9d4140812545529a814073",
+  "local_chain.sh": "3f0a887d6d75aa47655ec7b1228e780f",
+  "score_think.py": "dd55b9affc1c25465a5fd1fcc4709007",
+  "spark_chain.sh": "f079e377c5d19578883b683fa85f516b",
+  "spark_lora.sh": "246e91764508e3a614a4d984c422ac9a",
+  "stage_spark.sh": "62e2b6f1acbc09542982523cfe3dbaa9",
+  "test_train_olmo_cpu.py": "5490351f61a6ece5aa3f87f667f84fab",
+  "think_decode.py": "cf5a00ea1b81d6ac672a3e0d8d3408b0",
+  "think_vllm.py": "ef793d42cbc8e97d36245f0929f881c5",
+  "train_olmo.py": "855e01183e81b917a4f51f12115ae1fb",
+  "vllm_arm.py": "a2528e3d6d98ae4fd8b12898b2a95dc1"
+ }
+}

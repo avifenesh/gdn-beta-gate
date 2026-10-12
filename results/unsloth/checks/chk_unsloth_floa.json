@@ -1,0 +1,180 @@
+{
+ "args": {
+  "stack": "unsloth",
+  "model": "<models>/Qwen3.5-4B-Base",
+  "data": "<data>/broad/tulu3_permissive.parquet",
+  "adapters": "<runs>/broad/pilot6/sft_wide_s0/ckpt_step50.pt",
+  "ref": "ref_floa.pt",
+  "dtype": "float32",
+  "n_ex": 24,
+  "out": "chk_unsloth_floa.json"
+ },
+ "info": {
+  "path": "unsloth",
+  "arm": "wide",
+  "gate_prebuild": {
+   "file_forward": "3eb0766c38019a1a",
+   "live_forward": "bd25761e1031fff0",
+   "live_is_file": true,
+   "gate_forward_code": "<work>/venv-fast/lib/python3.12/site-packages/transformers/integrations/accelerate.py"
+  },
+  "loaded_class": "Qwen3_5ForConditionalGeneration",
+  "gdn_after_load": {
+   "file_forward": "3eb0766c38019a1a",
+   "live_forward": "5ff84da37940d284",
+   "live_is_file": false
+  },
+  "n_gate_params": 24,
+  "n_lora": 8675328,
+  "n_w": 1966080,
+  "n_lora_tensors": 192
+ },
+ "adapters_loaded": 216,
+ "n_ex": 24,
+ "lens": [
+  782,
+  486,
+  228,
+  136,
+  745,
+  270,
+  898,
+  229,
+  1797,
+  542,
+  607,
+  165,
+  1882,
+  1990,
+  382,
+  2347,
+  204,
+  1917,
+  142,
+  54,
+  89,
+  282,
+  76,
+  215
+ ],
+ "torch": "2.14.0+cu130",
+ "gpu": "NVIDIA GB10",
+ "param_dtypes": [
+  "torch.float32"
+ ],
+ "bounds": {
+  "metric": {
+   "full": 0.0011739383502027757,
+   "head64": 0.0001313067215561529,
+   "head8": 0.0001535014933012409
+  },
+  "total": 1.136961386103943e-05,
+  "grad": {
+   "lora": 0.039938760379552844,
+   "gate": 0.06820738447666168
+  }
+ },
+ "gate_proof": {
+  "gdn_layers": 24,
+  "forward_code_files": [
+   "<wg_forward>"
+  ],
+  "instance_bound": true,
+  "beta_calls": 24,
+  "beta_fns": [
+   "_wg_beta"
+  ],
+  "arms": [
+   "wide"
+  ]
+ },
+ "green": {
+  "dev": {
+   "full": 0.00041711635469665257,
+   "head64": 6.935865775388964e-05,
+   "head8": 4.2399827477514994e-05
+  },
+  "total_rel": 2.1819077064524727e-06,
+  "grad_rel": {
+   "lora": 0.0068015907891094685,
+   "gate": 0.012246061116456985
+  },
+  "engaged": {
+   "attn": 16,
+   "gdn": 48,
+   "conv": 48
+  },
+  "total": 6022.44140625,
+  "ratio_to_bound": {
+   "metric_full": 0.3553136794829163,
+   "metric_head64": 0.5282186390148248,
+   "metric_head8": 0.2762176873048846,
+   "total": 0.19190693132765713,
+   "grad_lora": 0.1703004981744909,
+   "grad_gate": 0.17954157325365824
+  },
+  "ok": true
+ },
+ "red": {
+  "nogate": {
+   "dev": {
+    "full": 0.6884810287543074,
+    "head64": 0.3174118002653936,
+    "head8": 0.5359680748806139
+   },
+   "total_rel": 0.038691389231917374,
+   "grad_rel": {
+    "lora": 1.434814691543579,
+    "gate": 1.0
+   },
+   "engaged": {
+    "attn": 16,
+    "gdn": 0,
+    "conv": 0
+   },
+   "total": 6255.4716796875,
+   "ratio_to_bound": {
+    "metric_full": 586.4711964094071,
+    "metric_head64": 2417.3309370888032,
+    "metric_head8": 3491.6147286515106,
+    "total": 3403.052179678874,
+    "grad_lora": 35.92536868716012,
+    "grad_gate": 14.661169133998492
+   },
+   "max_ratio": 3491.6147286515106,
+   "detected": true
+  },
+  "clamp1": {
+   "dev": {
+    "full": 0.13163341753190913,
+    "head64": 0.020283990044613075,
+    "head8": 0.021483635637142857
+   },
+   "total_rel": 0.0046072765267299465,
+   "grad_rel": {
+    "lora": 0.5415520071983337,
+    "gate": 0.7917581796646118
+   },
+   "engaged": {
+    "attn": 16,
+    "gdn": 48,
+    "conv": 48
+   },
+   "total": 6050.20166015625,
+   "ratio_to_bound": {
+    "metric_full": 112.12975324400293,
+    "metric_head64": 154.47792621902218,
+    "metric_head8": 139.95717680076265,
+    "total": 405.22717684527777,
+    "grad_lora": 13.55955973725184,
+    "grad_gate": 11.608100585289638
+   },
+   "max_ratio": 405.22717684527777,
+   "detected": true
+  }
+ },
+ "why": [],
+ "verdict": "PASS",
+ "seconds": 325.5,
+ "peak_gib": 28.25
+}

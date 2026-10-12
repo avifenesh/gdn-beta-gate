@@ -1,0 +1,24 @@
+=== untouched adopted from <repo>/results/ml7_4b/step12_box
+=== warmup adopted from <repo>/results/ml7_4b/step12_box
+=== ctrl_0 adopted from <repo>/results/ml7_4b/step12_box
+=== ctrl_1 adopted from <repo>/results/ml7_4b/step12_box
+=== ctrl_2 adopted from <repo>/results/ml7_4b/step12_box
+=== wide_0 adopted from <repo>/results/ml7_4b/step12_box
+=== wide_1 adopted from <repo>/results/ml7_4b/step12_box
+=== wide_2 adopted from <repo>/results/ml7_4b/step12_box
+=== wide1_0 adopted from <repo>/results/ml7_4b/step12_box
+=== wide1_1 adopted from <repo>/results/ml7_4b/step12_box
+=== wide1_2 adopted from <repo>/results/ml7_4b/step12_box
+queued pms12_ctrlpm_0
+queued pms12_ctrlpm_1
+queued pms12_ctrlpm_2
+=== readouts queued 2026-10-11T23:00:08+00:00: pms12_ctrlpm_0 pms12_ctrlpm_1 pms12_ctrlpm_2
+=== ctrlpm_0 start 2026-10-11T23:00:23+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s0_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step12_ctrlpm/readout_val_ctrlpm_0.json --probe_effect 0.05 --rank 20
+=== ctrlpm_2 start 2026-10-11T23:00:23+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s2_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step12_ctrlpm/readout_val_ctrlpm_2.json --probe_effect 0.05 --rank 20
+=== ctrlpm_1 start 2026-10-11T23:00:23+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <models>/Qwen3.5-4B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrlpm_s1_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7_4b/step12_ctrlpm/readout_val_ctrlpm_1.json --probe_effect 0.05 --rank 20
+=== ctrlpm_2 ok wall=453s gpu 2
+=== ctrlpm_1 ok wall=602s gpu 1
+=== ctrlpm_0 ok wall=933s gpu 0
+wait: 3 jobs terminal, failed []
+=== analysis start 2026-10-11T23:17:08+00:00
+=== analysis ok (<repo>/results/ml7_4b/step12_ctrlpm/analysis_val.json)

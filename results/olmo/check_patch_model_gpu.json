@@ -1,0 +1,291 @@
+{
+ "pass": true,
+ "mode": "model-gpu",
+ "model": "<hf-cache>/models--allenai--Olmo-Hybrid-7B/snapshots/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf",
+ "device": "cuda",
+ "ids_shape": [
+  2,
+  1024
+ ],
+ "checks": [
+  {
+   "check": "library: stock logits bit-identical",
+   "pass": true
+  },
+  {
+   "check": "library: stock kernel betas bit-identical",
+   "pass": true,
+   "n_layers": 24
+  },
+  {
+   "check": "input has positions with 2s > 1",
+   "pass": true,
+   "frac": 0.41073404947916664
+  },
+  {
+   "check": "stock : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"stock\"}"
+  },
+  {
+   "check": "stock red arm: differs from erase expectation",
+   "pass": true
+  },
+  {
+   "check": "stock logits equal library",
+   "pass": true
+  },
+  {
+   "check": "half : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"half\"}"
+  },
+  {
+   "check": "half  red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "half : logits differ from stock",
+   "pass": true,
+   "max_abs": 25.15625
+  },
+  {
+   "check": "erase : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"erase\"}"
+  },
+  {
+   "check": "erase  red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "erase : logits differ from stock",
+   "pass": true,
+   "max_abs": 17.921875
+  },
+  {
+   "check": "layer 0: betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"layer\", \"gdn_index\": 0, \"model_layer\": 0}"
+  },
+  {
+   "check": "layer 0 red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "layer 0: logits differ from stock",
+   "pass": true,
+   "max_abs": 11.0625
+  },
+  {
+   "check": "layer 0: untouched layers/heads exactly stock",
+   "pass": true
+  },
+  {
+   "check": "layer 0: clamps at least one 2s > 1 position",
+   "pass": true,
+   "n": 53353
+  },
+  {
+   "check": "layer 12: betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"layer\", \"gdn_index\": 12, \"model_layer\": 16}"
+  },
+  {
+   "check": "layer 12 red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "layer 12: logits differ from stock",
+   "pass": true,
+   "max_abs": 1.6875
+  },
+  {
+   "check": "layer 12: untouched layers/heads exactly stock",
+   "pass": true
+  },
+  {
+   "check": "layer 12: clamps at least one 2s > 1 position",
+   "pass": true,
+   "n": 8220
+  },
+  {
+   "check": "heads : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"heads\", \"n_heads\": 72, \"heads\": {\"0\": [1, 8, 12, 13, 14, 15, 16, 19, 20, 23, 24, 27], \"3\": [18], \"4\": [28], \"5\""
+  },
+  {
+   "check": "heads  red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "heads : logits differ from stock",
+   "pass": true,
+   "max_abs": 7.375
+  },
+  {
+   "check": "heads : untouched layers/heads exactly stock",
+   "pass": true
+  },
+  {
+   "check": "heads : clamps at least one 2s > 1 position",
+   "pass": true,
+   "n": 142440
+  },
+  {
+   "check": "gate R=2.0 W=0: betas equal stock",
+   "pass": true
+  },
+  {
+   "check": "gate R=2 W=0: logits bit-identical to library",
+   "pass": true
+  },
+  {
+   "check": "gate R=2.0: W gets a gradient at W=0",
+   "pass": true,
+   "grad_norm": 55.088068187236786
+  },
+  {
+   "check": "gate R=2 random W (red arm for the bound): beta exceeds 1",
+   "pass": true,
+   "max": 2.0,
+   "min": 0.0
+  },
+  {
+   "check": "gate R=1.0 W=0: betas equal erase",
+   "pass": true
+  },
+  {
+   "check": "gate R=1.0: W gets a gradient at W=0",
+   "pass": true,
+   "grad_norm": 25.243520468473434
+  },
+  {
+   "check": "gate R=1 random W: beta never exceeds 1",
+   "pass": true,
+   "max": 1.0,
+   "min": 0.0
+  }
+ ],
+ "torch": "2.14.0+cu130",
+ "transformers": "5.17.0",
+ "wall_s": 90.3,
+ "top_heads_k": 72,
+ "top_heads": {
+  "8": [
+   0,
+   8,
+   19,
+   27
+  ],
+  "10": [
+   13,
+   22
+  ],
+  "13": [
+   8
+  ],
+  "14": [
+   11,
+   28
+  ],
+  "16": [
+   4,
+   7,
+   23
+  ],
+  "22": [
+   2,
+   6,
+   9,
+   12,
+   19,
+   22,
+   26
+  ],
+  "17": [
+   10,
+   13,
+   19,
+   22
+  ],
+  "23": [
+   1,
+   6,
+   7,
+   9,
+   16,
+   19,
+   24,
+   29
+  ],
+  "21": [
+   15,
+   24,
+   27
+  ],
+  "20": [
+   8,
+   10,
+   12,
+   21,
+   27,
+   29
+  ],
+  "0": [
+   1,
+   8,
+   12,
+   13,
+   14,
+   15,
+   16,
+   19,
+   20,
+   23,
+   24,
+   27
+  ],
+  "18": [
+   28
+  ],
+  "6": [
+   1,
+   13,
+   17
+  ],
+  "19": [
+   2,
+   6,
+   7,
+   15,
+   18,
+   21,
+   22,
+   27
+  ],
+  "12": [
+   19
+  ],
+  "9": [
+   27
+  ],
+  "5": [
+   1,
+   12
+  ],
+  "15": [
+   9
+  ],
+  "3": [
+   18
+  ],
+  "7": [
+   12
+  ],
+  "4": [
+   28
+  ]
+ },
+ "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU"
+}

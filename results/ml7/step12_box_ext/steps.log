@@ -1,0 +1,37 @@
+reuse: readout_vllm.py 9ef24b622b545ab0 accepted against the reused set's 87e8ba32abfe9882: documented amendments: 9ef24b622b54<-7239c503181f (readout_probe_effect.diff) <- 7239c503181f<-87e8ba32abfe (readout_parity_k.diff)
+=== untouched adopted from <repo>/results/ml7/step12_box
+=== warmup adopted from <repo>/results/ml7/step12_box
+=== untouched kept (<repo>/results/ml7/step12_box_ext/readout_val_untouched.json)
+=== warmup kept (<repo>/results/ml7/step12_box_ext/readout_val_warmup.json)
+queued exs12_ctrl_3
+queued exs12_ctrl_4
+queued exs12_ctrl_5
+queued exs12_wide_3
+queued exs12_wide_4
+queued exs12_wide_5
+queued exs12_wide1_3
+queued exs12_wide1_4
+queued exs12_wide1_5
+=== readouts queued 2026-10-11T13:38:11+00:00: exs12_ctrl_3 exs12_ctrl_4 exs12_ctrl_5 exs12_wide_3 exs12_wide_4 exs12_wide_5 exs12_wide1_3 exs12_wide1_4 exs12_wide1_5
+=== ctrl_3 start 2026-10-11T13:38:24+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_ctrl_3.json
+=== ctrl_4 start 2026-10-11T13:38:24+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_ctrl_4.json
+=== wide1_3 start 2026-10-11T13:38:24+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_wide1_3.json
+=== ctrl_5 start 2026-10-11T13:38:24+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_ctrl_5.json
+=== wide1_4 start 2026-10-11T13:38:24+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_wide1_4.json
+=== wide1_5 start 2026-10-11T13:38:24+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_wide1_5.json
+=== wide1_4 ok wall=761s gpu 7
+=== wide_3 start 2026-10-11T13:51:09+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_wide_3.json
+=== wide1_3 ok wall=778s gpu 6
+=== wide_4 start 2026-10-11T13:51:24+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_wide_4.json
+=== wide1_5 ok wall=865s gpu 7
+=== wide_5 start 2026-10-11T13:52:54+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12_box_ext/readout_val_wide_5.json
+=== ctrl_5 ok wall=906s gpu 6
+=== ctrl_3 ok wall=1017s gpu 5
+=== ctrl_4 ok wall=1063s gpu 5
+=== wide_4 ok wall=414s gpu 6
+=== wide_5 ok wall=464s gpu 7
+=== wide_3 ok wall=677s gpu 7
+wait: 9 jobs terminal, failed []
+=== analysis start 2026-10-11T14:03:51+00:00: 9 of 9 arm runs
+=== analysis ok (<repo>/results/ml7/step12_box_ext/analysis_val.json); figures not drawn on the box
+=== step 12 box set: 9 of 9 arm runs read

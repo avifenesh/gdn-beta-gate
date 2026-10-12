@@ -1,0 +1,18 @@
+{
+ "n_items": 9284,
+ "suffix_sha": "e29dab4489c6665b",
+ "4B_identical_thinking_prompts": 9284,
+ "4B_special_ids_equal": true,
+ "4B_force_ids_equal": true,
+ "9B_identical_thinking_prompts": 9284,
+ "9B_special_ids_equal": true,
+ "9B_force_ids_equal": true,
+ "red_default_2B_vs_4B_differ": true,
+ "red_default_4B_equals_thinking": true,
+ "pass": true,
+ "models": {
+  "2B": "<runs>/broad/models/Qwen3.5-2B",
+  "4B": "<hf-cache>/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "9B": "<models>/qwen3.5-9b-bf16-c202236"
+ }
+}

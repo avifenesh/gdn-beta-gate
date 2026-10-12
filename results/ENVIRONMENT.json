@@ -1,0 +1,3239 @@
+{
+ "note": "env blocks of the released readouts; code_sha256 values refer to the lab files before the publication scrub (see results/README.md)",
+ "by_record": {
+  "results/fresh": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+   ]
+  },
+  "results/ml7/step12": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA GeForce RTX 5090 Laptop GPU"
+   ],
+   "model_revision": [
+    "15852e8c16360a2fea060d615a32b45270f8a8fc"
+   ]
+  },
+  "results/ml7/step12_box": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    null
+   ]
+  },
+  "results/ml7/step12_box_ext": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    null
+   ]
+  },
+  "results/ml7/step14": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    null
+   ]
+  },
+  "results/ml7/step14_ext": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    null
+   ]
+  },
+  "results/ml7_4b/pilots": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+   ]
+  },
+  "results/ml7_4b/step12_box": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+   ]
+  },
+  "results/ml7_4b/step12_ctrlpm": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+   ]
+  },
+  "results/ml7_4b/step14": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+   ]
+  },
+  "results/ml7_4b/step14_ctrlpm": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+   ],
+   "model_revision": [
+    "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+   ]
+  }
+ },
+ "readouts": {
+  "results/fresh/readout_fresh_2b_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "de2794c085f5096fea53374ba1cea31075071bb6de3f227bb3350b3035970447"
+   }
+  },
+  "results/fresh/readout_fresh_2b_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "cba95c4d3f2bf63245af2ef1ad5d44e3cd6db78262a1188b655faff5cde74d4d"
+   }
+  },
+  "results/fresh/readout_fresh_2b_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "f24ec97c3e13aaf41e579b3af6b9e8e7b1c6a59d7145a00cf2a209d4115c080a"
+   }
+  },
+  "results/fresh/readout_fresh_2b_ctrl_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "4ffd0521deaffe5d1c83754669e37dde9d221116508af50c5e91858188c19261"
+   }
+  },
+  "results/fresh/readout_fresh_2b_ctrl_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "7ed77611780acf2509f4ae93c1fb08d8e5cb3c628e89688b5eec287af20efb94"
+   }
+  },
+  "results/fresh/readout_fresh_2b_ctrl_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "232b90bd550cbf99371cf152d114b4781f81d48d7e68d57288cc258075a2f42d"
+   }
+  },
+  "results/fresh/readout_fresh_2b_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": null
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "85556ef22766c2bd94a2ce3c8aaeccd11d2ba00e7e942353acb9e6a9fc51cb8b"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "a705fb7cbfcac3a425fd8f9822a4e5236368a6e9a599bcb466573e62f6d2ddc6"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "85a50db9b497dba72c06ff925c875602aaf37f46eaf2115154f9e28384cd2072"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide1_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "52e283109e14bcf7529099de0140a8ccd5099b284bb3f209cc611bdb8cdeedaf"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide1_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "3f77f0b5f1a18b944f38f8f9c74757a27e1152c94918c8b7ea78c433160d9886"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide1_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "8adf991b4732e217bf68337633ebaf8783613556887e4eb5178ce3d32ab469c7"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "6130ec91c41bc00476e580d87948da78de29c372a118ffc9c7e69dc00fbeebb2"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "309fc607114be4802a27789831e8afcb1abbe3220da62ebd8cbc6cfde0982880"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "ecefb0a8ea87bb3b903f1dbb9ac819f69413f6d6bb5e50eabedd1d4ddf4ac299"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "77d41edc06acb4ed6c98a092b0bc819c6f037fa144ec500309f2301e11694665"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "d0e63e046df42072261d6b4679fb80ba17e2000cb62fa54577b7845aeb09dd98"
+   }
+  },
+  "results/fresh/readout_fresh_2b_wide_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "c9e4641cc35e54a2eb8ef73321e0d327a29b159be45bba2207b889ba9a99b802"
+   }
+  },
+  "results/fresh/readout_fresh_4b_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/fresh/readout_fresh_4b_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/fresh/readout_fresh_4b_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/fresh/readout_fresh_4b_ctrlpm_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "61b584708baf533e2a8eb28ad448775201e3562ffaa35837a460e8ba1e4e876a"
+   }
+  },
+  "results/fresh/readout_fresh_4b_ctrlpm_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "6784dac5bb587cc41188323375284b0b8077abb78cdfe42f5922bb2f468eaf9d"
+   }
+  },
+  "results/fresh/readout_fresh_4b_ctrlpm_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "29bcfa7835f2f05b98ef6e75353a115a555f70be396b1bf12fe7cdc55ddf2e5b"
+   }
+  },
+  "results/fresh/readout_fresh_4b_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": null
+   }
+  },
+  "results/fresh/readout_fresh_4b_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/fresh/readout_fresh_4b_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/fresh/readout_fresh_4b_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/fresh/readout_fresh_4b_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/fresh/readout_fresh_4b_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/fresh/readout_fresh_4b_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/fresh/readout_fresh_4b_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7/step12/readout_val_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "de2794c085f5096fea53374ba1cea31075071bb6de3f227bb3350b3035970447"
+   }
+  },
+  "results/ml7/step12/readout_val_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "cba95c4d3f2bf63245af2ef1ad5d44e3cd6db78262a1188b655faff5cde74d4d"
+   }
+  },
+  "results/ml7/step12/readout_val_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step12/readout_val_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step12/readout_val_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "85556ef22766c2bd94a2ce3c8aaeccd11d2ba00e7e942353acb9e6a9fc51cb8b"
+   }
+  },
+  "results/ml7/step12/readout_val_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "a705fb7cbfcac3a425fd8f9822a4e5236368a6e9a599bcb466573e62f6d2ddc6"
+   }
+  },
+  "results/ml7/step12/readout_val_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "85a50db9b497dba72c06ff925c875602aaf37f46eaf2115154f9e28384cd2072"
+   }
+  },
+  "results/ml7/step12/readout_val_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "6130ec91c41bc00476e580d87948da78de29c372a118ffc9c7e69dc00fbeebb2"
+   }
+  },
+  "results/ml7/step12_box/readout_val_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "de2794c085f5096fea53374ba1cea31075071bb6de3f227bb3350b3035970447"
+   }
+  },
+  "results/ml7/step12_box/readout_val_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "cba95c4d3f2bf63245af2ef1ad5d44e3cd6db78262a1188b655faff5cde74d4d"
+   }
+  },
+  "results/ml7/step12_box/readout_val_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "f24ec97c3e13aaf41e579b3af6b9e8e7b1c6a59d7145a00cf2a209d4115c080a"
+   }
+  },
+  "results/ml7/step12_box/readout_val_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step12_box/readout_val_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step12_box/readout_val_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "85556ef22766c2bd94a2ce3c8aaeccd11d2ba00e7e942353acb9e6a9fc51cb8b"
+   }
+  },
+  "results/ml7/step12_box/readout_val_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "a705fb7cbfcac3a425fd8f9822a4e5236368a6e9a599bcb466573e62f6d2ddc6"
+   }
+  },
+  "results/ml7/step12_box/readout_val_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "85a50db9b497dba72c06ff925c875602aaf37f46eaf2115154f9e28384cd2072"
+   }
+  },
+  "results/ml7/step12_box/readout_val_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "6130ec91c41bc00476e580d87948da78de29c372a118ffc9c7e69dc00fbeebb2"
+   }
+  },
+  "results/ml7/step12_box/readout_val_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "309fc607114be4802a27789831e8afcb1abbe3220da62ebd8cbc6cfde0982880"
+   }
+  },
+  "results/ml7/step12_box/readout_val_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "ecefb0a8ea87bb3b903f1dbb9ac819f69413f6d6bb5e50eabedd1d4ddf4ac299"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_ctrl_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "4ffd0521deaffe5d1c83754669e37dde9d221116508af50c5e91858188c19261"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_ctrl_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "7ed77611780acf2509f4ae93c1fb08d8e5cb3c628e89688b5eec287af20efb94"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_ctrl_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "232b90bd550cbf99371cf152d114b4781f81d48d7e68d57288cc258075a2f42d"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_wide1_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "52e283109e14bcf7529099de0140a8ccd5099b284bb3f209cc611bdb8cdeedaf"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_wide1_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "3f77f0b5f1a18b944f38f8f9c74757a27e1152c94918c8b7ea78c433160d9886"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_wide1_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "8adf991b4732e217bf68337633ebaf8783613556887e4eb5178ce3d32ab469c7"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_wide_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "77d41edc06acb4ed6c98a092b0bc819c6f037fa144ec500309f2301e11694665"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_wide_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "d0e63e046df42072261d6b4679fb80ba17e2000cb62fa54577b7845aeb09dd98"
+   }
+  },
+  "results/ml7/step12_box_ext/readout_val_wide_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "c9e4641cc35e54a2eb8ef73321e0d327a29b159be45bba2207b889ba9a99b802"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "de2794c085f5096fea53374ba1cea31075071bb6de3f227bb3350b3035970447"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "cba95c4d3f2bf63245af2ef1ad5d44e3cd6db78262a1188b655faff5cde74d4d"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "f24ec97c3e13aaf41e579b3af6b9e8e7b1c6a59d7145a00cf2a209d4115c080a"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "85556ef22766c2bd94a2ce3c8aaeccd11d2ba00e7e942353acb9e6a9fc51cb8b"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "a705fb7cbfcac3a425fd8f9822a4e5236368a6e9a599bcb466573e62f6d2ddc6"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "85a50db9b497dba72c06ff925c875602aaf37f46eaf2115154f9e28384cd2072"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "6130ec91c41bc00476e580d87948da78de29c372a118ffc9c7e69dc00fbeebb2"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "309fc607114be4802a27789831e8afcb1abbe3220da62ebd8cbc6cfde0982880"
+   }
+  },
+  "results/ml7/step14/readout_gsm8k_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "ecefb0a8ea87bb3b903f1dbb9ac819f69413f6d6bb5e50eabedd1d4ddf4ac299"
+   }
+  },
+  "results/ml7/step14/readout_math500_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "de2794c085f5096fea53374ba1cea31075071bb6de3f227bb3350b3035970447"
+   }
+  },
+  "results/ml7/step14/readout_math500_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "cba95c4d3f2bf63245af2ef1ad5d44e3cd6db78262a1188b655faff5cde74d4d"
+   }
+  },
+  "results/ml7/step14/readout_math500_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "f24ec97c3e13aaf41e579b3af6b9e8e7b1c6a59d7145a00cf2a209d4115c080a"
+   }
+  },
+  "results/ml7/step14/readout_math500_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step14/readout_math500_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step14/readout_math500_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "85556ef22766c2bd94a2ce3c8aaeccd11d2ba00e7e942353acb9e6a9fc51cb8b"
+   }
+  },
+  "results/ml7/step14/readout_math500_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "a705fb7cbfcac3a425fd8f9822a4e5236368a6e9a599bcb466573e62f6d2ddc6"
+   }
+  },
+  "results/ml7/step14/readout_math500_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "85a50db9b497dba72c06ff925c875602aaf37f46eaf2115154f9e28384cd2072"
+   }
+  },
+  "results/ml7/step14/readout_math500_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "6130ec91c41bc00476e580d87948da78de29c372a118ffc9c7e69dc00fbeebb2"
+   }
+  },
+  "results/ml7/step14/readout_math500_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "309fc607114be4802a27789831e8afcb1abbe3220da62ebd8cbc6cfde0982880"
+   }
+  },
+  "results/ml7/step14/readout_math500_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "ecefb0a8ea87bb3b903f1dbb9ac819f69413f6d6bb5e50eabedd1d4ddf4ac299"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_ctrl_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "4ffd0521deaffe5d1c83754669e37dde9d221116508af50c5e91858188c19261"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_ctrl_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "7ed77611780acf2509f4ae93c1fb08d8e5cb3c628e89688b5eec287af20efb94"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_ctrl_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "232b90bd550cbf99371cf152d114b4781f81d48d7e68d57288cc258075a2f42d"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_wide1_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "52e283109e14bcf7529099de0140a8ccd5099b284bb3f209cc611bdb8cdeedaf"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_wide1_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "3f77f0b5f1a18b944f38f8f9c74757a27e1152c94918c8b7ea78c433160d9886"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_wide1_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "8adf991b4732e217bf68337633ebaf8783613556887e4eb5178ce3d32ab469c7"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_wide_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "77d41edc06acb4ed6c98a092b0bc819c6f037fa144ec500309f2301e11694665"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_wide_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "d0e63e046df42072261d6b4679fb80ba17e2000cb62fa54577b7845aeb09dd98"
+   }
+  },
+  "results/ml7/step14_ext/readout_gsm8k_wide_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "c9e4641cc35e54a2eb8ef73321e0d327a29b159be45bba2207b889ba9a99b802"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_ctrl_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "4ffd0521deaffe5d1c83754669e37dde9d221116508af50c5e91858188c19261"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_ctrl_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "7ed77611780acf2509f4ae93c1fb08d8e5cb3c628e89688b5eec287af20efb94"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_ctrl_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "232b90bd550cbf99371cf152d114b4781f81d48d7e68d57288cc258075a2f42d"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": null
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": null,
+   "code_sha256": {
+    "readout_vllm.py": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "4c3bfae1388877745ddf916f8165984f913290012a37d1f925dcc2146b657eeb"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_wide1_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "52e283109e14bcf7529099de0140a8ccd5099b284bb3f209cc611bdb8cdeedaf"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_wide1_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "3f77f0b5f1a18b944f38f8f9c74757a27e1152c94918c8b7ea78c433160d9886"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_wide1_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "8adf991b4732e217bf68337633ebaf8783613556887e4eb5178ce3d32ab469c7"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_wide_3.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "77d41edc06acb4ed6c98a092b0bc819c6f037fa144ec500309f2301e11694665"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_wide_4.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "d0e63e046df42072261d6b4679fb80ba17e2000cb62fa54577b7845aeb09dd98"
+   }
+  },
+  "results/ml7/step14_ext/readout_math500_wide_5.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "c9e4641cc35e54a2eb8ef73321e0d327a29b159be45bba2207b889ba9a99b802"
+   }
+  },
+  "results/ml7_4b/pilots/readout_val_pilot1024.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "01c632f8ae088ab507b651a8a82237b6a0d4ff621b6ec3c90508e8b95926780c"
+   }
+  },
+  "results/ml7_4b/pilots/readout_val_pilot2048.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "87c7767bc34930489d60ad7e72de6eb8ad322052c237c9971e108f78c57ed8b1"
+   }
+  },
+  "results/ml7_4b/pilots/readout_val_pilot512.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "b3624d18f01b671384f6aac0f9cde5dfc96239395f50b0e6a4976e0a82f821c7"
+   }
+  },
+  "results/ml7_4b/pilots/readout_val_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": null
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/ml7_4b/step12_box/readout_val_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_ctrlpm_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "61b584708baf533e2a8eb28ad448775201e3562ffaa35837a460e8ba1e4e876a"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_ctrlpm_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "6784dac5bb587cc41188323375284b0b8077abb78cdfe42f5922bb2f468eaf9d"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_ctrlpm_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "29bcfa7835f2f05b98ef6e75353a115a555f70be396b1bf12fe7cdc55ddf2e5b"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": null
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/ml7_4b/step12_ctrlpm/readout_val_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": null
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/ml7_4b/step14/readout_gsm8k_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": null
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/ml7_4b/step14/readout_math500_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrlpm_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "61b584708baf533e2a8eb28ad448775201e3562ffaa35837a460e8ba1e4e876a"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrlpm_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "6784dac5bb587cc41188323375284b0b8077abb78cdfe42f5922bb2f468eaf9d"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_ctrlpm_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "29bcfa7835f2f05b98ef6e75353a115a555f70be396b1bf12fe7cdc55ddf2e5b"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": null
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_gsm8k_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "600215565f76f23acc786e09dfa49c3543b1909d3543e1a0354345eb51f6050e"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "f175d9680f9838d0266339d562340b951772c51c4b5e7708e021923d898ed6c1"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "10c693215a8e8e66921e50e37526896447feb37d902840246e12d56ba39a8c2c"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_ctrlpm_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "61b584708baf533e2a8eb28ad448775201e3562ffaa35837a460e8ba1e4e876a"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_ctrlpm_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "6784dac5bb587cc41188323375284b0b8077abb78cdfe42f5922bb2f468eaf9d"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_ctrlpm_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "29bcfa7835f2f05b98ef6e75353a115a555f70be396b1bf12fe7cdc55ddf2e5b"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": null
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_warmup.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "1d779bed4b26afc97947cdab446e3865f4137ede71ce6768e5ae3ccf45fedb25"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "92d135f1fa20ed35dc27f38b6ea97a928a6d9008f16beefccfdcfddbd5926ece"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "98b276d9bc220d5f7a34eb817151f4e75cfe2b5ba2c81d65adbc92da4f3f7da6"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_wide_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "27eb181d6db85dba42b2e021feecc4aa98976cd39c8a9744e0c89740df0c0d3b"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_wide_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "e14f8d3995b907e26408fc4e8259f0b3ba5154caf9dc5256506f6e04e15cba84"
+   }
+  },
+  "results/ml7_4b/step14_ctrlpm/readout_math500_wide_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "code_sha256": {
+    "readout_vllm.py": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+    "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  }
+ }
+}

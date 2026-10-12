@@ -1,0 +1,10 @@
+{
+  "test_fingerprint": "0296684921671d7736c9b193921befd0eb57d37618453e43c28bcb1fc8cd4b7e",
+  "n_test": 130,
+  "test_touches": 1,
+  "duplicates_dropped": 0,
+  "split": "fixed_external_test (fresh, Phase 5)",
+  "created": "2026-10-12",
+  "test_frame": "columns id, problem, answer; rows of test_fresh.jsonl, file order",
+  "record": "fresh held-out set read by the Qwen3.5-4B and Qwen3.5-2B arms of lane wg, touch count 1"
+}

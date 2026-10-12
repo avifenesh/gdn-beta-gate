@@ -1,0 +1,5 @@
+left_id,right_id,ratio,ratio_masked,same_answer
+gsm8k_test:602,gsm8k_train:gsm8k_train1314,0.9453,0.9756,False
+gsm8k_test:602,gsm8k_train:gsm8k_train5162,0.9453,0.9756,False
+gsm8k_test:632,gsm8k_train:gsm8k_train20,0.9556,0.9674,False
+gsm8k_test:824,gsm8k_train:gsm8k_train3726,0.8936,0.9147,False

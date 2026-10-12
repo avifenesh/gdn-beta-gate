@@ -1,0 +1,70 @@
+reuse: gsm8k untouched adopted from <repo>/results/ml7/step14
+reuse: gsm8k warmup adopted from <repo>/results/ml7/step14
+reuse: math500 untouched adopted from <repo>/results/ml7/step14
+reuse: math500 warmup adopted from <repo>/results/ml7/step14
+=== gsm8k untouched kept (<repo>/results/ml7/step14_ext/readout_gsm8k_untouched.json)
+=== gsm8k warmup kept (<repo>/results/ml7/step14_ext/readout_gsm8k_warmup.json)
+queued exs14_gsm8k_ctrl_3
+queued exs14_gsm8k_ctrl_4
+queued exs14_gsm8k_ctrl_5
+queued exs14_gsm8k_wide_3
+queued exs14_gsm8k_wide_4
+queued exs14_gsm8k_wide_5
+queued exs14_gsm8k_wide1_3
+queued exs14_gsm8k_wide1_4
+queued exs14_gsm8k_wide1_5
+=== math500 untouched kept (<repo>/results/ml7/step14_ext/readout_math500_untouched.json)
+=== math500 warmup kept (<repo>/results/ml7/step14_ext/readout_math500_warmup.json)
+queued exs14_math500_ctrl_3
+queued exs14_math500_ctrl_4
+queued exs14_math500_ctrl_5
+queued exs14_math500_wide_3
+queued exs14_math500_wide_4
+queued exs14_math500_wide_5
+queued exs14_math500_wide1_3
+queued exs14_math500_wide1_4
+queued exs14_math500_wide1_5
+=== readouts queued 2026-10-11T14:04:57+00:00: exs14_gsm8k_ctrl_3 exs14_gsm8k_ctrl_4 exs14_gsm8k_ctrl_5 exs14_gsm8k_wide_3 exs14_gsm8k_wide_4 exs14_gsm8k_wide_5 exs14_gsm8k_wide1_3 exs14_gsm8k_wide1_4 exs14_gsm8k_wide1_5 exs14_math500_ctrl_3 exs14_math500_ctrl_4 exs14_math500_ctrl_5 exs14_math500_wide_3 exs14_math500_wide_4 exs14_math500_wide_5 exs14_math500_wide1_3 exs14_math500_wide1_4 exs14_math500_wide1_5
+=== math500 ctrl_3 start 2026-10-11T14:05:09+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_ctrl_3.json
+=== math500 ctrl_5 start 2026-10-11T14:05:09+00:00 gpu 4: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_ctrl_5.json
+=== math500 ctrl_4 start 2026-10-11T14:05:09+00:00 gpu 0: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_ctrl_4.json
+=== gsm8k ctrl_5 start 2026-10-11T14:05:09+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_ctrl_5.json
+=== gsm8k ctrl_3 start 2026-10-11T14:05:09+00:00 gpu 4: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_ctrl_3.json
+=== math500 wide1_5 start 2026-10-11T14:05:09+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_wide1_5.json
+=== gsm8k ctrl_4 start 2026-10-11T14:05:09+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_ctrl_4.json
+=== math500 wide1_3 start 2026-10-11T14:05:09+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_wide1_3.json
+=== math500 wide1_4 start 2026-10-11T14:05:09+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_wide1_4.json
+=== gsm8k wide1_3 start 2026-10-11T14:05:09+00:00 gpu 7: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide1_3.json
+=== gsm8k wide1_5 start 2026-10-11T14:07:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide1_5.json
+=== gsm8k wide1_4 start 2026-10-11T14:07:39+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide1_4.json
+=== math500 wide_3 start 2026-10-11T14:18:10+00:00 gpu 2: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_wide_3.json
+=== gsm8k wide1_4 ok wall=1502s gpu 1
+=== gsm8k wide1_5 ok wall=2087s gpu 1
+=== math500 wide_4 start 2026-10-11T14:42:40+00:00 gpu 1: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_wide_4.json
+=== math500 wide_5 start 2026-10-11T14:43:10+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_math500.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_math500_wide_5.json
+=== gsm8k wide_3 start 2026-10-11T14:43:10+00:00 gpu 3: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s3_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide_3.json
+=== gsm8k ctrl_5 ok wall=2326s gpu 5
+=== gsm8k wide_4 start 2026-10-11T14:43:55+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s4_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide_4.json
+=== gsm8k ctrl_3 ok wall=2349s gpu 4
+=== math500 wide1_4 ok wall=2519s gpu 6
+=== gsm8k wide_5 start 2026-10-11T14:47:10+00:00 gpu 6: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide_5.json
+=== math500 wide1_3 ok wall=2541s gpu 6
+=== gsm8k wide_5 FAIL rc=1 wall=23s (log <repo>/results/ml7/step14_ext/logs/gsm8k_wide_5.log)
+=== gsm8k ctrl_4 ok wall=2586s gpu 5
+=== gsm8k wide_5 start 2026-10-11T14:48:40+00:00 gpu 5: ~/.cache/gdn_gate/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/test_gsm8k.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s5_cap512_r_box/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step14_ext/readout_gsm8k_wide_5.json
+=== math500 ctrl_5 ok wall=2683s gpu 4
+=== math500 wide1_5 ok wall=2766s gpu 7
+=== math500 ctrl_3 ok wall=2810s gpu 0
+=== math500 ctrl_4 ok wall=2877s gpu 0
+=== math500 wide_3 ok wall=2697s gpu 2
+=== gsm8k wide_5 ok wall=942s gpu 5
+=== gsm8k wide_4 ok wall=1342s gpu 5
+=== gsm8k wide1_3 ok wall=3877s gpu 7
+=== math500 wide_4 ok wall=1741s gpu 1
+=== math500 wide_5 ok wall=2063s gpu 3
+=== gsm8k wide_3 ok wall=2540s gpu 3
+wait: 18 jobs terminal, failed []
+=== analysis gsm8k start 2026-10-11T15:26:57+00:00
+=== analysis gsm8k ok (<repo>/results/ml7/step14_ext/analysis_gsm8k.json)
+=== analysis math500 start 2026-10-11T15:26:59+00:00
+=== analysis math500 ok (<repo>/results/ml7/step14_ext/analysis_math500.json)

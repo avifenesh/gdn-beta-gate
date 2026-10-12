@@ -1,0 +1,4 @@
+{"val_loss": 1.322031997119304, "val_tokens": 26312, "gate_stat_mean": 0.0, "gate_stat_max": 0.0, "abs_t_mean": 0.0, "step": 0}
+{"val_loss": 1.2085027558421537, "val_tokens": 26312, "gate_stat_mean": 0.03556980178271058, "gate_stat_max": 0.12323006615042686, "abs_t_mean": 0.07896584522030833, "step": 300}
+{"val_loss": 1.2019777932983287, "val_tokens": 26312, "gate_stat_mean": 0.04765108934629502, "gate_stat_max": 0.12632725511988005, "abs_t_mean": 0.10985785016479592, "step": 700}
+{"val_loss": 1.197317854689044, "val_tokens": 26312, "gate_stat_mean": 0.054612071777228266, "gate_stat_max": 0.1671083097656568, "abs_t_mean": 0.13630998173418143, "step": 1200}

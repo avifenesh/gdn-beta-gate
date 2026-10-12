@@ -1,0 +1,27 @@
+{
+ "what": "step 6 SFT stack comparison on GB10: ours (train_sft.py --pack) vs Unsloth 2026.10.2 vs TRL 1.13 SFTTrainer padding-free + Liger 0.8.4",
+ "host": "<host>",
+ "lease": "sparklock gb10a 02:55-05:35 IDT 2026-10-08",
+ "worktree_git_describe": "f5dc762-dirty (wg code uncommitted by design)",
+ "model": "<work>/models/Qwen3.5-4B-Base (same snapshot as <hf-cache>/models--Qwen--Qwen3.5-4B-Base/snapshots/1001bb4d...)",
+ "data": "<data>/broad/tulu3_permissive.parquet, stream seed 0",
+ "adapters_for_checks": "<work>/runs/broad/pilot6/sft_wide_s0/ckpt_step50.pt (wide arm, 50 steps)",
+ "venv": "<work>/venv-fast (step 6 venv pins + unsloth 2026.10.2, unsloth_zoo 2026.10.2, trl 1.13.0, liger-kernel 0.8.4; datasets 4.8.5 and fsspec 2026.2.0 are the only shared packages that moved), freeze in venv-fast.freeze.txt",
+ "code": "src/gdn_gate/unsloth/{stacks.py,bench_fast.py,check_fast.py,report_fast.py,fast_job.sh,train_sft_fast.py,dump_init.py,setup_venv_fast.sh,jobs/sft_run_fast.sh,jobs/step6_worker_fast.sh}; md5 per job in ab/code.md5",
+ "commands": {
+  "checks": "fast_job.sh checks float32 | checks bfloat16 | checks bfloat16 4  (check_fast.py --stack ours|unsloth|trl --dtype D --wscale W --model M --data T --adapters A --ref ref.pt --out chk_*.json)",
+  "smoke": "fast_job.sh smoke 4",
+  "ab": "fast_job.sh ab 11 3 unsloth  (bench_fast.py --path P --gc unsloth --state ab --block_steps 11; rounds ordered [ours unsloth trl], [unsloth trl ours], [trl ours unsloth])",
+  "traj": "fast_job.sh traj 31  (ours dumps its initial trainables, unsloth starts from them)",
+  "final": "fast_job.sh initcheck <traj_init.pt>; fast_job.sh switch 3",
+  "wrapper": "spark_job.sh gb10a NAME MAX_S 'bash <work>/code/gdn_gate/unsloth/fast_job.sh ...' 8 (memguard 8 GiB floor)"
+ },
+ "wall": {
+  "checks32": "02:57-03:12",
+  "smoke+checks16": "03:13-03:35",
+  "ab": "03:36-04:37",
+  "post(bf16 W x4 + switch v1)": "04:38-04:51",
+  "traj": "04:52-05:26",
+  "final": "05:27-05:34"
+ }
+}

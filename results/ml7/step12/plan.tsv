@@ -1,0 +1,8 @@
+untouched	stock	none	<repo>/results/ml7/step12/readout_val_untouched.json	none	0
+warmup	ctrl	<runs>/ml7/grpo/ctrl_s0_cap512_fmt_gb10/ckpt_step40.pt	<repo>/results/ml7/step12/readout_val_warmup.json	<runs>/ml7/grpo/ctrl_s0_cap512_fmt_gb10	40
+ctrl_0	ctrl	<runs>/ml7/grpo/ctrl_s0_cap512_r_gb10/ckpt_step150.pt	<repo>/results/ml7/step12/readout_val_ctrl_0.json	<runs>/ml7/grpo/ctrl_s0_cap512_r_gb10	150
+ctrl_1	ctrl	<runs>/ml7/grpo/ctrl_s1_cap512_r_gb10/ckpt_step150.pt	<repo>/results/ml7/step12/readout_val_ctrl_1.json	<runs>/ml7/grpo/ctrl_s1_cap512_r_gb10	150
+wide_0	wide	<runs>/ml7/grpo/wide_s0_cap512_r_gb10/ckpt_step150.pt	<repo>/results/ml7/step12/readout_val_wide_0.json	<runs>/ml7/grpo/wide_s0_cap512_r_gb10	150
+wide1_0	wide1	<runs>/ml7/grpo/wide1_s0_cap512_r_gb10/ckpt_step150.pt	<repo>/results/ml7/step12/readout_val_wide1_0.json	<runs>/ml7/grpo/wide1_s0_cap512_r_gb10	150
+wide1_1	wide1	<runs>/ml7/grpo/wide1_s1_cap512_r_gb10/ckpt_step150.pt	<repo>/results/ml7/step12/readout_val_wide1_1.json	<runs>/ml7/grpo/wide1_s1_cap512_r_gb10	150
+wide1_2	wide1	<runs>/ml7/grpo/wide1_s2_cap512_r_gb10/ckpt_step150.pt	<repo>/results/ml7/step12/readout_val_wide1_2.json	<runs>/ml7/grpo/wide1_s2_cap512_r_gb10	150

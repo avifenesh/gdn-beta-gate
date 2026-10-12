@@ -1,0 +1,13 @@
+342a343,345
+> PARITY_K_OVERRIDE = {"wide_s2_cap512_r_gb10/ckpt_step150.pt": 2.5}
+> 
+> 
+432a436,439
+>         # parity_k 2.0, except the checkpoints listed in PARITY_K_OVERRIDE (owner approval 2026-10-11 ~10:50: step 14
+>         # GSM8K wide s2 failed the decode-path check at 2.03x vs 2.0x with every other check passing; 2.5 as in the
+>         # wide s1 training retry). The check is a pre-readout self-test; it does not touch the scored generations.
+>         pk = next((v for k, v in PARITY_K_OVERRIDE.items() if a.ckpt.endswith(k)), 2.0)
+434c441
+<                                     parity_k=2.0, parity_floor=1e-3, probe_effect=0.2, effect_corr=0.9,
+---
+>                                     parity_k=pk, parity_floor=1e-3, probe_effect=0.2, effect_corr=0.9,

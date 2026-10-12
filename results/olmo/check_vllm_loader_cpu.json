@@ -1,0 +1,129 @@
+{
+ "vllm": "0.30.1rc1.dev260+g7ba3df63c",
+ "files_md5": {
+  "vllm.model_executor.models.utils": "c8d721e8150c45399d85ddeb5805bd46",
+  "vllm.model_executor.layers.linear": "9c026f7d15dcb9200281013576e8eb82",
+  "vllm.model_executor.models.olmo_hybrid": "61bc9344a970692ef802656a92391b9d",
+  "vllm.model_executor.layers.mamba.gdn.olmo_gdn_linear_attn": "a08fb664167b4089ca52b167af59c2d4"
+ },
+ "target_class_has_load_weights": {
+  "qkv_proj": true,
+  "in_proj_qkvg": true,
+  "gate_up_proj": true,
+  "conv1d": false
+ },
+ "models": [
+  {
+   "model": "<hf-cache>/models--allenai--Olmo-Hybrid-Think-SFT-7B/snapshots/79d1f7f613a9f98169e6c9f00880ab2df4383860",
+   "n_tensors": 523,
+   "gdn_layers": 24,
+   "conv_tensors": 72,
+   "dims": {
+    "key_dim": 2880,
+    "value_dim": 5760,
+    "kernel": 4
+   },
+   "stacked_targets": {
+    "conv1d": [
+     "0",
+     "1",
+     "2"
+    ],
+    "gate_up_proj": [
+     "0",
+     "1"
+    ],
+    "in_proj_qkvg": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ],
+    "qkv_proj": [
+     "k",
+     "q",
+     "v"
+    ]
+   },
+   "red_unpatched": "TypeError: list indices must be integers or slices, not NoneType",
+   "loaded_names": 24,
+   "loader_calls": 72,
+   "loader_shards": {
+    "0": 24,
+    "1": 24,
+    "2": 24
+   },
+   "layers_mismatch": [],
+   "q_k_differ": true,
+   "checks": {
+    "red arm: unpatched loader raises the Spark TypeError": true,
+    "fixed: every fused conv1d equals cat(q,k,v) bit for bit": true,
+    "fixed: 3 loader calls per GDN layer": true,
+    "fixed: shard ids 0,1,2 each once per layer": true,
+    "q and k conv differ (swap detectable)": true,
+    "only conv1d among stacked targets lacks a module load_weights": true
+   },
+   "stacked_targets_without_load_weights": [
+    "conv1d"
+   ]
+  },
+  {
+   "model": "<hf-cache>/models--allenai--Olmo-Hybrid-7B/snapshots/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf",
+   "n_tensors": 523,
+   "gdn_layers": 24,
+   "conv_tensors": 72,
+   "dims": {
+    "key_dim": 2880,
+    "value_dim": 5760,
+    "kernel": 4
+   },
+   "stacked_targets": {
+    "conv1d": [
+     "0",
+     "1",
+     "2"
+    ],
+    "gate_up_proj": [
+     "0",
+     "1"
+    ],
+    "in_proj_qkvg": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ],
+    "qkv_proj": [
+     "k",
+     "q",
+     "v"
+    ]
+   },
+   "red_unpatched": "TypeError: list indices must be integers or slices, not NoneType",
+   "loaded_names": 24,
+   "loader_calls": 72,
+   "loader_shards": {
+    "0": 24,
+    "1": 24,
+    "2": 24
+   },
+   "layers_mismatch": [],
+   "q_k_differ": true,
+   "checks": {
+    "red arm: unpatched loader raises the Spark TypeError": true,
+    "fixed: every fused conv1d equals cat(q,k,v) bit for bit": true,
+    "fixed: 3 loader calls per GDN layer": true,
+    "fixed: shard ids 0,1,2 each once per layer": true,
+    "q and k conv differ (swap detectable)": true,
+    "only conv1d among stacked targets lacks a module load_weights": true
+   },
+   "stacked_targets_without_load_weights": [
+    "conv1d"
+   ]
+  }
+ ],
+ "pass": true,
+ "wall_s": 7.9,
+ "cmd": "<repo>/src/gdn_gate/olmo/check_vllm_loader_cpu.py --model <hf-cache>/models--allenai--Olmo-Hybrid-Think-SFT-7B/snapshots/79d1f7f613a9f98169e6c9f00880ab2df4383860 --model <hf-cache>/models--allenai--Olmo-Hybrid-7B/snapshots/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf --out <repo>/results/olmo/check_vllm_loader_cpu.json",
+ "host": "<host>"
+}

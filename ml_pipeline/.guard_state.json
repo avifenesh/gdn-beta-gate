@@ -1,0 +1,9 @@
+{
+  "test_fingerprint": "b28bc3d5cda5a27b30430c730ed381e95289e23f7a7c028616e3f6e8ce9de646",
+  "n_test": 1819,
+  "test_touches": 2,
+  "duplicates_dropped": 0,
+  "split": "fixed_external_test+hashed_validation",
+  "created": "2026-10-08",
+  "test_frame": "columns id, problem, answer; rows of test_gsm8k.jsonl then test_math500.jsonl, file order"
+}

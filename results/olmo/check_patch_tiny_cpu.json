@@ -1,0 +1,179 @@
+{
+ "pass": true,
+ "mode": "tiny-cpu",
+ "model": "",
+ "device": "cpu",
+ "ids_shape": [
+  2,
+  96
+ ],
+ "checks": [
+  {
+   "check": "library: stock logits bit-identical",
+   "pass": true
+  },
+  {
+   "check": "library: stock kernel betas bit-identical",
+   "pass": true,
+   "n_layers": 3
+  },
+  {
+   "check": "input has positions with 2s > 1",
+   "pass": true,
+   "frac": 0.53515625
+  },
+  {
+   "check": "stock : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"stock\"}"
+  },
+  {
+   "check": "stock red arm: differs from erase expectation",
+   "pass": true
+  },
+  {
+   "check": "stock logits equal library",
+   "pass": true
+  },
+  {
+   "check": "half : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"half\"}"
+  },
+  {
+   "check": "half  red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "half : logits differ from stock",
+   "pass": true,
+   "max_abs": 0.32314831018447876
+  },
+  {
+   "check": "erase : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"erase\"}"
+  },
+  {
+   "check": "erase  red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "erase : logits differ from stock",
+   "pass": true,
+   "max_abs": 0.30959486961364746
+  },
+  {
+   "check": "layer 0: betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"layer\", \"gdn_index\": 0, \"model_layer\": 0}"
+  },
+  {
+   "check": "layer 0 red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "layer 0: logits differ from stock",
+   "pass": true,
+   "max_abs": 0.24608832597732544
+  },
+  {
+   "check": "layer 0: untouched layers/heads exactly stock",
+   "pass": true
+  },
+  {
+   "check": "layer 0: clamps at least one 2s > 1 position",
+   "pass": true,
+   "n": 407
+  },
+  {
+   "check": "layer 1: betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"layer\", \"gdn_index\": 1, \"model_layer\": 1}"
+  },
+  {
+   "check": "layer 1 red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "layer 1: logits differ from stock",
+   "pass": true,
+   "max_abs": 0.2079164683818817
+  },
+  {
+   "check": "layer 1: untouched layers/heads exactly stock",
+   "pass": true
+  },
+  {
+   "check": "layer 1: clamps at least one 2s > 1 position",
+   "pass": true,
+   "n": 409
+  },
+  {
+   "check": "heads : betas equal expectation",
+   "pass": true,
+   "desc": "{\"arm\": \"heads\", \"n_heads\": 1, \"heads\": {\"0\": [2]}}"
+  },
+  {
+   "check": "heads  red arm: differs from stock expectation",
+   "pass": true
+  },
+  {
+   "check": "heads : logits differ from stock",
+   "pass": true,
+   "max_abs": 0.05429738759994507
+  },
+  {
+   "check": "heads : untouched layers/heads exactly stock",
+   "pass": true
+  },
+  {
+   "check": "heads : clamps at least one 2s > 1 position",
+   "pass": true,
+   "n": 113
+  },
+  {
+   "check": "gate R=2.0 W=0: betas equal stock",
+   "pass": true
+  },
+  {
+   "check": "gate R=2 W=0: logits bit-identical to library",
+   "pass": true
+  },
+  {
+   "check": "gate R=2.0: W gets a gradient at W=0",
+   "pass": true,
+   "grad_norm": 0.03146308520808816
+  },
+  {
+   "check": "gate R=2 random W (red arm for the bound): beta exceeds 1",
+   "pass": true,
+   "max": 2.0,
+   "min": 0.0
+  },
+  {
+   "check": "gate R=1.0 W=0: betas equal erase",
+   "pass": true
+  },
+  {
+   "check": "gate R=1.0: W gets a gradient at W=0",
+   "pass": true,
+   "grad_norm": 0.010131507879123092
+  },
+  {
+   "check": "gate R=1 random W: beta never exceeds 1",
+   "pass": true,
+   "max": 1.0,
+   "min": 0.0
+  }
+ ],
+ "torch": "2.14.0+cu130",
+ "transformers": "5.17.0",
+ "wall_s": 0.2,
+ "top_heads_k": 1,
+ "top_heads": {
+  "0": [
+   2
+  ]
+ }
+}

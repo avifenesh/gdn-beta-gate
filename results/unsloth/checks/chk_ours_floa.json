@@ -1,0 +1,77 @@
+{
+ "args": {
+  "stack": "ours",
+  "model": "<models>/Qwen3.5-4B-Base",
+  "data": "<data>/broad/tulu3_permissive.parquet",
+  "adapters": "<runs>/broad/pilot6/sft_wide_s0/ckpt_step50.pt",
+  "ref": "ref_floa.pt",
+  "dtype": "float32",
+  "n_ex": 24,
+  "out": "chk_ours_floa.json"
+ },
+ "info": {
+  "path": "ours"
+ },
+ "adapters_loaded": 216,
+ "n_ex": 24,
+ "lens": [
+  782,
+  486,
+  228,
+  136,
+  745,
+  270,
+  898,
+  229,
+  1797,
+  542,
+  607,
+  165,
+  1882,
+  1990,
+  382,
+  2347,
+  204,
+  1917,
+  142,
+  54,
+  89,
+  282,
+  76,
+  215
+ ],
+ "torch": "2.14.0+cu130",
+ "gpu": "NVIDIA GB10",
+ "param_dtypes": [
+  "torch.float32"
+ ],
+ "ref": {
+  "dev_padded": {
+   "full": 0.00017678810044855254,
+   "head64": 5.278182095260855e-05,
+   "head8": 7.625074665062045e-05
+  },
+  "dev_packed": {
+   "full": 0.0005864691751013879,
+   "head64": 6.515336077807644e-05,
+   "head8": 4.012232576982912e-05
+  },
+  "grad_rel_padded": {
+   "lora": 0.012053761631250381,
+   "gate": 0.021200694143772125
+  },
+  "grad_rel_packed": {
+   "lora": 0.01996438018977642,
+   "gate": 0.03409869223833084
+  },
+  "total_rel_padded": 5.184806930519715e-06,
+  "total_rel_packed": 9.800868926543385e-07,
+  "grad_norm_alone": {
+   "lora": 1275.0740966796875,
+   "gate": 6667.6787109375
+  }
+ },
+ "verdict": "REF",
+ "seconds": 231.4,
+ "peak_gib": 27.69
+}

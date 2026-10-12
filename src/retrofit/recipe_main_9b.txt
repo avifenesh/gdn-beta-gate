@@ -1,0 +1,12 @@
+# 9B confirmation (Qwen3.5-9B-Base, revision 68c46c4b): the 4B main recipe exactly (WikiText replay, 64-step
+# training), so the verdict replicates at scale. GPU 6: zero-step untouched-base reference (test eval + general
+# evals). GPU 7: clean replay (FineWeb-Edu + Python) on 9B wide; at 4B it restored general evals but seed 0
+# switched only codeswap. The decay gate is dropped (no 16x gain at 4B, less reliable switching).
+0 main9_wide_s0 wide 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+1 main9_ctrl_s0 ctrl 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+2 main9_wide_s1 wide 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+3 main9_ctrl_s1 ctrl 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+4 main9_wide_s2 wide 1e-4 1e-4 1200 2 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+5 main9_ctrl_s2 ctrl 1e-4 1e-4 1200 2 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+6 base9_ctrl_s100 ctrl 1e-4 1e-4 0 100 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576
+7 clean9_wide_s0 wide 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576 --replay <work>/replay_clean.pt

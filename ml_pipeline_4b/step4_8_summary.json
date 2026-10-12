@@ -1,0 +1,34 @@
+{
+ "sibling_pairs_heldout": 4,
+ "dropped_4_1": 4,
+ "heldout_items_with_sibling": 3,
+ "heldout_sibling_items_by_set": {
+  "gsm8k_test": 3
+ },
+ "heldout_near_duplicates_same_answer": 0,
+ "sibling_pairs_val": 4,
+ "dropped_4_2": 4,
+ "counts": {
+  "rl_pool.jsonl": 6965,
+  "val.jsonl": 500,
+  "test_gsm8k.jsonl": 1319,
+  "test_math500.jsonl": 500
+ },
+ "files_sha256": {
+  "rl_pool.jsonl": "1cc1ef6b8f8339cd84847ced1c52f799db0095984def0afbe6142d5afec6c448",
+  "val.jsonl": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+  "test_gsm8k.jsonl": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+  "test_math500.jsonl": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337"
+ },
+ "test_fingerprint": "b28bc3d5cda5a27b30430c730ed381e95289e23f7a7c028616e3f6e8ce9de646",
+ "grader": {
+  "verbatim_pass_math_verify": 1.0,
+  "verbatim_pass_fallback": 1.0,
+  "red_accept_math_verify": 0.0,
+  "red_accept_fallback": 0.0,
+  "accept_variants_math_verify": 1.0,
+  "accept_variants_fallback": 0.3976209256219489,
+  "n_checks": 84077,
+  "math_verify_passes_contract": true
+ }
+}

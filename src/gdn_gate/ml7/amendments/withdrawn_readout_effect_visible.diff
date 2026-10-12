@@ -1,0 +1,10 @@
+343a344,347
+> # effect_visible 5.0, except (checkpoint, data file) pairs below (owner approval 2026-10-11 ~22:45, option 1, "do it": 4B
+> # step 14 GSM8K wide1 s2, lora/gate effect 0.0415 / 0.0423 vs the 5x-floor bar 0.0428 under the approved probe 0.05;
+> # every agreement check passed). Pre-readout self-test only; scored generations unchanged.
+> EFFECT_VISIBLE_OVERRIDE = {("wide1_s2_cap512_r_box/ckpt_step150.pt", "test_gsm8k.jsonl"): 4.0}
+447c451,452
+<                                     effect_slope_tol=0.1, effect_visible=5.0)
+---
+>                                     effect_slope_tol=0.1, effect_visible=next((v for (c, d), v in EFFECT_VISIBLE_OVERRIDE.items()
+>                                                                     if a.ckpt.endswith(c) and a.data.endswith(d)), 5.0))

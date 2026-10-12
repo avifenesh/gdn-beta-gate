@@ -1,0 +1,105 @@
+{
+ "k": 2.0,
+ "floor_abs": 0.001,
+ "prompts": 8,
+ "samples": 2,
+ "tokens": 256,
+ "effect_corr_min": 0.9,
+ "effect_slope_tol": 0.1,
+ "effect_visible_x": 5.0,
+ "floor_decode": {
+  "n": 4096,
+  "mean": 0.00816011682909439,
+  "p99": 0.11430759429931647,
+  "max": 0.17982101440429688,
+  "bias": 0.0002369857864840761
+ },
+ "floor_prefill": {
+  "n": 4096,
+  "mean": 0.008371146013894092,
+  "p99": 0.11573946475982672,
+  "max": 0.23760175704956055,
+  "bias": -3.9453569736348434e-05
+ },
+ "probe": {
+  "target": 0.05,
+  "lora_B": {
+   "scale": 0.01176295767268285,
+   "effect": 0.045951006139639324
+  }
+ },
+ "probe_decode": {
+  "n": 4096,
+  "mean": 0.007558573847834791,
+  "p99": 0.11137005090713506,
+  "max": 0.32673072814941406,
+  "bias": -0.0006772348210704084
+ },
+ "prefill_floor_probe_tokens": {
+  "n": 4096,
+  "mean": 0.006501027214850937,
+  "p99": 0.10428712666034715,
+  "max": 0.22618889808654785,
+  "bias": -0.0006006758373133091
+ },
+ "prefill_lora": {
+  "n": 4096,
+  "mean": 0.007426692820252991,
+  "p99": 0.11132202148437506,
+  "max": 0.2497844696044922,
+  "bias": -0.0004142738858696846
+ },
+ "lora_effect": {
+  "n": 4096,
+  "slope": 0.9525591053335704,
+  "corr": 0.9610443640988074,
+  "err_mean": 0.011491693494260692,
+  "effect_mean": 0.04051765211266248,
+  "engine_effect_mean": 0.03976570841626988
+ },
+ "red_lora_zeroed": {
+  "n": 4096,
+  "slope": 0.0,
+  "corr": 0.0,
+  "err_mean": 0.04051765211266248,
+  "effect_mean": 0.04051765211266248,
+  "engine_effect_mean": 0.0
+ },
+ "bound_decode": 0.01632023365818878,
+ "bound_prefill": 0.016742292027788184,
+ "visible_min": 0.04185573006947046,
+ "checks": {
+  "probe_decode": true,
+  "prefill_lora": true,
+  "lora_visible": false,
+  "lora_effect_agrees": true,
+  "red_lora_fails": true
+ },
+ "pass": false,
+ "start": {
+  "n": 4096,
+  "mean": 0.008955398810711888,
+  "p99": 0.11359075307846073,
+  "max": 0.22739076614379883,
+  "bias": -0.0007003382575476187
+ },
+ "start_effect": {
+  "n": 4096,
+  "slope": 0.9093224377884338,
+  "corr": 0.8923227598850334,
+  "err_mean": 0.014079109350300044,
+  "effect_mean": 0.027850497811157067,
+  "engine_effect_mean": 0.028628114013242348,
+  "visible": false
+ },
+ "start_pass": true,
+ "seconds": 11.4,
+ "train_kernel": "fla",
+ "gate_tensors": 0,
+ "gate_dropped": 0,
+ "sync": {
+  "lora_modules": 96,
+  "gate_layers": 0,
+  "sync_s": 0.0035021305084228516
+ }
+}

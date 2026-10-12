@@ -1,0 +1,104 @@
+{
+ "results": {
+  "niah_single_1": {
+   "name": "niah_single_1",
+   "alias": "niah_single_1",
+   "sample_len": 100,
+   "4096,none": 1.0,
+   "4096_stderr,none": "N/A"
+  },
+  "niah_single_2": {
+   "name": "niah_single_2",
+   "alias": "niah_single_2",
+   "sample_len": 100,
+   "4096,none": 1.0,
+   "4096_stderr,none": "N/A"
+  },
+  "niah_multikey_1": {
+   "name": "niah_multikey_1",
+   "alias": "niah_multikey_1",
+   "sample_len": 100,
+   "4096,none": 0.98,
+   "4096_stderr,none": "N/A"
+  },
+  "niah_multiquery": {
+   "name": "niah_multiquery",
+   "alias": "niah_multiquery",
+   "sample_len": 100,
+   "4096,none": 0.9975,
+   "4096_stderr,none": "N/A"
+  },
+  "niah_multivalue": {
+   "name": "niah_multivalue",
+   "alias": "niah_multivalue",
+   "sample_len": 100,
+   "4096,none": 1.0,
+   "4096_stderr,none": "N/A"
+  },
+  "ruler_vt": {
+   "name": "ruler_vt",
+   "alias": "ruler_vt",
+   "sample_len": 100,
+   "4096,none": 0.9520000000000001,
+   "4096_stderr,none": "N/A"
+  },
+  "ruler_cwe": {
+   "name": "ruler_cwe",
+   "alias": "ruler_cwe",
+   "sample_len": 100,
+   "4096,none": 0.32799999999999996,
+   "4096_stderr,none": "N/A"
+  },
+  "ruler_qa_squad": {
+   "name": "ruler_qa_squad",
+   "alias": "ruler_qa_squad",
+   "sample_len": 100,
+   "4096,none": 0.6941666666666667,
+   "4096_stderr,none": "N/A"
+  }
+ },
+ "n-samples": {
+  "niah_single_1": {
+   "original": 500,
+   "effective": 100
+  },
+  "niah_single_2": {
+   "original": 500,
+   "effective": 100
+  },
+  "niah_multikey_1": {
+   "original": 500,
+   "effective": 100
+  },
+  "niah_multiquery": {
+   "original": 500,
+   "effective": 100
+  },
+  "niah_multivalue": {
+   "original": 500,
+   "effective": 100
+  },
+  "ruler_vt": {
+   "original": 500,
+   "effective": 100
+  },
+  "ruler_cwe": {
+   "original": 500,
+   "effective": 100
+  },
+  "ruler_qa_squad": {
+   "original": 500,
+   "effective": 100
+  }
+ },
+ "configs_versions": {
+  "niah_multikey_1": 1.0,
+  "niah_multiquery": 1.0,
+  "niah_multivalue": 1.0,
+  "niah_single_1": 1.0,
+  "niah_single_2": 1.0,
+  "ruler_cwe": 1.0,
+  "ruler_qa_squad": 1.0,
+  "ruler_vt": 1.0
+ }
+}

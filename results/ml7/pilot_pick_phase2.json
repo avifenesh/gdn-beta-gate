@@ -1,0 +1,63 @@
+{
+ "base": "<repo>/results/ml7/step9_pilot_ctrl_s0_cap512_fmt_gb10_step40_ans1792_Qwen3.5-2B_gb10.json",
+ "rule": "Training cap from the 40-step ctrl pilots (rule pre-registered in ml_pipeline/PIPELINE.md, 2026-10-08 about 21:06):\nscore = normalized area under accuracy vs log2 budget, pilot minus the untouched step 9 curve, paired over items\n(compare_readout.compare, z_cont); 95% interval D +- 1.96 |D / z|. Largest gain wins; a cap whose interval contains the\nwinner's point estimate ties; ties go to the cheaper (smaller) cap.",
+ "pilots": {
+  "512": {
+   "file": "<repo>/results/ml7/step9_pilot_ctrl_s0_cap512_r_gb10_step40_ans1792_Qwen3.5-2B_gb10.json",
+   "auc_gain": 0.028599999999999997,
+   "z": 4.072438168449893,
+   "ci95": [
+    0.014835272904993717,
+    0.04236472709500628
+   ],
+   "acc_gain": {
+    "acc@256": 0.033,
+    "acc@512": 0.041,
+    "acc@1024": 0.031,
+    "acc@2048": 0.027,
+    "acc@4096": 0.019,
+    "acc@8192": 0.017
+   }
+  },
+  "1024": {
+   "file": "<repo>/results/ml7/step9_pilot_ctrl_s0_cap1024_r_gb10_step40_ans1792_Qwen3.5-2B_gb10.json",
+   "auc_gain": 0.023399999999999997,
+   "z": 3.341493546168608,
+   "ci95": [
+    0.009674401142390907,
+    0.03712559885760909
+   ],
+   "acc_gain": {
+    "acc@256": 0.014,
+    "acc@512": 0.037,
+    "acc@1024": 0.035,
+    "acc@2048": 0.018,
+    "acc@4096": 0.018,
+    "acc@8192": 0.004
+   }
+  },
+  "2048": {
+   "file": "<repo>/results/ml7/step9_pilot_ctrl_s0_cap2048_r_gb10_step40_ans1792_Qwen3.5-2B_gb10.json",
+   "auc_gain": 0.013199999999999998,
+   "z": 1.7511498711338565,
+   "ci95": [
+    -0.0015742922673135182,
+    0.027974292267313516
+   ],
+   "acc_gain": {
+    "acc@256": 0.012,
+    "acc@512": 0.029,
+    "acc@1024": 0.011,
+    "acc@2048": 0.01,
+    "acc@4096": 0.011,
+    "acc@8192": -0.002
+   }
+  }
+ },
+ "best": 512,
+ "tied": [
+  512,
+  1024
+ ],
+ "cap": 512
+}

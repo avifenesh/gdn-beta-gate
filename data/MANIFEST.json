@@ -1,0 +1,326 @@
+{
+ "name": "gdn-beta-gate data manifest",
+ "note": "No dataset text is redistributed here. Each entry names the public source, the pinned revision, the license the source card states (verify on the card before reuse), and the sha256 of the frozen file the runs read. scripts/rebuild_data.py rebuilds and checks the four RL files and the fresh held-out set.",
+ "sources": [
+  {
+   "name": "gsm8k",
+   "repo": "openai/gsm8k",
+   "config": "main",
+   "revision": "740312add88f781978c0658806c59bc2815b9866",
+   "license": "MIT",
+   "url": "https://huggingface.co/datasets/openai/gsm8k",
+   "use": "RL prompts (train split), validation slice (train split), GSM8K test"
+  },
+  {
+   "name": "math500",
+   "repo": "HuggingFaceH4/MATH-500",
+   "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+   "license": "MIT (MATH, Hendrycks et al.; check the card)",
+   "url": "https://huggingface.co/datasets/HuggingFaceH4/MATH-500",
+   "use": "MATH-500 test (transfer)"
+  },
+  {
+   "name": "tulu3",
+   "repo": "allenai/tulu-3-sft-mixture",
+   "revision": "b14afda60f1bbebe55d5d2fa1e4df5042f97f8be",
+   "license": "ODC-BY-1.0 (collection; the CC-BY-NC No Robots subset is dropped by src/gdn_gate/broad/sft_data.py)",
+   "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-mixture",
+   "use": "chat SFT (Section 7)"
+  },
+  {
+   "name": "wikitext103",
+   "repo": "Salesforce/wikitext",
+   "config": "wikitext-103-raw-v1",
+   "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+   "license": "CC-BY-SA-3.0 / GFDL",
+   "url": "https://huggingface.co/datasets/Salesforce/wikitext",
+   "use": "replay stream in the forgetting recipe; held-out NLL"
+  },
+  {
+   "name": "fineweb_edu",
+   "repo": "HuggingFaceFW/fineweb-edu",
+   "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+   "license": "ODC-BY-1.0",
+   "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu",
+   "use": "clean replay stream (src/retrofit/prep_replay_clean.py); Olmo held-out NLL"
+  },
+  {
+   "name": "codeparrot_valid",
+   "repo": "codeparrot/codeparrot-clean-valid",
+   "revision": "4db92d2ec0c1b4c41eeb439cfae16854511d9dcd",
+   "license": "see source card",
+   "url": "https://huggingface.co/datasets/codeparrot/codeparrot-clean-valid",
+   "use": "code domain of held-out NLL; Python part of the clean replay"
+  },
+  {
+   "name": "humaneval",
+   "repo": "openai/openai_humaneval",
+   "revision": "7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544",
+   "license": "MIT",
+   "url": "https://huggingface.co/datasets/openai/openai_humaneval",
+   "use": "forgetting measure (pass@1)"
+  },
+  {
+   "name": "mbppplus",
+   "repo": "evalplus/mbppplus",
+   "revision": "b2d74c91837c3f2a20c1299ae98133cbe7cfa077",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/datasets/evalplus/mbppplus",
+   "use": "Olmo battery"
+  },
+  {
+   "name": "mmlu_pro",
+   "repo": "TIGER-Lab/MMLU-Pro",
+   "revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+   "license": "MIT",
+   "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
+   "use": "Olmo battery (cloze accuracy)"
+  },
+  {
+   "name": "arc_challenge",
+   "repo": "allenai/ai2_arc",
+   "revision": "210d026faf9955653af8916fad021475a3f00453",
+   "license": "CC-BY-SA-4.0",
+   "url": "https://huggingface.co/datasets/allenai/ai2_arc",
+   "use": "Olmo battery"
+  },
+  {
+   "name": "based_squad_fda_swde",
+   "repo": "hazyresearch/based-squad, hazyresearch/based-fda, hazyresearch/based-swde",
+   "revision": "d152c14c2d7d8d5114db4cb1306eee547bdbb5a7, 42569d301e12fbcf8d5a69e04e892aa013e20314, 27f0223028a5d1ce174011051d3d22a5fafda830",
+   "license": "see source cards",
+   "url": "https://huggingface.co/hazyresearch",
+   "use": "Olmo battery (recall tasks)"
+  },
+  {
+   "name": "c4",
+   "repo": "allenai/c4",
+   "config": "en (validation)",
+   "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+   "license": "ODC-BY-1.0",
+   "url": "https://huggingface.co/datasets/allenai/c4",
+   "use": "web domain of held-out NLL"
+  },
+  {
+   "name": "ruler",
+   "repo": "lm-evaluation-harness 0.4.13 RULER task generators (synthetic; haystack baber/paul_graham_essays rev 792d672b77d1a67720f7e9820d646358fc18792e)",
+   "revision": "lm-eval==0.4.13",
+   "license": "MIT (lm-evaluation-harness); see the essays card",
+   "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+   "use": "RULER battery and the CWE/FWE counting cells"
+  },
+  {
+   "name": "aime2024",
+   "repo": "HuggingFaceH4/aime_2024",
+   "revision": "2fe88a2f1091d5048c0f36abc874fb997b3dd99a",
+   "file": "data/train-00000-of-00001.parquet",
+   "sha256": "26139847601a5037c237d5928b195e7260ca8074cf4f264b794af42847f79ccf",
+   "license": "no license on the card (problems: Mathematical Association of America, AIME 2024)",
+   "url": "https://huggingface.co/datasets/HuggingFaceH4/aime_2024",
+   "use": "fresh held-out test set (Section 5.2), read once"
+  },
+  {
+   "name": "aime2025",
+   "repo": "MathArena/aime_2025",
+   "revision": "c94da77eb22bbd6439e62a323bec18493a421302",
+   "file": "data/train-00000-of-00001.parquet",
+   "sha256": "9f9066ff48ad2e31f9bf1b1ac6d5e80693195f987985f2859f89dd25ffa51c2d",
+   "license": "CC-BY-NC-SA-4.0 (card); problems: MAA, AIME 2025",
+   "url": "https://huggingface.co/datasets/MathArena/aime_2025",
+   "use": "fresh held-out test set (Section 5.2), read once"
+  },
+  {
+   "name": "aime2026",
+   "repo": "MathArena/aime_2026",
+   "revision": "d2de22f3c656b4f56cf8981212186377d1e23bc3",
+   "file": "data/train-00000-of-00001.parquet",
+   "sha256": "d91db799651b4cc1f0734f52792a695c9cc60dac342524b3d8e5b2ff31c3e957",
+   "license": "CC-BY-NC-SA-4.0 (card); problems: MAA, AIME 2026",
+   "url": "https://huggingface.co/datasets/MathArena/aime_2026",
+   "use": "fresh held-out test set (Section 5.2), read once"
+  },
+  {
+   "name": "amc2023",
+   "repo": "AI-MO/aimo-validation-amc",
+   "revision": "69d78a4a2c840e82d69af6bc742bda09005f6316",
+   "file": "data/train-00000-of-00001.parquet",
+   "sha256": "4de056fd006062cee46e3900727dd5d00094b8592ed0bfd6b5dfae2267f72dd7",
+   "license": "Apache-2.0 (card); problems: MAA, AMC 12 2023",
+   "url": "https://huggingface.co/datasets/AI-MO/aimo-validation-amc",
+   "use": "fresh held-out test set (Section 5.2), read once",
+   "cross_check": {
+    "repo": "math-ai/amc23",
+    "revision": "80815d37005feb82cd7f8fbc6901d5d3eff43057",
+    "sha256": "b696e87ba47be4e879a60fd4ef1d4aa522ba78c5ae013c6aff5cc9788a397c5e",
+    "result": "same urls, problem texts and answers as the 40 kept rows (build_fresh.py)"
+   },
+   "filter": "rows whose url is 2023 AMC 12A or 12B (40 of 83)"
+  }
+ ],
+ "models": [
+  {
+   "repo": "Qwen/Qwen3.5-2B",
+   "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+   "license": "Apache-2.0",
+   "use": "2B RL record"
+  },
+  {
+   "repo": "Qwen/Qwen3.5-4B",
+   "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "license": "Apache-2.0",
+   "use": "4B RL record"
+  },
+  {
+   "repo": "Qwen/Qwen3.5-4B-Base",
+   "revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+   "license": "Apache-2.0 (check the card)",
+   "use": "chat SFT, forgetting recipe"
+  },
+  {
+   "repo": "Qwen/Qwen3.5-9B-Base",
+   "revision": "68c46c4b3498877f3ef123c856ecfde50c39f404",
+   "license": "Apache-2.0 (check the card)",
+   "use": "forgetting recipe at 9B"
+  },
+  {
+   "repo": "allenai/Olmo-Hybrid-7B",
+   "revision": "4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf",
+   "license": "Apache-2.0",
+   "use": "lesion study (Section 8)"
+  }
+ ],
+ "frozen_files": [
+  {
+   "path": "<WG_RUNS>/ml7/data/rl_pool.jsonl",
+   "sha256": "1cc1ef6b8f8339cd84847ced1c52f799db0095984def0afbe6142d5afec6c448",
+   "rows": 6965,
+   "built_by": "ml_pipeline/02_prep.py (rebuild: scripts/rebuild_data.py)",
+   "ids": "data/splits/rl_pool.ids"
+  },
+  {
+   "path": "<WG_RUNS>/ml7/data/val.jsonl",
+   "sha256": "8251b0d493e1371f4aece78b1e163708078d8cda35ece92c2d16f7b6892750dd",
+   "rows": 500,
+   "built_by": "ml_pipeline/02_prep.py (rebuild: scripts/rebuild_data.py)",
+   "ids": "data/splits/val.ids"
+  },
+  {
+   "path": "<WG_RUNS>/ml7/data/test_gsm8k.jsonl",
+   "sha256": "bfa80506b84afadbb7c6f0dd261d580ca5407893c973b87bf666ad45ad709652",
+   "rows": 1319,
+   "built_by": "ml_pipeline/02_prep.py (rebuild: scripts/rebuild_data.py)",
+   "ids": "data/splits/test_gsm8k.ids"
+  },
+  {
+   "path": "<WG_RUNS>/ml7/data/test_math500.jsonl",
+   "sha256": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
+   "rows": 500,
+   "built_by": "ml_pipeline/02_prep.py (rebuild: scripts/rebuild_data.py)",
+   "ids": "data/splits/test_math500.ids"
+  },
+  {
+   "path": "<WG_RUNS>/vllm/data/gsm8k_train.jsonl",
+   "sha256": "efa1d1f7b9034654d50c1b74a864601a83133915148c679b6910afc31fecb212",
+   "rows": 7473,
+   "built_by": "openai/gsm8k main train, id gsm8k_train<row>, answer after ####"
+  },
+  {
+   "path": "<WG_RUNS>/broad/data/tulu3_permissive.parquet",
+   "sha256": "06cd7b52f6a749b35491442fcec913e8a5eab56f83ba96afac1aca8899462ffb",
+   "bytes": 1410817627,
+   "built_by": "src/gdn_gate/broad/sft_data.py prepare() over the six train parquet files of the pinned tulu-3-sft-mixture revision"
+  },
+  {
+   "path": "<WG_RUNS>/retrofit/replay_wikitext103.pt",
+   "sha256": "7999641edfbd015bb8c8da24d08c8729f41fcc5c51a8ca2d2a29851ee5d60f74",
+   "bytes": 81188797,
+   "built_by": "src/retrofit/prep_replay.py"
+  },
+  {
+   "path": "<WG_RUNS>/retrofit/box/replay_clean.pt",
+   "sha256": "c05757ce36dd090bb81ac814d7db75ec784c83150278de92283a23f2892fac1f",
+   "bytes": 65855373,
+   "built_by": "src/retrofit/prep_replay_clean.py"
+  },
+  {
+   "path": "<WG_RUNS>/olmo/nll_heldout_olmo.pt",
+   "sha256": "a5c284d0b06db33c7c94154dee1eaeb29eb7a0194081ad30b6f81aa2145126a4",
+   "bytes": 79989687,
+   "built_by": "src/gdn_gate/olmo/prep_nll.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/arc_c.jsonl",
+   "sha256": "5af4708072731bb652cee4d2f7c8dc7bc53443647eadcc1fbbc806518784a1d9",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/fda.jsonl",
+   "sha256": "80c3f709bb6245a9ccdd8116cb123f3e9d564d33e186f6664edae4c02978fc62",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/gsm8k.jsonl",
+   "sha256": "538f84ddb07f10b3fb6e90bc15c047f1677158d5c031d63aeb3ed12981caf50d",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/humaneval.jsonl",
+   "sha256": "ceb51bf3901bb6df98c092d649cee3cc94d93213a3157d6ac2c762e88f40b68e",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/math500.jsonl",
+   "sha256": "f0ef0be08d8a8f50502b4a7192d93447a4b56661621abb408beb83b0affcdc24",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/math_train.jsonl",
+   "sha256": "64cb5d3eb37ba67a87fc038c260945122634979462676cd991edc35af3c06ae1",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/mbppplus.jsonl",
+   "sha256": "a8eebd0f07c3fe6620eff4ac3d326e1c6dc85d336c064004baf442ca8c82d727",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/mmlu_pro.jsonl",
+   "sha256": "b4d9d72ad0cca3cd0612742a57caf98cf92f70e58256778462ac96991399e67c",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/nll_domains.pt",
+   "sha256": "e215b614616cd50a22267c448f1b789c91f2a1ccda69a311db43827d9e758f60",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/ruler.jsonl",
+   "sha256": "41b4049343dab7a3688ef0e88b1e82589c414ddf607d73110da338cdec12e051",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/squad.jsonl",
+   "sha256": "caefbc3a8035199988e497aecee9fed9c014120a9f720856bf6dd9a750643f66",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/broad/eval_data/swde.jsonl",
+   "sha256": "339a57d4b0477f2f9e5bf97791ea904348c8045285758803f285c78737f14b4a",
+   "built_by": "src/gdn_gate/broad/make_eval_data.py"
+  },
+  {
+   "path": "<WG_RUNS>/ml7/data/test_fresh.jsonl",
+   "sha256": "9ce51dff11355439f073e4e9d62e22eb6ae45f40bb8d3b4db2b9df78cf0f50fa",
+   "rows": 130,
+   "built_by": "src/gdn_gate/ml7/fresh/build_fresh.py (rebuild: scripts/rebuild_data.py)",
+   "ids": "data/splits/test_fresh.ids",
+   "counts": {
+    "aime2024": 30,
+    "aime2025": 30,
+    "aime2026": 30,
+    "amc2023": 40
+   },
+   "dedup": "02_prep.py sibling scan against rl_pool, val and within the set: 0 hits, 0 dropped"
+  }
+ ]
+}

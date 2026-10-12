@@ -1,0 +1,22 @@
+[project]
+name = "gdn-beta-gate"
+version = "1.0.0"
+description = "Code, receipts and checks for 'Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5'"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+authors = [{ name = "Avi Fenesh" }]
+# CPU-side environment: claims checker, analysis and mechanism reruns, figures, data rebuild. GPU environments are pinned in env/.
+dependencies = [
+  "numpy==2.3.5",
+  "matplotlib==3.11.1",
+  "huggingface-hub==1.33.0",
+  "pyarrow==25.0.1",
+  "tokenizers==0.23.2",
+]
+
+[dependency-groups]
+dev = ["pytest==9.0.2"]
+
+[tool.uv]
+package = false

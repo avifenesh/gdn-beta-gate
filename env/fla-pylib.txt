@@ -1,0 +1,4 @@
+# Kernels the GRPO trainer imports through WG_ML7_PYLIB (a directory placed on sys.path before transformers), installed with
+#   uv pip install --target "$WG_ML7_PYLIB" --no-deps -r env/fla-pylib.txt
+flash-linear-attention==0.5.2
+fla-core==0.5.2

@@ -1,0 +1,75 @@
+{
+ "args": {
+  "stack": "unsloth",
+  "model": "<models>/Qwen3.5-4B-Base",
+  "data": "<data>/broad/tulu3_permissive.parquet",
+  "arm": "wide",
+  "seed": 1,
+  "out": "<runs>/broad/step6/wide_s1",
+  "steps": 1200,
+  "step_tokens": 33472,
+  "micro_tokens": 24576,
+  "max_len": 4096,
+  "lr": 0.0001,
+  "w_lr": 0.0001,
+  "rank": 16,
+  "warmup_frac": 0.05,
+  "ckpt_steps": "300,700,1200",
+  "val_n": 256,
+  "stop_after": 0,
+  "resume": true,
+  "gc": "unsloth",
+  "loss": "model",
+  "init_from": "<runs>/broad/step6/wide_s1/init_wide_s1.pt"
+ },
+ "env": {
+  "host": "<host>",
+  "machine": "x86_64",
+  "torch": "2.14.0+cu130",
+  "transformers": "5.17.0",
+  "peft": "0.21.0",
+  "fla": "0.5.2",
+  "triton": "3.8.0",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "git_describe": "",
+  "model_path": "<models>/Qwen3.5-4B-Base",
+  "code_sha256": {
+   "arms.py": "a4303e9a39474466",
+   "sft_data.py": "49075ee1d80905bc",
+   "train_sft.py": "ed6fc820fd9d9fbf",
+   "packing.py": "4d567ac5bc2dc950"
+  },
+  "code_sha256_fast": {
+   "stacks.py": "d8ba46ca78117dea",
+   "train_sft_fast.py": "6934ee0c93b13f71"
+  }
+ },
+ "stack_info": {
+  "path": "unsloth",
+  "arm": "wide",
+  "gate_prebuild": {
+   "file_forward": "3eb0766c38019a1a",
+   "live_forward": "bd25761e1031fff0",
+   "live_is_file": true,
+   "gate_forward_code": "<work>/venv-fast/lib/python3.12/site-packages/transformers/integrations/accelerate.py"
+  },
+  "loaded_class": "Qwen3_5ForConditionalGeneration",
+  "gdn_after_load": {
+   "file_forward": "3eb0766c38019a1a",
+   "live_forward": "5ff84da37940d284",
+   "live_is_file": false
+  },
+  "n_gate_params": 24,
+  "n_lora": 8675328,
+  "n_w": 1966080,
+  "n_lora_tensors": 192,
+  "init_from": "<runs>/broad/step6/wide_s1/init_wide_s1.pt",
+  "init_loaded": 216
+ },
+ "n_lora": 8675328,
+ "n_w": 1966080,
+ "n_val": 256,
+ "train_rows": 920567,
+ "val_rows": 9276,
+ "resumed_from": 0
+}

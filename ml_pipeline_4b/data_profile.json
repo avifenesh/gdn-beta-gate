@@ -1,0 +1,173 @@
+{
+  "schema_version": "1",
+  "created": "2026-10-08",
+  "shape": {
+    "n_rows": 9292,
+    "n_cols": 11,
+    "memory_mb": 1.25,
+    "sampled": false,
+    "sample_rows": null
+  },
+  "target": {
+    "name": "set",
+    "task": "multiclass",
+    "n_classes": 3,
+    "class_balance": {
+      "gsm8k_train": 0.8042,
+      "gsm8k_test": 0.142,
+      "math500": 0.0538
+    },
+    "minority_frac": 0.0538
+  },
+  "columns": {
+    "id": {
+      "kind": "id",
+      "missing_frac": 0.0,
+      "n_unique": 9292,
+      "unique_frac": 1.0
+    },
+    "set": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 3,
+      "unique_frac": 0.0003,
+      "n_levels": 3,
+      "top": {
+        "gsm8k_train": 0.8042,
+        "gsm8k_test": 0.142,
+        "math500": 0.0538
+      }
+    },
+    "level": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 6,
+      "unique_frac": 0.0006,
+      "n_levels": 6,
+      "top": {
+        "gsm8k": 0.9462,
+        "5": 0.0144,
+        "4": 0.0138,
+        "3": 0.0113,
+        "2": 0.0097
+      }
+    },
+    "subject": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 8,
+      "unique_frac": 0.0009,
+      "n_levels": 8,
+      "top": {
+        "gsm8k": 0.9462,
+        "Algebra": 0.0133,
+        "Intermediate Algebra": 0.0104,
+        "Prealgebra": 0.0088,
+        "Number Theory": 0.0067
+      }
+    },
+    "q_chars": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 577,
+      "unique_frac": 0.0621,
+      "min": 20.0,
+      "median": 215.0,
+      "max": 1733.0,
+      "skew": 1.9954,
+      "outlier_frac": 0.033
+    },
+    "q_tokens": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 196,
+      "unique_frac": 0.0211,
+      "min": 8.0,
+      "median": 56.0,
+      "max": 831.0,
+      "skew": 6.9034,
+      "outlier_frac": 0.033
+    },
+    "prompt_tokens": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 196,
+      "unique_frac": 0.0211,
+      "min": 34.0,
+      "median": 82.0,
+      "max": 857.0,
+      "skew": 6.9034,
+      "outlier_frac": 0.033
+    },
+    "answer_type": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 6,
+      "unique_frac": 0.0006,
+      "n_levels": 6,
+      "top": {
+        "integer": 0.9814,
+        "expression": 0.0091,
+        "fraction": 0.006,
+        "tuple_or_interval": 0.002,
+        "text": 0.0009
+      }
+    },
+    "answer_tokens": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 23,
+      "unique_frac": 0.0025,
+      "min": 1.0,
+      "median": 2.0,
+      "max": 32.0,
+      "skew": 6.0124,
+      "outlier_frac": 0.0494
+    },
+    "answer_log10_abs": {
+      "kind": "numeric",
+      "missing_frac": 0.0121,
+      "n_unique": 1013,
+      "unique_frac": 0.109,
+      "min": -2.7011,
+      "median": 1.6128,
+      "max": 8.2833,
+      "skew": 1.1377,
+      "outlier_frac": 0.0366
+    },
+    "in_pilot50": {
+      "kind": "bool",
+      "missing_frac": 0.0,
+      "n_unique": 2,
+      "unique_frac": 0.0002,
+      "n_levels": 2,
+      "top": {
+        "False": 0.9946,
+        "True": 0.0054
+      }
+    }
+  },
+  "duplicates": {
+    "exact_row_frac": 0.0
+  },
+  "constant_columns": [],
+  "high_cardinality_categoricals": [],
+  "datetime_columns": [],
+  "time_col": null,
+  "group_col": null,
+  "entity_candidates": [
+    "id"
+  ],
+  "leakage_suspects": [],
+  "traits": {
+    "n_rows": 9292,
+    "n_features": 10,
+    "task": "multiclass",
+    "minority_frac": 0.0538,
+    "has_datetime": false,
+    "has_groups": false,
+    "small_data": false,
+    "imbalanced": true,
+    "high_card_categoricals": []
+  }
+}

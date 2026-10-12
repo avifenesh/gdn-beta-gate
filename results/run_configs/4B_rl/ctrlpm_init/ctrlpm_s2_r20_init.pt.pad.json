@@ -1,0 +1,26 @@
+{
+ "what": "LoRA rank widening for ctrlpm (pad_rank.py)",
+ "source": "<runs>/ml7/grpo/ctrl_s0_cap512_fmt_box/ckpt_step40.pt",
+ "source_sha256": "ee5cc70988f943cb8b2bfe9b19b4dd9c1f5416ac3e4c9957f0e81e94afd4779f",
+ "out": "<runs>/ml7/grpo/ctrlpm_init/ctrlpm_s2_r20_init.pt",
+ "sha256": "aa5a9c37f92484a03fa810e8c7dea69ccb8ccba2df64a17d75b7317290a50e7f",
+ "seed": 2,
+ "rank_from": 16,
+ "rank_to": 20,
+ "pairs": 96,
+ "numel_source": 8675328,
+ "numel_out": 10844160,
+ "init": "new A rows U(-1/sqrt(in), 1/sqrt(in)) (PEFT kaiming_uniform a=sqrt(5)), generator seed sha256('ctrlpm_pad:{seed}:{key}')[:15]; new B columns zero",
+ "verified": true,
+ "argv": [
+  "<repo>/src/gdn_gate/ml7/pad_rank.py",
+  "--src",
+  "<runs>/ml7/grpo/ctrl_s0_cap512_fmt_box/ckpt_step40.pt",
+  "--rank",
+  "20",
+  "--seed",
+  "2",
+  "--out",
+  "<runs>/ml7/grpo/ctrlpm_init/ctrlpm_s2_r20_init.pt"
+ ]
+}

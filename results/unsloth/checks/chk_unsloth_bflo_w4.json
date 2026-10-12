@@ -1,0 +1,184 @@
+{
+ "args": {
+  "stack": "unsloth",
+  "model": "<models>/Qwen3.5-4B-Base",
+  "data": "<data>/broad/tulu3_permissive.parquet",
+  "adapters": "<runs>/broad/pilot6/sft_wide_s0/ckpt_step50.pt",
+  "ref": "ref_bflo_w4.pt",
+  "dtype": "bfloat16",
+  "n_ex": 24,
+  "wscale": 4.0,
+  "out": "chk_unsloth_bflo_w4.json"
+ },
+ "info": {
+  "path": "unsloth",
+  "arm": "wide",
+  "gate_prebuild": {
+   "file_forward": "3eb0766c38019a1a",
+   "live_forward": "bd25761e1031fff0",
+   "live_is_file": true,
+   "gate_forward_code": "<work>/venv-fast/lib/python3.12/site-packages/transformers/integrations/accelerate.py"
+  },
+  "loaded_class": "Qwen3_5ForConditionalGeneration",
+  "gdn_after_load": {
+   "file_forward": "3eb0766c38019a1a",
+   "live_forward": "5ff84da37940d284",
+   "live_is_file": false
+  },
+  "n_gate_params": 24,
+  "n_lora": 8675328,
+  "n_w": 1966080,
+  "n_lora_tensors": 192
+ },
+ "adapters_loaded": 216,
+ "n_ex": 24,
+ "lens": [
+  782,
+  486,
+  228,
+  136,
+  745,
+  270,
+  898,
+  229,
+  1797,
+  542,
+  607,
+  165,
+  1882,
+  1990,
+  382,
+  2347,
+  204,
+  1917,
+  142,
+  54,
+  89,
+  282,
+  76,
+  215
+ ],
+ "torch": "2.14.0+cu130",
+ "gpu": "NVIDIA GB10",
+ "param_dtypes": [
+  "torch.bfloat16",
+  "torch.float32"
+ ],
+ "bounds": {
+  "metric": {
+   "full": 0.11127837166424755,
+   "head64": 0.011880916639173416,
+   "head8": 0.020554376262611466
+  },
+  "total": 0.0005358039981717334,
+  "grad": {
+   "lora": 1.3626271350479127,
+   "gate": 1.7301083667373658
+  }
+ },
+ "gate_proof": {
+  "gdn_layers": 24,
+  "forward_code_files": [
+   "<wg_forward>"
+  ],
+  "instance_bound": true,
+  "beta_calls": 24,
+  "beta_fns": [
+   "_wg_beta"
+  ],
+  "arms": [
+   "wide"
+  ]
+ },
+ "green": {
+  "dev": {
+   "full": 0.029235171819286393,
+   "head64": 0.005540154392485713,
+   "head8": 0.009754481118350611
+  },
+  "total_rel": 0.00027730230345691356,
+  "grad_rel": {
+   "lora": 0.40524446964263916,
+   "gate": 0.5094332098960876
+  },
+  "engaged": {
+   "attn": 16,
+   "gdn": 48,
+   "conv": 48
+  },
+  "total": 6078.1982421875,
+  "ratio_to_bound": {
+   "metric_full": 0.2627210605444123,
+   "metric_head64": 0.4663069829325185,
+   "metric_head8": 0.4745695512100783,
+   "total": 0.5175442968009245,
+   "grad_lora": 0.29739938330847193,
+   "grad_gate": 0.29445161915306817
+  },
+  "ok": true
+ },
+ "red": {
+  "nogate": {
+   "dev": {
+    "full": 0.7867506318178397,
+    "head64": 0.31956582269699674,
+    "head8": 0.7534149995049944
+   },
+   "total_rel": 0.02894704769753079,
+   "grad_rel": {
+    "lora": 1.2661175727844238,
+    "gate": 1.0
+   },
+   "engaged": {
+    "attn": 16,
+    "gdn": 0,
+    "conv": 0
+   },
+   "total": 6255.87890625,
+   "ratio_to_bound": {
+    "metric_full": 7.070112727670453,
+    "metric_head64": 26.897404670219935,
+    "metric_head8": 36.65472451603704,
+    "total": 54.02544175912032,
+    "grad_lora": 0.9291739025437099,
+    "grad_gate": 0.57799847641093
+   },
+   "max_ratio": 54.02544175912032,
+   "detected": true
+  },
+  "clamp1": {
+   "dev": {
+    "full": 0.15457929556978534,
+    "head64": 0.0696222170678244,
+    "head8": 0.04924941768925415
+   },
+   "total_rel": 0.0029361567800369236,
+   "grad_rel": {
+    "lora": 0.7924053072929382,
+    "gate": 0.9002981185913086
+   },
+   "engaged": {
+    "attn": 16,
+    "gdn": 48,
+    "conv": 48
+   },
+   "total": 6062.03271484375,
+   "ratio_to_bound": {
+    "metric_full": 1.389122551471068,
+    "metric_head64": 5.860003834911865,
+    "metric_head8": 2.3960550814105286,
+    "total": 5.4799083061262275,
+    "grad_lora": 0.5815276144967388,
+    "grad_gate": 0.5203709408614031
+   },
+   "max_ratio": 5.860003834911865,
+   "detected": false
+  }
+ },
+ "why": [
+  "red arm clamp1 not detected (max ratio 5.86)"
+ ],
+ "verdict": "FAIL",
+ "seconds": 130.8,
+ "peak_gib": 14.27
+}

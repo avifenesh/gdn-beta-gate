@@ -1,0 +1,6 @@
+Source: model card of drlee1/ThinkingCap-Qwen3.5-2B, https://huggingface.co/drlee1/ThinkingCap-Qwen3.5-2B,
+revision 9ec6e4f6 (read 2026-10-11). Two table rows quoted for the prior-work numbers in the paper (row C1 of
+paper/CLAIMS.md); the card states a single training seed.
+
+| GSM8K | 50.0 | **66.7** | 3,545 | 2,438 | **↓ 31.2%** |
+| MATH-500 | 20.8 | 20.8 | 4,096 | 3,320 | **↓ 19.0%** |

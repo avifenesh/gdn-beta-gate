@@ -1,0 +1,43 @@
+{
+ "schema": "wg-code-amendments-v1",
+ "note": "Owner-approved amendments of locked instrument files. code_ledger.py accept walks a file back through these entries (diff sha256, reverse-applied diff, old/new sha256); step12_val_box.sh and step14_test_box.sh use it for the STEP12_REUSE / STEP14_REUSE code check. Add an entry only with the owner's approval recorded here.",
+ "amendments": [
+  {
+   "file": "readout_vllm.py",
+   "old": "87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b",
+   "new": "7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052",
+   "diff": "readout_parity_k.diff",
+   "diff_sha256": "370c55eddb5367956293167448a2ba801778f8af8a9cd135258db2b7f84ee6c5",
+   "approval": "owner in chat 2026-10-11 ~10:50 Israel (option 1): parity_k 2.5 for wide_s2_cap512_r_gb10/ckpt_step150.pt only",
+   "what": "PARITY_K_OVERRIDE dict + pk lookup: the pre-readout engine/trainer self-test threshold for one 2B checkpoint (GSM8K wide_2, decode-path 2.03x vs 2.0x); no scored generation changes",
+   "record": "results/ml7/step14/code_lock_amendment.txt"
+  },
+  {
+   "file": "readout_vllm.py",
+   "old": "7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052",
+   "new": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+   "diff": "readout_probe_effect.diff",
+   "diff_sha256": "95bcf394fd9c2525bb16a30323ee83e93b131814771ce1b38303e64df7899fd1",
+   "approval": "owner in chat 2026-10-11 ~14:55 Israel: \"ok\" to \"probe 0.05 for the 4B record\"",
+   "what": "--probe_effect CLI argument (default 0.2 = the value hard-coded before, so every 2B readout is unchanged) used in the parity self-test; the Qwen3.5-4B record passes 0.05. The self-test does not touch the scored generations",
+   "record": "ml_pipeline_4b/PIPELINE.md (Gate B recipe) and results/FINDINGS.md, 2026-10-11"
+  },
+  {
+   "file": "readout_vllm.py",
+   "old": "9ef24b622b545ab0899ce78878f34cf857af8c125dfb3c05fd4a7d6514b34282",
+   "new": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+   "diff": "readout_effect_visible_fresh.diff",
+   "diff_sha256": "ec675edef89d07fe6a7920f8d6923ebe21768e3d979fcf6c8c6422e1e53fd20a",
+   "approval": "owner in chat 2026-10-12 (\"approve\", relayed by the lane wg coordinator): effect_visible 4.0 instead of 5.0 only for fresh-set readouts (test_fresh.jsonl) of Qwen3.5-4B checkpoints that fail the visibility checks only; every agreement, red-arm and start-parity check keeps its bar",
+   "what": "EFFECT_VISIBLE_OVERRIDE + effect_visible_of(ckpt, data): the pre-readout self-test's visibility bar for (ml7_4b ctrl_s1_cap512_r_box step 150, test_fresh.jsonl) and (ml7_4b wide_s2_cap512_r_box step 150, test_fresh.jsonl); measured on the fresh prompts: ctrl_1 lora effect 0.0405 vs bar 0.0419 (4.84x floor); wide_2 lora 0.0433 vs 0.0436, gate 0.0398 vs 0.0436. No scored generation or scoring changes; every other readout keeps 5.0",
+   "test": "src/gdn_gate/ml7/fresh/test_effect_visible_cpu.py (red arms: non-fresh data, 2B and unlisted 4B checkpoints keep 5.0; an agreement failure still fails under the override)",
+   "record": "ml_pipeline_4b/PIPELINE.md (Fresh test set, amendment 2026-10-12) and results/FINDINGS.md"
+  }
+ ],
+ "withdrawn": [
+  {
+   "diff": "withdrawn_readout_effect_visible.diff",
+   "note": "approved 2026-10-11 ~22:45 but never used: the coordinator's own retry ran 4B GSM8K wide1_2 at 20:12 UTC with the 9ef24b62 code and passed at effect_visible 5.0 (floor varies per run); reverted 20:3x UTC"
+  }
+ ]
+}

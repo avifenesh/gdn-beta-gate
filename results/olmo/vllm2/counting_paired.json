@@ -1,0 +1,112 @@
+{
+ "root": "<runs>/olmo/battery_vllm2_cwe",
+ "rows": [
+  {
+   "L": 4096,
+   "arm": "erase",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.765,
+   "arm_mean": 0.7266,
+   "diff": -0.0384,
+   "p": 0.0002,
+   "better": 122,
+   "worse": 190
+  },
+  {
+   "L": 4096,
+   "arm": "erase",
+   "task": "ruler_fwe",
+   "n": 500,
+   "stock": 0.8187,
+   "arm_mean": 0.798,
+   "diff": -0.0207,
+   "p": 0.0129,
+   "better": 20,
+   "worse": 43
+  },
+  {
+   "L": 8192,
+   "arm": "erase",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.5108,
+   "arm_mean": 0.4482,
+   "diff": -0.0626,
+   "p": 0.0,
+   "better": 112,
+   "worse": 231
+  },
+  {
+   "L": 8192,
+   "arm": "erase",
+   "task": "ruler_fwe",
+   "n": 500,
+   "stock": 0.856,
+   "arm_mean": 0.8187,
+   "diff": -0.0373,
+   "p": 0.0,
+   "better": 13,
+   "worse": 53
+  },
+  {
+   "L": 16384,
+   "arm": "erase",
+   "task": "ruler_cwe",
+   "n": 500,
+   "stock": 0.305,
+   "arm_mean": 0.245,
+   "diff": -0.06,
+   "p": 0.0,
+   "better": 103,
+   "worse": 229
+  },
+  {
+   "L": 16384,
+   "arm": "erase",
+   "task": "ruler_fwe",
+   "n": 500,
+   "stock": 0.912,
+   "arm_mean": 0.8827,
+   "diff": -0.0293,
+   "p": 0.0,
+   "better": 16,
+   "worse": 51
+  }
+ ],
+ "macro": [
+  {
+   "L": 4096,
+   "arm": "erase",
+   "tasks": 2,
+   "diff": -0.0295,
+   "ci95": [
+    -0.0412,
+    -0.0177
+   ],
+   "p": 0.0
+  },
+  {
+   "L": 8192,
+   "arm": "erase",
+   "tasks": 2,
+   "diff": -0.05,
+   "ci95": [
+    -0.0641,
+    -0.0368
+   ],
+   "p": 0.0
+  },
+  {
+   "L": 16384,
+   "arm": "erase",
+   "tasks": 2,
+   "diff": -0.0447,
+   "ci95": [
+    -0.0559,
+    -0.0335
+   ],
+   "p": 0.0
+  }
+ ]
+}

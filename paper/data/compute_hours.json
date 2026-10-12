@@ -1,0 +1,73 @@
+{
+ "note": "Logged GPU time per device class for the compute statement. CPU only.",
+ "hours": {
+  "GB10": {
+   "readout": 14.130586528049575,
+   "train": 110.40857222222223,
+   "train_pilot": 11.967944444444443,
+   "total": 124.53915875027181
+  },
+  "RTX 5090 Laptop": {
+   "readout": 6.242197776039442,
+   "train": 0.9683611111111111,
+   "total": 7.210558887150553
+  },
+  "RTX PRO 6000": {
+   "readout": 91.11683881209956,
+   "train": 79.49569999999996,
+   "train_pilot": 2.436080555555556,
+   "total": 170.6125388120995
+  }
+ },
+ "files": {
+  "GB10": {
+   "readout": 9,
+   "train": 24,
+   "train_pilot": 8
+  },
+  "RTX 5090 Laptop": {
+   "readout": 17,
+   "train": 4
+  },
+  "RTX PRO 6000": {
+   "readout": 185,
+   "train": 63,
+   "train_pilot": 4
+  }
+ },
+ "rented": {
+  "boxes": [
+   {
+    "what": "Phase 1-2 8x, 01:40-11:08 Israel",
+    "gpus": 8,
+    "hours": 9.466666666666667,
+    "gpu_hours": 75.73333333333333
+   },
+   {
+    "what": "Phase 3 8x, 13:29-23:45 Israel",
+    "gpus": 8,
+    "hours": 10.3,
+    "gpu_hours": 82.4
+   },
+   {
+    "what": "Phase 4 4x",
+    "gpus": 4,
+    "hours": 3.66,
+    "gpu_hours": 14.64
+   },
+   {
+    "what": "Phase 5 4x spot",
+    "gpus": 4,
+    "hours": 4.9,
+    "gpu_hours": 19.6
+   },
+   {
+    "what": "Phase 5 8x spot",
+    "gpus": 8,
+    "hours": 2.2,
+    "gpu_hours": 17.6
+   }
+  ],
+  "gpu_hours_total": 209.97333333333336
+ }
+}

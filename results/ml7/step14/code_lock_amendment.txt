@@ -1,0 +1,7 @@
+Code lock amendment 2026-10-11T07:48:21+00:00
+owner approval in chat 2026-10-11 ~10:50 (option 1): parity_k 2.5 for wide_s2_cap512_r_gb10/ckpt_step150.pt only
+reason: GSM8K wide_2 pre-readout engine/trainer self-test, decode-path check 2.03x floor vs 2.0x limit, all other checks passed (two attempts); the check does not affect scored generations
+diff: readout_parity_k.diff (PARITY_K_OVERRIDE dict + pk lookup, nothing else)
+before: 87e8ba32abfe9882656f96728c5d43389907d6096eb295b2bc7251528501455b  <repo>/src/gdn_gate/ml7/readout_vllm.py
+after:  7239c503181f0bdb9da1eeb5caf8cc1d82c27605554fc0c746e49a6ca9e33052  <repo>/src/gdn_gate/ml7/readout_vllm.py
+readouts already done keep their markers; they ran the before-code, which differs only in this threshold

@@ -1,0 +1,232 @@
+{
+ "verbatim_pass_math_verify": 1.0,
+ "verbatim_pass_fallback": 1.0,
+ "red_accept_math_verify": 0.0,
+ "red_accept_fallback": 0.0,
+ "accept_variants_math_verify": 1.0,
+ "accept_variants_fallback": 0.3976209256219489,
+ "n_checks": 84077,
+ "red_failures_math_verify": [],
+ "red_failures_fallback": [],
+ "accept_misses_math_verify": [],
+ "table": [
+  {
+   "set": "gsm8k_test",
+   "variant": "A0_verbatim",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "A1_spaced",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "A2_trailing_zeros",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "A3_dollar",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "A4_unit_text",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "A5_thousands_comma",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 131
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "R1_wrong_value",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "R2_no_box",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "R3_empty_box",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_test",
+   "variant": "R4_last_box_wrong",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 1319
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "A0_verbatim",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "A1_spaced",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "A2_trailing_zeros",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "A3_dollar",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "A4_unit_text",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "A5_thousands_comma",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 797
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "R1_wrong_value",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "R2_no_box",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "R3_empty_box",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "gsm8k_train",
+   "variant": "R4_last_box_wrong",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 7473
+  },
+  {
+   "set": "math500",
+   "variant": "A0_verbatim",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 500
+  },
+  {
+   "set": "math500",
+   "variant": "A1_spaced",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 500
+  },
+  {
+   "set": "math500",
+   "variant": "A2_trailing_zeros",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 311
+  },
+  {
+   "set": "math500",
+   "variant": "A3_dollar",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 311
+  },
+  {
+   "set": "math500",
+   "variant": "A4_unit_text",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 311
+  },
+  {
+   "set": "math500",
+   "variant": "A5_thousands_comma",
+   "math_verify": 1.0,
+   "fallback": 0.0,
+   "n": 20
+  },
+  {
+   "set": "math500",
+   "variant": "A6_dfrac",
+   "math_verify": 1.0,
+   "fallback": 1.0,
+   "n": 68
+  },
+  {
+   "set": "math500",
+   "variant": "R1_wrong_value",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 500
+  },
+  {
+   "set": "math500",
+   "variant": "R2_no_box",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 500
+  },
+  {
+   "set": "math500",
+   "variant": "R3_empty_box",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 500
+  },
+  {
+   "set": "math500",
+   "variant": "R4_last_box_wrong",
+   "math_verify": 0.0,
+   "fallback": 0.0,
+   "n": 500
+  }
+ ],
+ "math_verify_passes_contract": true
+}

@@ -1,0 +1,195 @@
+{
+ "args": {
+  "stack": "trl",
+  "model": "<models>/Qwen3.5-4B-Base",
+  "data": "<data>/broad/tulu3_permissive.parquet",
+  "adapters": "<runs>/broad/pilot6/sft_wide_s0/ckpt_step50.pt",
+  "ref": "ref_bflo.pt",
+  "dtype": "bfloat16",
+  "n_ex": 24,
+  "out": "chk_trl_bflo.json"
+ },
+ "info": {
+  "path": "trl",
+  "liger": true
+ },
+ "adapters_loaded": 216,
+ "n_ex": 24,
+ "lens": [
+  782,
+  486,
+  228,
+  136,
+  745,
+  270,
+  898,
+  229,
+  1797,
+  542,
+  607,
+  165,
+  1882,
+  1990,
+  382,
+  2347,
+  204,
+  1917,
+  142,
+  54,
+  89,
+  282,
+  76,
+  215
+ ],
+ "torch": "2.14.0+cu130",
+ "gpu": "NVIDIA GB10",
+ "param_dtypes": [
+  "torch.bfloat16",
+  "torch.float32"
+ ],
+ "bounds": {
+  "metric": {
+   "full": 0.10164478786295736,
+   "head64": 0.010031519068211148,
+   "head8": 0.012374429361424662
+  },
+  "total": 0.0006464611547545416,
+  "grad": {
+   "lora": 0.39939926696777345,
+   "gate": 0.6879904730415344
+  }
+ },
+ "gate_proof": {
+  "gdn_layers": 24,
+  "forward_code_files": [
+   "<wg_forward>"
+  ],
+  "instance_bound": true,
+  "beta_calls": 24,
+  "beta_fns": [
+   "_wg_beta"
+  ],
+  "arms": [
+   "wide"
+  ]
+ },
+ "green": {
+  "dev": {
+   "full": 0.066735885106436,
+   "head64": 0.003622075323985982,
+   "head8": 0.008966212756671997
+  },
+  "total_rel": 0.00038506091607627414,
+  "grad_rel": {
+   "lora": 0.1859387457370758,
+   "gate": 0.2998354136943817
+  },
+  "engaged": {
+   "attn": 16,
+   "gdn": 48,
+   "conv": 48
+  },
+  "total": 6025.96484375,
+  "ratio_to_bound": {
+   "metric_full": 0.6565598345919388,
+   "metric_head64": 0.36106947505726883,
+   "metric_head8": 0.7245758567762935,
+   "total": 0.5956443217728682,
+   "grad_lora": 0.46554603654813104,
+   "grad_gate": 0.4358133221944782
+  },
+  "ok": true
+ },
+ "red": {
+  "nogate": {
+   "dev": {
+    "full": 0.5345650448327616,
+    "head64": 0.04359346073709549,
+    "head8": 0.03569821238906191
+   },
+   "total_rel": 0.01622895317168251,
+   "grad_rel": {
+    "lora": 0.680939257144928,
+    "gate": 1.0
+   },
+   "engaged": {
+    "attn": 16,
+    "gdn": 48,
+    "conv": 48
+   },
+   "total": 6121.40283203125,
+   "ratio_to_bound": {
+    "metric_full": 5.259148610290664,
+    "metric_head64": 4.345648993006321,
+    "metric_head8": 2.884837057646106,
+    "total": 25.104297531758995,
+    "grad_lora": 1.704908630190028,
+    "grad_gate": 1.4535084992952068
+   },
+   "max_ratio": 25.104297531758995,
+   "detected": true
+  },
+  "clamp1": {
+   "dev": {
+    "full": 0.14237470903068017,
+    "head64": 0.020880286754874272,
+    "head8": 0.02315112433917083
+   },
+   "total_rel": 0.0047095712070575994,
+   "grad_rel": {
+    "lora": 0.4954124093055725,
+    "gate": 0.7349541187286377
+   },
+   "engaged": {
+    "attn": 16,
+    "gdn": 48,
+    "conv": 48
+   },
+   "total": 6052.01416015625,
+   "ratio_to_bound": {
+    "metric_full": 1.4007084084098533,
+    "metric_head64": 2.0814680820417073,
+    "metric_head8": 1.870884196999081,
+    "total": 7.285157309793505,
+    "grad_lora": 1.2403938872164884,
+    "grad_gate": 1.0682620581640934
+   },
+   "max_ratio": 7.285157309793505,
+   "detected": false
+  },
+  "trlstock": {
+   "dev": {
+    "full": 4.522632791840005,
+    "head64": 1.5699884989735484,
+    "head8": 1.680701540273757
+   },
+   "total_rel": 0.14824571688883845,
+   "grad_rel": {
+    "lora": 7.165881633758545,
+    "gate": 13.62121295928955
+   },
+   "engaged": {
+    "attn": 0,
+    "gdn": 0,
+    "conv": 0
+   },
+   "total": 6916.625,
+   "ratio_to_bound": {
+    "metric_full": 44.49448798041319,
+    "metric_head64": 156.50555895853105,
+    "metric_head8": 135.82052886520003,
+    "total": 229.31883191825605,
+    "grad_lora": 17.941649438071558,
+    "grad_gate": 19.798548807037378
+   },
+   "max_ratio": 229.31883191825605,
+   "detected": true
+  }
+ },
+ "why": [
+  "red arm clamp1 not detected (max ratio 7.29)"
+ ],
+ "verdict": "FAIL",
+ "seconds": 168.5,
+ "peak_gib": 14.31
+}

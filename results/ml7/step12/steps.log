@@ -1,0 +1,45 @@
+=== untouched start 2026-10-10T17:53:47+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm stock --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_untouched.json
+=== untouched ok wall=5550s
+=== warmup start 2026-10-10T19:26:17+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s0_cap512_fmt_gb10/ckpt_step40.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_warmup.json
+=== warmup ok wall=3510s
+=== ctrl_0 start 2026-10-10T20:24:47+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_ctrl_0.json
+=== ctrl_0 ok wall=1319s
+=== wide_0 start 2026-10-10T20:46:46+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide --ckpt <runs>/ml7/grpo/wide_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_wide_0.json
+=== wide_0 ok wall=962s
+=== wide1_0 start 2026-10-10T21:02:48+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s0_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_wide1_0.json
+=== wide1_0 ok wall=1550s
+=== analysis start 2026-10-10T21:28:39+03:00: 3 of 9 arm runs
+=== analysis ok (<repo>/results/ml7/step12/analysis_val.json)
+=== figures ok: 3 figures in <repo>/ml_pipeline/figures (receipt <repo>/results/ml7/step12/figures_val.json)
+=== untouched kept (<repo>/results/ml7/step12/readout_val_untouched.json)
+=== warmup kept (<repo>/results/ml7/step12/readout_val_warmup.json)
+=== ctrl_0 kept (<repo>/results/ml7/step12/readout_val_ctrl_0.json)
+=== ctrl_1 start 2026-10-10T21:30:52+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm ctrl --ckpt <runs>/ml7/grpo/ctrl_s1_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_ctrl_1.json
+=== ctrl_1 ok wall=1335s
+=== wide_0 kept (<repo>/results/ml7/step12/readout_val_wide_0.json)
+=== wide1_0 kept (<repo>/results/ml7/step12/readout_val_wide1_0.json)
+=== wide1_1 start 2026-10-10T21:53:07+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s1_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_wide1_1.json
+=== wide1_1 ok wall=975s
+=== analysis start 2026-10-10T22:09:23+03:00: 5 of 9 arm runs
+=== analysis ok (<repo>/results/ml7/step12/analysis_val.json)
+=== figures ok: 3 figures in <repo>/ml_pipeline/figures (receipt <repo>/results/ml7/step12/figures_val.json)
+=== untouched kept (<repo>/results/ml7/step12/readout_val_untouched.json)
+=== warmup kept (<repo>/results/ml7/step12/readout_val_warmup.json)
+=== ctrl_0 kept (<repo>/results/ml7/step12/readout_val_ctrl_0.json)
+=== ctrl_1 kept (<repo>/results/ml7/step12/readout_val_ctrl_1.json)
+=== wide_0 kept (<repo>/results/ml7/step12/readout_val_wide_0.json)
+=== wide1_0 kept (<repo>/results/ml7/step12/readout_val_wide1_0.json)
+=== wide1_1 kept (<repo>/results/ml7/step12/readout_val_wide1_1.json)
+=== wide1_2 start 2026-10-10T22:12:34+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s2_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_wide1_2.json
+=== untouched kept (<repo>/results/ml7/step12/readout_val_untouched.json)
+=== warmup kept (<repo>/results/ml7/step12/readout_val_warmup.json)
+=== ctrl_0 kept (<repo>/results/ml7/step12/readout_val_ctrl_0.json)
+=== ctrl_1 kept (<repo>/results/ml7/step12/readout_val_ctrl_1.json)
+=== wide_0 kept (<repo>/results/ml7/step12/readout_val_wide_0.json)
+=== wide1_0 kept (<repo>/results/ml7/step12/readout_val_wide1_0.json)
+=== wide1_1 kept (<repo>/results/ml7/step12/readout_val_wide1_1.json)
+=== wide1_2 start 2026-10-10T22:40:21+03:00: <cache>/vllm/venv/bin/python <repo>/src/gdn_gate/ml7/readout_vllm.py --model <runs>/broad/models/Qwen3.5-2B --data <runs>/ml7/data/val.jsonl --arm wide1 --ckpt <runs>/ml7/grpo/wide1_s2_cap512_r_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 --answer_max 1792 --samples 2 --seed 20261006 --gpu_mem 0.45 --out <repo>/results/ml7/step12/readout_val_wide1_2.json
+=== wide1_2 ok wall=927s
+=== analysis start 2026-10-10T22:55:48+03:00: 6 of 9 arm runs
+=== analysis ok (<repo>/results/ml7/step12/analysis_val.json)
+=== figures ok: 3 figures in <repo>/ml_pipeline/figures (receipt <repo>/results/ml7/step12/figures_val.json)
