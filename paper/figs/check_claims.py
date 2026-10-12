@@ -12,6 +12,7 @@ keys, labels, references, URLs, typewriter names and table layout arguments remo
 Signs are ignored (a difference written $-0.002$ matches expect -0.002 or 0.002).
 Exit status 1 if any row fails or any main.tex number is unmatched. Run: python3 paper/figs/check_claims.py
 """
+import gzip
 import json
 import math
 import re
@@ -76,6 +77,13 @@ def resolve(f):
     return p if p.is_absolute() else ROOT / p
 
 
+def read_text_any(p):
+    """Released readouts are gzipped (results/**/readout_*.json.gz): read FILE or FILE.gz."""
+    if not p.exists() and Path(str(p) + ".gz").exists():
+        return gzip.open(str(p) + ".gz", "rt").read()
+    return p.read_text()
+
+
 def get(obj, path):
     for k in path.split("/"):
         obj = obj[int(k)] if isinstance(obj, list) else obj[k]
@@ -98,19 +106,22 @@ def check_rows():
     for line in CL.read_text().splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
         if len(cells) != 8 or cells[2] not in ("json", "text", "textfull"):
+            # A line that starts like a ledger row but does not parse is a broken row, not a skip.
+            if re.match(r"^\|\s*[A-Z][A-Za-z]*\d+[a-z]?\s*\|", line):
+                bad.append(f"malformed row ({len(cells)} cells): {line[:120]}")
             continue
         rid, text, kind, f, path, scale, expect, tol = cells
         p = resolve(f)
         try:
             if kind == "text":
-                ok = path in p.read_text()
+                ok = path in read_text_any(p)
                 got = "found" if ok else "missing"
             elif kind == "textfull":
-                ok = p.read_text().strip() == path
+                ok = read_text_any(p).strip() == path
                 got = "equal" if ok else "differs"
             else:
                 if p not in cache:
-                    cache[p] = json.load(open(p))
+                    cache[p] = json.loads(read_text_any(p))
                 v = float(get(cache[p], path)) * float(scale)
                 ok = abs(v - float(expect)) <= float(tol) + 1e-12
                 got = f"{v:.6g}"

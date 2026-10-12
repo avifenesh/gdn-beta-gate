@@ -21,7 +21,7 @@ tags:
 
 # β gate adapters: Qwen3.5-4B-Base, chat SFT
 
-Trained adapters for the paper "Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5" (Avi Fenesh, 2026; Section 7). The β gate is a zero-initialized
+Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, Tiyuvta.ai, 2026; appendix on supervised fine-tuning and forgetting). The β gate is a zero-initialized
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the chat SFT adapters of the paper's supervised check: Qwen3.5-4B-Base fine-tuned on a Tulu 3 mixture in three arms (LoRA, and LoRA plus the β gate with ceiling 1 or 2), 6 seeds each. Gate(0,1) lowers held-out loss in every seed; opening the negative-eigenvalue range (ceiling 2) gives back about half of that gain.
 
@@ -62,7 +62,7 @@ ceiling, base revision, sha256 of the source checkpoint). `SHA256SUMS` covers ev
 
 ## Training
 
-Chat SFT on the permissive subsets of allenai/tulu-3-sft-mixture (the CC-BY-NC No Robots subset dropped), 1,200 steps of about 33,000 tokens, LoRA rank 16, alpha 32, on the four GDN projections, lr 1e-4 for LoRA and gate. Unsloth stack on NVIDIA GB10 (DGX Spark); checked against the plain trainer of the code repository.
+Chat SFT on the permissive subsets of allenai/tulu-3-sft-mixture (the CC-BY-NC No Robots subset dropped), 1,200 steps of about 33,000 tokens, LoRA rank 16, alpha 32, on the four GDN projections, lr 1e-4 for LoRA and gate. Unsloth stack; seed 0 on NVIDIA GB10 (DGX Spark), seeds 1 to 5 on one NVIDIA RTX PRO 6000 Blackwell Server Edition per run; checked against the plain trainer of the code repository.
 
 ## Evaluation
 
@@ -75,7 +75,7 @@ Every number maps to a receipt and a check in the code repository (`paper/CLAIMS
 - Research artifacts for reproducing and probing the paper's results. They are not tuned for deployment or safety
   and inherit the base model's limitations.
 - The RL results cover one model family (Qwen3.5) at 2B and 4B, 3 to 6 seeds per arm, GSM8K training prompts only,
-  and reasoning budgets up to 8,192 tokens.
+  and thinking budgets up to 8,192 tokens.
 - Readouts are sampled; a rerun reproduces the protocol and, within seed and item noise, the numbers, not the bytes.
 - Tested with vLLM 0.31.0, PyTorch 2.13 and transformers 5.17 on NVIDIA RTX PRO 6000, GB10 and RTX 5090 GPUs.
 
@@ -87,7 +87,7 @@ Apache-2.0, as the base model. Training data licenses stay with their sources (c
 ## Citation
 
     @misc{fenesh2026betagate,
-      title  = {Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5},
+      title  = {Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues},
       author = {Fenesh, Avi},
       year   = {2026},
       note   = {arXiv identifier to be added. Code: https://github.com/avifenesh/gdn-beta-gate}

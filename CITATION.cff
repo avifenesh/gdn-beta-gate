@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the paper below."
-title: "gdn-beta-gate: code and receipts for 'Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5'"
-version: 1.0.0
+title: "gdn-beta-gate: code and receipts for 'Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues'"
+version: 1.1.0
 date-released: 2026-10-12
 url: "https://github.com/avifenesh/gdn-beta-gate"
 repository-code: "https://github.com/avifenesh/gdn-beta-gate"
@@ -9,6 +9,8 @@ license: Apache-2.0
 authors:
   - family-names: "Fenesh"
     given-names: "Avi"
+    affiliation: "Tiyuvta.ai"
+    email: "avifenesh@tiyuvta.ai"
 keywords:
   - Gated DeltaNet
   - delta rule
@@ -18,9 +20,11 @@ keywords:
   - Qwen3.5
 preferred-citation:
   type: article
-  title: "Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5"
+  title: "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues"
   authors:
     - family-names: "Fenesh"
       given-names: "Avi"
+      affiliation: "Tiyuvta.ai"
+      email: "avifenesh@tiyuvta.ai"
   year: 2026
   url: "https://github.com/avifenesh/gdn-beta-gate"

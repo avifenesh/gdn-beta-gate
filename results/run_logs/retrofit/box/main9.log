@@ -1,0 +1,17 @@
+start main9_wide_s0 gpu 0 2026-09-29T22:35:22+00:00
+start main9_wide_s2 gpu 4 2026-09-29T22:35:22+00:00
+start base9_ctrl_s100 gpu 6 2026-09-29T22:35:22+00:00
+start main9_wide_s1 gpu 2 2026-09-29T22:35:22+00:00
+start main9_ctrl_s0 gpu 1 2026-09-29T22:35:22+00:00
+start main9_ctrl_s2 gpu 5 2026-09-29T22:35:22+00:00
+start main9_ctrl_s1 gpu 3 2026-09-29T22:35:22+00:00
+start clean9_wide_s0 gpu 7 2026-09-29T22:35:22+00:00
+done base9_ctrl_s100 2026-09-29T22:44:02+00:00
+done main9_ctrl_s2 2026-09-30T01:13:07+00:00
+done main9_ctrl_s0 2026-09-30T01:13:59+00:00
+done main9_ctrl_s1 2026-09-30T01:14:59+00:00
+done main9_wide_s1 2026-09-30T01:15:51+00:00
+done clean9_wide_s0 2026-09-30T01:16:42+00:00
+done main9_wide_s2 2026-09-30T01:16:52+00:00
+done main9_wide_s0 2026-09-30T01:17:20+00:00
+all done 2026-09-30T01:17:20+00:00

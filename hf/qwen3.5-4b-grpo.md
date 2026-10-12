@@ -22,7 +22,7 @@ tags:
 
 # β gate adapters: Qwen3.5-4B, GRPO
 
-Trained adapters for the paper "Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5" (Avi Fenesh, 2026; Sections 4, 5 and 6). The β gate is a zero-initialized
+Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, Tiyuvta.ai, 2026; Results and Mechanism sections). The β gate is a zero-initialized
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the adapters of the paper's main record: Qwen3.5-4B trained with GRPO on GSM8K under a correctness-gated length penalty, in four arms (LoRA, a parameter-matched LoRA-r20, and LoRA plus the β gate with ceiling 1 or 2) with 3 seeds each, plus the shared warm-up every arm starts from. The gated arms score higher on MATH-500 and reason far shorter; the parameter-matched LoRA does not reproduce this.
 
@@ -73,7 +73,7 @@ GRPO (no KL term) with the correctness-gated length penalty of Arora and Zanette
 
 ## Evaluation
 
-Read under the paper's locked protocol: vendor sampling (temperature 1.0, top-p 0.95, top-k 20, presence penalty 1.5), reasoning budgets 256 to 8,192 tokens, area = normalized area under accuracy vs log2 budget, length = mean reasoning tokens at the 8,192 budget. Means of 3 seeds.
+Read under the paper's locked protocol: vendor sampling (temperature 1.0, top-p 0.95, top-k 20, presence penalty 1.5), thinking budgets 256 to 8,192 tokens, area = anytime accuracy (area under the accuracy-budget curve), normalized over log2 budgets, length = mean reasoning tokens at the 8,192 budget. Means of 3 seeds.
 
 | Arm | MATH-500 area | MATH-500 length | GSM8K length | Fresh set area | Fresh set length |
 |---|---|---|---|---|---|
@@ -93,7 +93,7 @@ Every number maps to a receipt and a check in the code repository (`paper/CLAIMS
 - Research artifacts for reproducing and probing the paper's results. They are not tuned for deployment or safety
   and inherit the base model's limitations.
 - The RL results cover one model family (Qwen3.5) at 2B and 4B, 3 to 6 seeds per arm, GSM8K training prompts only,
-  and reasoning budgets up to 8,192 tokens.
+  and thinking budgets up to 8,192 tokens.
 - Readouts are sampled; a rerun reproduces the protocol and, within seed and item noise, the numbers, not the bytes.
 - Tested with vLLM 0.31.0, PyTorch 2.13 and transformers 5.17 on NVIDIA RTX PRO 6000, GB10 and RTX 5090 GPUs.
 
@@ -105,7 +105,7 @@ Apache-2.0, as the base model. Training data licenses stay with their sources (c
 ## Citation
 
     @misc{fenesh2026betagate,
-      title  = {Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5},
+      title  = {Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues},
       author = {Fenesh, Avi},
       year   = {2026},
       note   = {arXiv identifier to be added. Code: https://github.com/avifenesh/gdn-beta-gate}

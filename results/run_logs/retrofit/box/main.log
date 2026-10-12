@@ -1,0 +1,17 @@
+start main_ctrl_s0 gpu 1 2026-09-29T18:21:25+00:00
+start main_wide_s2 gpu 4 2026-09-29T18:21:25+00:00
+start len128_ctrl_s0 gpu 7 2026-09-29T18:21:25+00:00
+start main_wide_s0 gpu 0 2026-09-29T18:21:25+00:00
+start main_wide_s1 gpu 2 2026-09-29T18:21:25+00:00
+start len128_wide_s0 gpu 6 2026-09-29T18:21:25+00:00
+start main_ctrl_s1 gpu 3 2026-09-29T18:21:25+00:00
+start main_ctrl_s2 gpu 5 2026-09-29T18:21:25+00:00
+done main_ctrl_s2 2026-09-29T20:19:17+00:00
+done main_ctrl_s0 2026-09-29T20:19:29+00:00
+done main_ctrl_s1 2026-09-29T20:20:16+00:00
+done main_wide_s1 2026-09-29T20:20:41+00:00
+done main_wide_s2 2026-09-29T20:21:57+00:00
+done main_wide_s0 2026-09-29T20:22:02+00:00
+done len128_ctrl_s0 2026-09-29T22:06:25+00:00
+done len128_wide_s0 2026-09-29T22:08:42+00:00
+all done 2026-09-29T22:08:42+00:00

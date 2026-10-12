@@ -75,7 +75,7 @@ def budget_panel(ax, d, arms, title):
                 label=LBL[arm])
     ax.set_xticks(x)
     ax.set_xticklabels([f"{c // 1024}k" if c >= 1024 else str(c) for c in caps])
-    ax.set_xlabel("reasoning budget (tokens, log scale)")
+    ax.set_xlabel("thinking budget (tokens, log scale)")
     ax.set_ylabel("accuracy")
     ax.set_title(title)
 
@@ -289,7 +289,7 @@ def budget_panel_fresh(ax, d, arms, title):
                 label=LBL[arm])
     ax.set_xticks(x)
     ax.set_xticklabels([f"{c // 1024}k" if c >= 1024 else str(c) for c in caps])
-    ax.set_xlabel("budget (tokens, log scale)")
+    ax.set_xlabel("thinking budget (tokens, log scale)")
     ax.set_ylabel("accuracy")
     ax.set_title(title)
 

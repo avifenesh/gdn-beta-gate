@@ -1,0 +1,266 @@
+{
+ "args": {
+  "model": "<models>/Qwen3.5-4B",
+  "pool": "<runs>/ml7/data/rl_pool.jsonl",
+  "manifest": "<repo>/ml_pipeline_4b/split_manifest.json",
+  "arm": "ctrl",
+  "seed": 0,
+  "out": "<runs>/ml7/grpo/ctrl_s0_cap512_fmt_box",
+  "cap": 512,
+  "gpu_mem": 0.3,
+  "micro_tokens": 8192,
+  "steps": 40,
+  "prompts": 16,
+  "group": 8,
+  "answer_max": 1280,
+  "alpha": 0.0,
+  "length_on": "reasoning",
+  "init_from": "",
+  "lr": 2e-05,
+  "w_lr": 2e-05,
+  "rank": 16,
+  "pack": true,
+  "max_num_seqs": 128,
+  "max_batched_tokens": 8192,
+  "ckpt_every": 25,
+  "stop_after": 0,
+  "resume": true,
+  "val_data": "<runs>/ml7/data/val.jsonl",
+  "val_every": 0,
+  "val_n": 128,
+  "parity_prompts": 8,
+  "parity_samples": 2,
+  "parity_tokens": 256,
+  "parity_k": 2.0,
+  "parity_floor": 0.001,
+  "probe_effect": 0.05,
+  "effect_corr": 0.9,
+  "effect_slope_tol": 0.1,
+  "effect_visible": 5.0,
+  "mem_probe_len": 0,
+  "mem_probe_tokens": 0,
+  "mem_probe_soft": false,
+  "bench_pack": false,
+  "device": "cuda"
+ },
+ "data": {
+  "pool": {
+   "file": "<runs>/ml7/data/rl_pool.jsonl",
+   "sha256": "1cc1ef6b8f8339cd84847ced1c52f799db0095984def0afbe6142d5afec6c448",
+   "rows": 6965,
+   "manifest": "<repo>/ml_pipeline_4b/split_manifest.json"
+  }
+ },
+ "math_verify": "0.9.0",
+ "train_sampling": {
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "presence_penalty": 0.0
+ },
+ "length_on": "reasoning",
+ "init_from": null,
+ "opt_at_start": {
+  "state_entries": 0,
+  "sched_last_epoch": 0,
+  "start_step": 0,
+  "lr": 1e-05
+ },
+ "resumed_from": 0,
+ "dropped_log_lines": {
+  "train_log.jsonl": 0,
+  "rollouts.jsonl": 0,
+  "val_log.jsonl": 0
+ },
+ "engine": {
+  "engine_kwargs": {
+   "dtype": "bfloat16",
+   "enable_prefix_caching": false,
+   "mamba_ssm_cache_dtype": "float32",
+   "additional_config": {
+    "gdn_prefill_backend": "triton"
+   },
+   "limit_mm_per_prompt": {
+    "image": 0,
+    "video": 0
+   },
+   "max_logprobs": 256,
+   "seed": 0,
+   "max_num_seqs": 128,
+   "gpu_memory_utilization": 0.3,
+   "max_model_len": 2049,
+   "max_num_batched_tokens": 8192
+  },
+  "engine_s": 79.08494019508362,
+  "layout": {
+   "layout_tensors_checked": 72,
+   "gdn_layers": 24
+  },
+  "installed": [
+   "stock",
+   false,
+   16
+  ],
+  "gate_calls": {
+   "gate": 0,
+   "post_conv": 0,
+   "sigmoid_gating": 0,
+   "packed_decode": 0
+  },
+  "torch_allocated_after_engine_gib": 34.52,
+  "num_gpu_blocks": 1146,
+  "block_size": 528
+ },
+ "gdn_train": {
+  "kernel": "fla",
+  "dtype": "bf16"
+ },
+ "parity": {
+  "k": 2.0,
+  "floor_abs": 0.001,
+  "prompts": 8,
+  "samples": 2,
+  "tokens": 256,
+  "effect_corr_min": 0.9,
+  "effect_slope_tol": 0.1,
+  "effect_visible_x": 5.0,
+  "floor_decode": {
+   "n": 4096,
+   "mean": 0.00630483027248234,
+   "p99": 0.11028870344161998,
+   "max": 1.8901588916778564,
+   "bias": -0.0003639231568029408
+  },
+  "floor_prefill": {
+   "n": 4096,
+   "mean": 0.0064816247525085555,
+   "p99": 0.10725693702697757,
+   "max": 1.901893138885498,
+   "bias": -0.0004904890540043828
+  },
+  "probe": {
+   "target": 0.05,
+   "lora_B": {
+    "scale": 0.018926625237574497,
+    "effect": 0.0499454674059094
+   }
+  },
+  "probe_decode": {
+   "n": 4096,
+   "mean": 0.0067419381668216115,
+   "p99": 0.10826878547668463,
+   "max": 0.24451971054077148,
+   "bias": -0.0009122325373201179
+  },
+  "prefill_floor_probe_tokens": {
+   "n": 4096,
+   "mean": 0.006795602101325911,
+   "p99": 0.10923538804054268,
+   "max": 0.2428598403930664,
+   "bias": 0.0003309526117534281
+  },
+  "prefill_lora": {
+   "n": 4096,
+   "mean": 0.007038489000315137,
+   "p99": 0.11312226057052621,
+   "max": 0.2588045597076416,
+   "bias": -0.0006439013029305631
+  },
+  "lora_effect": {
+   "n": 4096,
+   "slope": 0.9703648228788041,
+   "corr": 0.9781769331338332,
+   "err_mean": 0.01085845131316209,
+   "effect_mean": 0.05367471449990617,
+   "engine_effect_mean": 0.05343061634403099
+  },
+  "red_lora_zeroed": {
+   "n": 4096,
+   "slope": 0.0,
+   "corr": 0.0,
+   "err_mean": 0.05367471449990617,
+   "effect_mean": 0.05367471449990617,
+   "engine_effect_mean": 0.0
+  },
+  "bound_decode": 0.01260966054496468,
+  "bound_prefill": 0.013591204202651821,
+  "visible_min": 0.032408123762542776,
+  "checks": {
+   "probe_decode": true,
+   "prefill_lora": true,
+   "lora_visible": true,
+   "lora_effect_agrees": true,
+   "red_lora_fails": true
+  },
+  "pass": true,
+  "start": {
+   "n": 4096,
+   "mean": 0.006417167343004496,
+   "p99": 0.11133570671081555,
+   "max": 0.2620706558227539,
+   "bias": -3.4543001128583065e-05
+  },
+  "start_effect": {
+   "n": 4096,
+   "slope": 0.0,
+   "corr": 0.0,
+   "err_mean": 0.0,
+   "effect_mean": 0.0,
+   "engine_effect_mean": 0.0,
+   "visible": false
+  },
+  "start_pass": true,
+  "seconds": 28.5
+ },
+ "n_lora": 8675328,
+ "n_w": 0,
+ "pool_rows": 6965,
+ "max_model_len": 2049,
+ "env": {
+  "torch": "2.13.0+cu130",
+  "transformers": "5.17.0",
+  "python": "3.12.13",
+  "host": "<host>",
+  "pylib": "~/.cache/gdn_gate/ml7/pylib",
+  "code_sha256": {
+   "train_grpo_vllm.py": "fd43756063484b04",
+   "rl_common.py": "f64d634ea7820d2a",
+   "gate_vllm.py": "efb694059e39f4ea",
+   "arms.py": "a4303e9a39474466",
+   "packing.py": "4d567ac5bc2dc950"
+  },
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "vllm": "0.31.0",
+  "peft": "0.21.0",
+  "fla-core": "0.5.2",
+  "math-verify": "0.9.0",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "git_describe": ""
+ },
+ "startup_s": 136.8,
+ "mem_probe": {
+  "seqs": 4,
+  "seq_len": 2048,
+  "micro_tokens": 8192,
+  "oom": false,
+  "fwd_bwd_s": 27.04,
+  "max_allocated_gib": 83.74,
+  "max_reserved_gib": 84.46,
+  "device_free_gib": 9.22,
+  "device_total_gib": 94.97
+ },
+ "mem_probe_ladder": [
+  {
+   "seqs": 4,
+   "seq_len": 2048,
+   "micro_tokens": 8192,
+   "oom": false,
+   "fwd_bwd_s": 27.04,
+   "max_allocated_gib": 83.74,
+   "max_reserved_gib": 84.46,
+   "device_free_gib": 9.22,
+   "device_total_gib": 94.97
+  }
+ ]
+}

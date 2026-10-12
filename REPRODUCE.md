@@ -28,7 +28,7 @@ receipts. The tolerance for a GPU rerun is the decision rule (3 of 3 seeds with 
 
 | Claim | Paper location | Experiment id (receipt) | Command | Hardware | Wall time | Expected | Tolerance |
 |---|---|---|---|---|---|---|---|
-| Gated arms raise MATH-500 area over LoRA at 4B | Abstract, Results (Qwen3.5-4B), Table 2, Fig. 1 | `results/ml7_4b/step14_ctrlpm/analysis_math500.json` | sections 2.2 to 2.5 | 1 RTX PRO 6000 (96 GB) per run or readout | ~21 h training + ~45 h readouts (GPU-h) | LoRA 0.786, Gate(0,1) 0.852, Gate(0,2) 0.849; Gate(0,2) - LoRA +0.063 [+0.048, +0.078] | rule holds; seed-mean area within 0.02 |
+| Gated arms raise MATH-500 area over LoRA at 4B | Abstract, Results (Qwen3.5-4B), Table 1, Fig. 1 | `results/ml7_4b/step14_ctrlpm/analysis_math500.json` | sections 2.2 to 2.5 | 1 RTX PRO 6000 (96 GB) per run or readout | ~21 h training + ~45 h readouts (GPU-h) | LoRA 0.786, Gate(0,1) 0.852, Gate(0,2) 0.849; Gate(0,2) - LoRA +0.063 [+0.048, +0.078] | rule holds; seed-mean area within 0.02 |
 | Gated arms shorten GSM8K reasoning (H2) | Results (Qwen3.5-4B) | `results/ml7_4b/step14_ctrlpm/analysis_gsm8k.json` | same | same | same | LoRA 1,666, Gate(0,1) 297, Gate(0,2) 261 tokens; H2 -1,405 | rule holds; lengths within 25% |
 | Parameter-matched LoRA-r20 does not reproduce it (H3, H4) | Results (Qwen3.5-4B) | same two files, `preregistered_hypotheses` | sections 2.4, 2.5 | same | ~4 h training + ~8 h readouts | H3 +0.060 [+0.049, +0.072]; H4 -1,000 tokens | rule holds |
 | Effect holds on the fresh held-out set at 4B (H5, H6) | Abstract, Results (fresh set), Fig. 2 | `results/fresh/analysis_fresh_4b.json` | section 2.10 | 1 RTX PRO 6000 per readout | ~1.3 h per readout, 14 readouts (~18 GPU-h) | H5 +0.110 [+0.089, +0.132]; H6 -1,329 [-1,585, -1,081] tokens; both supported | rule holds; seed-mean area within 0.03 |
@@ -39,16 +39,16 @@ receipts. The tolerance for a GPU rerun is the decision rule (3 of 3 seeds with 
 | Length falls with the gate scale (G2) | Mechanism, Fig. 3b | `results/mech/g1g2_summary.json` (`g2_dose`), `results/mech/dose_receipt.json` | section 2.11 | same | 12 readouts | monotone in all 3 seeds; area 0.949 to 0.963 | monotone per seed |
 | Gate moves beta more than LoRA (G3) | Mechanism, Fig. 3c | `results/mech/gate_stats_summary/gate_stats_summary_fixed.json` | section 2.11 | 1 GPU (teacher forcing) | about 1 h for 43 checkpoints | mean abs change of beta at step 150: Gate(0,1) 0.018 to 0.021, Gate(0,2) 0.038 to 0.041 | seed range |
 | Where the tokens go, item-matched gap | Mechanism (text and training dynamics) | `results/mech/text_stats.json`, `item_match.json`, `traj.json`, `traj_extra.json` | section 2.11 | CPU | minutes | e.g. MATH-500: 94% of the saving is after the answer | exact (from released files where released) |
-| Range gives back half the SFT gain | Appendix (SFT and forgetting), Fig. 4 left | `paper/data/derived.json` `step6_sft` (from `results/run_logs/broad/step6/*/val_log.jsonl`) | section 2.7 | 1 GB10 per run | ~8 h per run (18 runs) | Gate(0,1) - LoRA -0.0061; Gate(0,2) - Gate(0,1) +0.0032, 6 of 6 | signs per seed |
-| Gate reduces forgetting | Appendix (SFT and forgetting), Fig. 4 right | `results/rescore/`, `results/w1main/` | section 2.8 | 1 RTX PRO 6000 (training), 1 GPU 24 GB+ (scoring) | not recorded in the released receipts | HumanEval LoRA 0.152, Gate(0,2) 0.264, Gate(0,1) 0.409 (4B seed means) | order holds per seed |
-| Clamp costs counting in Olmo-Hybrid-7B | Appendix (Olmo-Hybrid-7B), Fig. 5 | `results/olmo/vllm2/counting_paired.json`, `counting_localization.json`, `ruler_paired.json` | section 2.9 | 1 GPU, 24 GB+ (RTX 5090 Laptop in the lab) | ~2 h per arm for the 500-item cells (estimate from the battery timing) | CWE -3.8 / -6.3 / -6.0 points at 4k / 8k / 16k | sign and p < 0.05 per cell |
+| Range gives back half the SFT gain | Appendix (SFT and forgetting), Fig. 7 left | `paper/data/derived.json` `step6_sft` (from `results/run_logs/broad/step6/*/val_log.jsonl`) | section 2.7 | seed 0: 1 GB10 per run; seeds 1 to 5: 1 RTX PRO 6000 per run | seed 0: about 8 h per run; seeds 1 to 5: about 1.5 h per run (18 runs) | Gate(0,1) - LoRA -0.0061; Gate(0,2) - Gate(0,1) +0.0032, 6 of 6 | signs per seed |
+| Gate reduces forgetting | Appendix (SFT and forgetting), Fig. 7 right | `results/rescore/`, `results/w1main/` | section 2.8 | 1 RTX PRO 6000 (training), 1 GPU 24 GB+ (scoring) | training about 1.9 h per 4B run and 2.5 h per 9B run on one RTX PRO 6000 (`train_seconds` in the run configs); scoring not recorded | HumanEval LoRA 0.152, Gate(0,2) 0.264, Gate(0,1) 0.409 (4B seed means) | order holds per seed |
+| Clamp costs counting in Olmo-Hybrid-7B | Appendix (Olmo-Hybrid-7B), Fig. 8 | `results/olmo/vllm2/counting_paired.json`, `counting_localization.json`, `ruler_paired.json` | section 2.9 | 1 GPU, 24 GB+ (RTX 5090 Laptop in the lab) | ~2 h per arm for the 500-item cells (estimate from the battery timing) | CWE -3.8 / -6.3 / -6.0 points at 4k / 8k / 16k | sign and p < 0.05 per cell |
 | Clamp leaves the broad battery | Appendix (Olmo-Hybrid-7B) | `results/olmo/lesion_nll_base_summary.json`, `results/olmo/vllm2/battery/*/lmeval_lm.json` | section 2.9 | same | ~3 h per arm for the vLLM battery (receipt `timing_s`) | NLL +0.020 [0.017, 0.023]; GSM8K 0.747 vs 0.745 | within 2 points |
-| Every number in the paper | all | `paper/CLAIMS.md` (976 rows) | `uv run python paper/figs/check_claims.py` | CPU | seconds | 0 failed | per row |
+| Every number in the paper | all | `paper/CLAIMS.md` (1044 rows) | `uv run python paper/figs/check_claims.py` | CPU | seconds | 0 failed | per row |
 
 ## 1. Getting started (CPU, about 10 minutes)
 
     uv sync --locked
-    uv run python paper/figs/check_claims.py      # prints "976 rows checked, 0 failed"
+    uv run python paper/figs/check_claims.py      # prints "1044 rows checked, 0 failed"
     uv run python scripts/rerun_analysis.py       # 15 lines, each "OK"; exit 0
     uv run python scripts/rerun_mech.py           # 4 lines, each "OK" (G1/G2, G3, item match, training windows)
     uv run python paper/figs/derive.py            # rewrites paper/data/derived.json from results/ (git diff: empty)
@@ -56,6 +56,11 @@ receipts. The tolerance for a GPU rerun is the decision rule (3 of 3 seeds with 
     SOURCE_DATE_EPOCH=1760227200 uv run python paper/figs/make_figs.py   # rewrites paper/figs/*.pdf byte for byte
     uv run pytest tests/                          # 8 passed: the checks above as tests (tests/README.md)
     bash tests/run_cpu_checks.sh                  # the same, plus tier B with the GPU environment (see tests/README.md)
+
+Two paper scripts need lab files that are not released and are kept as records of how their outputs were made:
+`paper/figs/compute_hours.py` (sums the timing logs of the run trees into `paper/data/compute_hours.json`) and
+`paper/figs/example_traces.py` (decodes the paired example traces of the implementation appendix into
+`paper/data/example_traces.txt` from the raw trace files).
 
 Expected output of `rerun_analysis.py` on any machine:
 
@@ -155,14 +160,15 @@ queued these readouts two per GPU are not released.
 
 Same steps with Qwen3.5-2B (revision 15852e8c), `ml_pipeline/split_manifest.json`, `--answer_max 1792`,
 `--probe_effect 0.2` (the default), `MICRO=16384`; seeds 0 to 2 trained on GB10 (run tag `r_gb10`), seeds 3 to 5 on
-RTX PRO 6000 (`r_box`). Run configs: `results/run_configs/2B_rl/`. Receipts: `results/ml7/step14` (read 1) and
-`results/ml7/step14_ext` (read 2, `--seeds 3,4,5`).
+RTX PRO 6000 (`r_box`); the 2B warm-up and pilots also trained on GB10. Run configs: `results/run_configs/2B_rl/`.
+Receipts: `results/ml7/step14` (read 1) and `results/ml7/step14_ext` (read 2, `--seeds 3,4,5`).
 
 ### 2.7 Chat SFT (appendix, held-out loss)
 
-Environment `env/sft-fast.txt` (Unsloth stack on GB10); the plain trainer `src/gdn_gate/broad/train_sft.py` runs the
-same recipe with the `env/train.txt` environment, and `src/gdn_gate/unsloth/check_fast.py` compares the two (receipts
-in `results/unsloth/checks/`). For each arm in ctrl, wide1, wide and seed 0 to 5:
+Environment `env/sft-fast.txt` (Unsloth stack; seed 0 on GB10, seeds 1 to 5 on RTX PRO 6000); the plain trainer
+`src/gdn_gate/broad/train_sft.py` runs the same recipe with the `env/train.txt` environment, and
+`src/gdn_gate/unsloth/check_fast.py` compares the two (receipts in `results/unsloth/checks/`). For each arm in ctrl,
+wide1, wide and seed 0 to 5:
 
     B=$WG_HF_CACHE/models--Qwen--Qwen3.5-4B-Base/snapshots/1001bb4d826a52d1f399e183466143f4da7b741b
     O=$WG_RUNS/broad/step6/${ARM}_s${SEED}
@@ -314,9 +320,11 @@ released files and compares their output with the receipts.
   lists every edited line.
 - **Nondeterminism.** Readouts and rollouts sample; two readouts shared each GPU in the lab. vLLM reproduces outputs
   only on the same hardware and version. The analysis bootstrap uses a fixed seed (20261009) and is exact.
-- **Hardware.** Training of the 2B seeds 0 to 2 and the chat SFT used DGX Spark (GB10) units; the 9B forgetting runs
-  trained on one RTX PRO 6000 each and were scored on GB10 (LoRA seed 1 on an RTX PRO 6000);
-  the Olmo lesions and the 2B validation readouts used an RTX 5090 Laptop GPU (24 GB). Hardware per receipt is in its
-  env block (`results/ENVIRONMENT.json` for the RL readouts).
+- **Hardware.** Training of the 2B warm-up, pilots and seeds 0 to 2, the chat SFT seed 0 runs and the 4B forgetting
+  LoRA seeds 4 and 5 used DGX Spark (GB10) units; the 9B forgetting runs, the 4B forgetting runs of seeds 0 to 2 and
+  chat SFT seeds 1 to 5 trained on rented RTX PRO 6000 GPUs. The Olmo lesions, the 2B validation readouts and the
+  HumanEval scoring of the 4B LoRA and Gate(0,2) forgetting runs used an RTX 5090 Laptop GPU (24 GB); the 9B
+  forgetting runs were scored on GB10 (LoRA seed 1 on an RTX PRO 6000). Hardware per receipt is in its env block
+  (`results/ENVIRONMENT.json` for the RL readouts).
 - **Quick mode.** There is no shrunk GPU workload with its own reference values. `readout_vllm.py --limit N
   --stride K` reads a subset for a smoke test; the CPU level above is the fast path.

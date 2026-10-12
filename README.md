@@ -1,13 +1,13 @@
-# β gate: retrofitting a gate on the delta-rule write strength (Qwen3.5)
+# Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues
 
-Code, receipts and checks for the paper "Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained
-Reasoning in Qwen3.5" (Avi Fenesh, 2026; the arXiv identifier and the archive DOI are added to this README and
-`CITATION.cff` when they exist). This repository is a frozen research artifact: it holds the exact training,
-readout and analysis code the paper ran, the pre-registration records, every analysis receipt and per-item readout
-the paper's numbers come from, a claims checker that ties each number in the paper to a JSON field, and the figure
-scripts. It does not hold model weights (the trained adapters are on the Hugging Face Hub, see
-[docs/ADAPTERS.md](docs/ADAPTERS.md)), dataset text (rebuilt from the public sources by checksum), the raw generation
-traces (planned as a separate archive), or the lab's GPU scheduling and server provisioning scripts.
+Code, receipts and checks for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi
+Fenesh, Tiyuvta.ai, 2026; the arXiv identifier and the archive DOI are added to this README and `CITATION.cff` when
+they exist). This repository is a frozen research artifact: it holds the exact training, readout and analysis code the
+paper ran, the pre-registration records, every analysis receipt and per-item readout the paper's numbers come from, a
+claims checker that ties each number in the paper to a JSON field, and the figure scripts. It does not hold model
+weights (the trained adapters are on the Hugging Face Hub, see [docs/ADAPTERS.md](docs/ADAPTERS.md)), dataset text
+(rebuilt from the public sources by checksum), the raw generation traces (planned as a separate archive), or the lab's
+GPU scheduling and server provisioning scripts.
 
 The method in one line: a zero-initialized linear map `W` per Gated DeltaNet layer moves the write strength `beta`
 toward its floor or its ceiling, `tau = tanh(W x)`; ceiling 1 is Gate(0,1), ceiling 2 opens the negative-eigenvalue
@@ -17,11 +17,11 @@ penalty.
 ## Headline results
 
 All RL numbers: test sets read under the locked protocol with vendor sampling (temperature 1.0, top-p 0.95, top-k 20,
-presence penalty 1.5), budgets 256 to 8,192 reasoning tokens, mean of the seeds with the per-seed range. Area =
-normalized area under accuracy vs log2 budget. Length = mean reasoning tokens at the 8,192 budget. Every test readout
-and every 4B run used one NVIDIA RTX PRO 6000 Blackwell Server Edition (96 GB); the 2B runs of seeds 0 to 2 trained on
-NVIDIA GB10. Software: vLLM 0.31.0, PyTorch 2.13.0 (cu130), transformers 5.17.0 (trainer forward: PyTorch 2.14.0,
-flash-linear-attention 0.5.2).
+presence penalty 1.5), thinking budgets of 256 to 8,192 tokens, mean of the seeds with the per-seed range. Area =
+anytime accuracy (area under the accuracy-budget curve), normalized over log2 budgets. Length = mean reasoning tokens
+at the 8,192 budget. Every RL test readout and every 4B RL run used one NVIDIA RTX PRO 6000 Blackwell Server Edition
+(96 GB); the 2B warm-up, pilots and runs of seeds 0 to 2 trained on NVIDIA GB10. Software: vLLM 0.31.0, PyTorch 2.13.0
+(cu130), transformers 5.17.0 (trainer forward: PyTorch 2.14.0, flash-linear-attention 0.5.2).
 
 | Claim (paper part) | Model | Arm | Metric | Seeds | Mean (per-seed range) |
 |---|---|---|---|---|---|
@@ -74,7 +74,7 @@ Paths: `WG_RUNS` (default `./runs`, git-ignored) holds data files, checkpoints a
 
 ## Quickstart (CPU, about 10 minutes)
 
-    uv run python paper/figs/check_claims.py        # 976 rows checked, 0 failed
+    uv run python paper/figs/check_claims.py        # 1044 rows checked, 0 failed
     uv run python scripts/rerun_analysis.py         # reruns 15 frozen analyses (incl. the fresh set) from the released readouts: all OK
     uv run python scripts/rerun_mech.py             # reruns 4 mechanism summaries from released data: all OK
     SOURCE_DATE_EPOCH=1760227200 uv run python paper/figs/make_figs.py   # rewrites paper/figs/*.pdf, byte for byte
@@ -87,9 +87,10 @@ recorded in each receipt, and compares every key.
 
 ## Reproduce the paper
 
-About 210 GPU-hours on RTX PRO 6000 GPUs: 173 for the RL records and 37 for the fresh held-out set and the mechanism
-readouts, plus owned GB10 and RTX 5090 time ([docs/COMPUTE.md](docs/COMPUTE.md)). One 4B GRPO run takes about 1.4 h
-on one RTX PRO 6000; one test readout of one checkpoint on one test set takes 0.8 to 1.4 h.
+About 293 GPU-hours on RTX PRO 6000 GPUs: 83 for the 4B and 9B forgetting runs, 173 for the RL records and 37 for the
+fresh held-out set and the mechanism readouts, plus owned GB10 and RTX 5090 time ([docs/COMPUTE.md](docs/COMPUTE.md)).
+One 4B GRPO run takes about 1.4 h on one RTX PRO 6000; one test readout of one checkpoint on one test set takes 0.8 to
+1.4 h.
 
 | Result | Command (details in REPRODUCE.md) | Hardware | Wall time | Expected | Tolerance |
 |---|---|---|---|---|---|
@@ -142,7 +143,7 @@ their timestamps: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md). Trained ad
     scripts/               CPU tools: rerun analyses and mechanism summaries, rebuild data, collect env, export adapters
     env/                   pinned GPU environments
     docs/                  compute, pre-registration notes, adapters on the Hub
-    hf/                    the model cards of the four Hub repositories
+    hf/                    the model cards of the five Hub repositories
 
 ## Limits
 
@@ -158,14 +159,15 @@ their timestamps: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md). Trained ad
   readouts is exact.
 - The GPU scheduling, provisioning and transfer scripts of the rented servers are not released; REPRODUCE.md gives
   the per-run and per-readout commands they issued.
-- The raw generation traces are not released. The fresh set's
-  problem text is not redistributed: `scripts/rebuild_data.py` rebuilds it from the public sources by checksum.
+- The raw generation traces are not released; `paper/data/example_traces.txt` holds the one decoded pair the paper's
+  implementation appendix quotes, with its GSM8K test problem (MIT license). The fresh set's problem text is not redistributed: `scripts/rebuild_data.py`
+  rebuilds it from the public sources by checksum.
 - Untested: other GPUs than the three named above, other vLLM, PyTorch or transformers versions.
 
 ## Citation
 
     @misc{fenesh2026betagate,
-      title  = {Retrofitting a Gate on the Delta-Rule Write Strength Shortens RL-Trained Reasoning in Qwen3.5},
+      title  = {Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues},
       author = {Fenesh, Avi},
       year   = {2026},
       note   = {arXiv identifier to be added. Code and receipts: https://github.com/avifenesh/gdn-beta-gate}

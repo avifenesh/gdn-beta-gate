@@ -58,6 +58,9 @@ Shorthands for files:
 | P29b | torch 2.13.0+cu130 in the readouts | text | results/ENVIRONMENT.json | "torch": "2.13.0+cu130" | | | |
 | P29c | transformers 5.17.0 | text | results/ENVIRONMENT.json | "transformers": "5.17.0" | | | |
 | P30 | 4B readouts on RTX PRO 6000 Server Edition, analysis refuses mixed GPUs | text | ml_pipeline_4b/PIPELINE.md | the analysis refuses mixed GPUs | | | |
+| P30a | rented forgetting server 8x RTX PRO 6000, 21:09 to 07:31 (10.4 h) | text | docs/COMPUTE.md | 8 x RTX PRO 6000, 10.4 h | | | |
+| P30b | 4B forgetting LoRA seed 0 trained on that box | text | results/run_logs/retrofit/box/main.log | start main_ctrl_s0 gpu 1 2026-09-29T18:21:25+00:00 |  |  |  |
+| P30c | 9B forgetting Gate(0,2) seed 0 trained on that box | text | results/run_logs/retrofit/box/main9.log | start main9_wide_s0 gpu 0 2026-09-29T22:35:22+00:00 |  |  |  |
 | P31 | rented compute ~173 GPU-h: 8 GPUs 9.5 h | text | docs/COMPUTE.md | 8 x RTX PRO 6000, 9.5 h | | | |
 | P31b | ... preemptible leg 01:40-05:15 | text | docs/COMPUTE.md | preemptible server from 01:40 to 05:15 | | | |
 | P32 | 8 GPUs 10.3 h | text | docs/COMPUTE.md | 8 x RTX PRO 6000, 10.3 h | | | |
@@ -259,7 +262,7 @@ R56-R59, B11, B13. The abstract's CWE relative losses (5%, 12%, 20%) are O24/O25
 | F8 | 4B Gate(0,1) 0.451 | json | D | forgetting_humaneval/4B_main_wide1/s0/pass1 | 1 | 0.451 | 0.0005 |
 | F9 | 4B Gate(0,1) 0.366 | json | D | forgetting_humaneval/4B_main_wide1/s1/pass1 | 1 | 0.366 | 0.0005 |
 | F10 | 4B Gate(0,1) 0.409 | json | D | forgetting_humaneval/4B_main_wide1/s2/pass1 | 1 | 0.409 | 0.0005 |
-| F11 | McNemar p <= 4e-7 per seed (largest) | json | V245 | Table 3 4b_math500_area_wide-ctrl item lo 0.048 | json | X | contrasts/4b_math500_area_wide-ctrl/receipt_ci95_item/0 | 1 | 0.048 | 0.0005 |
+| V245 | Table 3 4b_math500_area_wide-ctrl item lo 0.048 | json | X | contrasts/4b_math500_area_wide-ctrl/receipt_ci95_item/0 | 1 | 0.048 | 0.0005 |
 | V246 | Table 3 4b_math500_area_wide-ctrl item hi 0.078 | json | X | contrasts/4b_math500_area_wide-ctrl/receipt_ci95_item/1 | 1 | 0.078 | 0.0005 |
 | V247 | Table 3 4b_math500_area_wide1-ctrl item lo 0.053 | json | X | contrasts/4b_math500_area_wide1-ctrl/receipt_ci95_item/0 | 1 | 0.053 | 0.0005 |
 | V248 | Table 3 4b_math500_area_wide1-ctrl item hi 0.078 | json | X | contrasts/4b_math500_area_wide1-ctrl/receipt_ci95_item/1 | 1 | 0.078 | 0.0005 |
@@ -311,7 +314,7 @@ R56-R59, B11, B13. The abstract's CWE relative losses (5%, 12%, 20%) are O24/O25
 | V294 | Table 3 2b_fresh_area_wide-wide1 item hi 0.016 | json | X | contrasts/2b_fresh_area_wide-wide1/receipt_ci95_item/1 | 1 | 0.016 | 0.0005 |
 | V295 | Table 3 2b_fresh_len_wide-ctrl item lo -404 | json | X | contrasts/2b_fresh_len_wide-ctrl/receipt_ci95_item/0 | 1 | -404 | 0.5 |
 | V296 | Table 3 2b_fresh_len_wide-ctrl item hi -219 | json | X | contrasts/2b_fresh_len_wide-ctrl/receipt_ci95_item/1 | 1 | -219 | 0.5 |
-| W1 | contrasts/wide1 - ctrl/he/per_seed/2/mcnemar_p | 1e7 | 4.04 | 0.01 |
+| F11 | McNemar p <= 4e-7 per seed (largest) | json | W1 | contrasts/wide1 - ctrl/he/per_seed/2/mcnemar_p | 1e7 | 4.04 | 0.01 |
 | F12 | 9B LoRA 0.305 | json | D | forgetting_humaneval/9B_main_ctrl/s0/pass1 | 1 | 0.305 | 0.0005 |
 | F13 | 9B LoRA 0.427 | json | D | forgetting_humaneval/9B_main_ctrl/s1/pass1 | 1 | 0.427 | 0.0005 |
 | F14 | 9B LoRA 0.335 | json | D | forgetting_humaneval/9B_main_ctrl/s2/pass1 | 1 | 0.335 | 0.0005 |
@@ -621,13 +624,13 @@ R56-R59, B11, B13. The abstract's CWE relative losses (5%, 12%, 20%) are O24/O25
 | M59 | G3 64 traces | json | D | mech/g3/n_seq | 1 | 64 | 0 |
 | M60 | G3 99,769 tokens | json | D | mech/g3/n_tokens | 1 | 99769 | 0 |
 | M61 | G3 traces of 2,048 tokens | text | src/gdn_gate/mech/mech_box.sh | the 64 fixed validation traces x 2,048 | | | |
-| M62 | gate |dbeta| wide1 low 0.018 | json | D | mech/g3/wide1/gate_abs_dbeta_150/min | 1 | 0.018 | 0.0005 |
-| M63 | gate |dbeta| wide1 high 0.021 | json | D | mech/g3/wide1/gate_abs_dbeta_150/max | 1 | 0.021 | 0.0005 |
-| M64 | gate |dbeta| wide low 0.038 | json | D | mech/g3/wide/gate_abs_dbeta_150/min | 1 | 0.038 | 0.0005 |
-| M65 | gate |dbeta| wide high 0.041 | json | D | mech/g3/wide/gate_abs_dbeta_150/max | 1 | 0.041 | 0.0005 |
-| M66 | LoRA |dbeta| LoRA/LoRA-r20 low 0.0007 | json | D | mech/g3/ctrl_ctrlpm_lora_abs_dbeta_150/min | 1 | 0.0007 | 5e-05 |
+| M62 | gate abs dbeta wide1 low 0.018 | json | D | mech/g3/wide1/gate_abs_dbeta_150/min | 1 | 0.018 | 0.0005 |
+| M63 | gate abs dbeta wide1 high 0.021 | json | D | mech/g3/wide1/gate_abs_dbeta_150/max | 1 | 0.021 | 0.0005 |
+| M64 | gate abs dbeta wide low 0.038 | json | D | mech/g3/wide/gate_abs_dbeta_150/min | 1 | 0.038 | 0.0005 |
+| M65 | gate abs dbeta wide high 0.041 | json | D | mech/g3/wide/gate_abs_dbeta_150/max | 1 | 0.041 | 0.0005 |
+| M66 | LoRA abs dbeta LoRA/LoRA-r20 low 0.0007 | json | D | mech/g3/ctrl_ctrlpm_lora_abs_dbeta_150/min | 1 | 0.0007 | 5e-05 |
 | M67 | ... high 0.0021 | json | D | mech/g3/ctrl_ctrlpm_lora_abs_dbeta_150/max | 1 | 0.0021 | 5e-05 |
-| M68 | LoRA |dbeta| gated runs low 0.0023 | json | D | mech/g3/gated_lora_abs_dbeta_150/min | 1 | 0.0023 | 5e-05 |
+| M68 | LoRA abs dbeta gated runs low 0.0023 | json | D | mech/g3/gated_lora_abs_dbeta_150/min | 1 | 0.0023 | 5e-05 |
 | M69 | ... high 0.0045 | json | D | mech/g3/gated_lora_abs_dbeta_150/max | 1 | 0.0045 | 5e-05 |
 | M70 | 16 times (Gate(0,1) vs LoRA arms) | json | D | mech/g3/ratio_gate_wide1_over_ctrl_lora_means | 1 | 16 | 0.5 |
 | M71 | 32 times (Gate(0,2) vs LoRA arms) | json | D | mech/g3/ratio_gate_wide_over_ctrl_lora_means | 1 | 32 | 0.5 |
@@ -636,8 +639,8 @@ R56-R59, B11, B13. The abstract's CWE relative losses (5%, 12%, 20%) are O24/O25
 | M74 | LoRA-r20 in same range: max LoRA-r20 0.0021 | json | GS | runs/ctrlpm_s2_150/lora_ds_abs_mean | 1 | 0.0021 | 5e-05 |
 | M75 | warm-up mean s 0.41 | json | D | mech/g3/warmup_s_mean | 1 | 0.41 | 0.005 |
 | M76 | warm-up s<0.1 17% | json | D | mech/g3/warmup_s_lt_0p1 | 1 | 0.17 | 0.005 |
-| M77 | |tau| step 25 0.017 | json | D | mech/g3/t_abs_by_step_mean_6runs/25 | 1 | 0.017 | 0.0005 |
-| M78 | |tau| step 150 0.045 | json | D | mech/g3/t_abs_by_step_mean_6runs/150 | 1 | 0.045 | 0.0005 |
+| M77 | abs tau step 25 0.017 | json | D | mech/g3/t_abs_by_step_mean_6runs/25 | 1 | 0.017 | 0.0005 |
+| M78 | abs tau step 150 0.045 | json | D | mech/g3/t_abs_by_step_mean_6runs/150 | 1 | 0.045 | 0.0005 |
 | M79 | heads > 0.05 wide1 heads_gt_0p05_25/max 2 | json | D | mech/g3/wide1/heads_gt_0p05_25/max | 1 | 2 | 0 |
 | M80 | heads > 0.05 wide1 heads_gt_0p05_150/min 61 | json | D | mech/g3/wide1/heads_gt_0p05_150/min | 1 | 61 | 0 |
 | M81 | heads > 0.05 wide1 heads_gt_0p05_150/max 83 | json | D | mech/g3/wide1/heads_gt_0p05_150/max | 1 | 83 | 0 |
@@ -673,8 +676,8 @@ R56-R59, B11, B13. The abstract's CWE relative losses (5%, 12%, 20%) are O24/O25
 | M111 | null sd 0.020 | json | WS | null_cos_sd | 1 | 0.02 | 0.0005 |
 | M112 | Gate(0,2) vs Gate(0,1) same seed 0.153 | json | WS | P2_cosines/wide_vs_wide1_same_seed/mean | 1 | 0.153 | 0.0005 |
 | M113 | ... other seed 0.142 | json | WS | P2_cosines/wide_vs_wide1_diff_seed/mean | 1 | 0.142 | 0.0005 |
-| M114 | |cos| with pretrained in_proj_b wide1_s1 0.026 | json | WS | P4_alignment/wide1_s1/cos_with_base_in_proj_b/abs_mean | 1 | 0.026 | 0.0005 |
-| M115 | |cos| with pretrained in_proj_b wide_s0 0.027 | json | WS | P4_alignment/wide_s0/cos_with_base_in_proj_b/abs_mean | 1 | 0.027 | 0.0005 |
+| M114 | abs cos with pretrained in_proj_b wide1_s1 0.026 | json | WS | P4_alignment/wide1_s1/cos_with_base_in_proj_b/abs_mean | 1 | 0.026 | 0.0005 |
+| M115 | abs cos with pretrained in_proj_b wide_s0 0.027 | json | WS | P4_alignment/wide_s0/cos_with_base_in_proj_b/abs_mean | 1 | 0.027 | 0.0005 |
 | M116 | effective rank low 19 | json | WS | P3_energy/gate/wide1_s2/eff_rank | 1 | 19 | 0.5 |
 | M117 | effective rank high 23 | json | WS | P3_energy/gate/wide_s1/eff_rank | 1 | 23 | 0.5 |
 | M118 | top 16 energy low 69% | json | WS | P3_energy/gate/wide_s1/top16 | 1 | 0.69 | 0.005 |
@@ -749,13 +752,15 @@ R56-R59, B11, B13. The abstract's CWE relative losses (5%, 12%, 20%) are O24/O25
 | M187 | rollout accuracy last 20 low 0.92 | json | D | mech/traj/acc_last20_range_all/min | 1 | 0.92 | 0.005 |
 | M188 | ... high 0.96 | json | D | mech/traj/acc_last20_range_all/max | 1 | 0.96 | 0.005 |
 
-Derived: the compute total, about 210 GPU-hours of box time, is 8 x 9.47 h + 8 x 10.3 h + 4 x 3.66 h + 4 x 4.9 h + 8 x 2.2 h (rows P31-P33, N163, N164; row W30 checks the sum in CH). The fresh-set 4B length cut 1,329 / 7,424 = 18% is `D` fresh/4b/wide1_vs_ctrl_len_cut (not printed in the paper).
+Derived: the compute total, about 293 GPU-hours of box time, is 8 x 10.37 h (row P30a) + 8 x 9.47 h + 8 x 10.3 h + 4 x 3.66 h + 4 x 4.9 h + 8 x 2.2 h (rows P31-P33, N163, N164; row W30 checks the sum in CH). The fresh-set 4B length cut 1,329 / 7,424 = 18% is `D` fresh/4b/wide1_vs_ctrl_len_cut (not printed in the paper).
 
 ## Claims without a receipt file
 
 - None of the numbers in the paper lacks a receipt. These statements rest on prose records or on the cited papers
   rather than on a JSON field:
-  - the compute hours (P31 to P33, N163, N164): the rental log, summarized in docs/COMPUTE.md;
+  - the compute hours (P30a, P31 to P33, N163, N164): the rental log, summarized in docs/COMPUTE.md;
+  - the hardware each run trained and scored on (I47 to I51): the lab notebook, summarized in docs/COMPUTE.md and
+    REPRODUCE.md and confirmed by the env blocks of the run configs and receipts;
   - "four from-scratch comparisons ... found likelihood within about 1%" (Background): read from the four cited
     papers;
   - "no paper does either" (Related work): a census of forward citations and recent preprints through 2026-10-11,
@@ -1008,7 +1013,7 @@ V rows are generated from paper/data/extra.json (one row per number shown in Tab
 | V239 | 82% shorter GSM8K (Gate(0,1) vs LoRA) | json | X | derived/cut_4b_gsm8k_wide1_vs_ctrl | 1 | 0.82 | 0.005 |
 | V240 | 84% shorter GSM8K (Gate(0,2) vs LoRA, 4B) | json | X | derived/cut_4b_gsm8k_wide_vs_ctrl | 1 | 0.84 | 0.005 |
 | V241 | 49% shorter GSM8K (Gate(0,2) vs LoRA, 2B read 1) | json | X | derived/cut_2b_gsm8k_wide_vs_ctrl_read1 | 1 | 0.49 | 0.005 |
-| V242 | training hardware moves HumanEval ~10 points (0.177 - 0.079) | json | X | derived/humaneval_hw_gap_ctrl_s0 | 1 | 0.1 | 0.005 |
+| V242 | retraining on another server moves HumanEval ~10 points (0.177 - 0.079) | json | X | derived/humaneval_hw_gap_ctrl_s0 | 1 | 0.1 | 0.005 |
 | V243 | Olmo MDE low 3 points | json | X | olmo_mde/noncwe_below_ceiling_paired_mde/min | 1 | 0.03 | 0.005 |
 | V244 | Olmo MDE high 10 points | json | X | olmo_mde/noncwe_below_ceiling_paired_mde/max | 1 | 0.1 | 0.005 |
 | W1 | 4B budget to match MATH LoRA 2,600 (2 s.f. of 2,590) | json | A4M | arms/ctrl/tokens_to_base_max_acc/from_seed_mean_curve | 1 | 2600 | 50 |
@@ -1040,12 +1045,13 @@ V rows are generated from paper/data/extra.json (one row per number shown in Tab
 | W27 | 8 of 14 4B fresh readouts finished before the approval | text | PL4 | 8 finished 4B fresh readout files | | | |
 | W28 | approval 06:11 UTC | text | PL4 | chat at 06:11:52 UTC | | | |
 | W29 | withdrawn amendment, never used, retry passed | text | LEDG | approved 2026-10-11 ~22:45 but never used | | | |
-| W30 | rented total about 210 GPU-h (box time) | json | CH | rented/gpu_hours_total | 1 | 210 | 0.5 |
-| W31 | rented logged jobs 171 GPU-h | json | CH | hours/RTX PRO 6000/total | 1 | 171 | 0.5 |
+| W30 | rented total about 293 GPU-h (box time) | json | CH | rented/gpu_hours_total | 1 | 293 | 0.5 |
+| W31 | rented logged jobs 233 GPU-h | json | CH | hours/RTX PRO 6000/total | 1 | 233 | 0.5 |
 | W32 | GB10 logged at least 125 GPU-h | json | CH | hours/GB10/total | 1 | 125 | 0.5 |
 | W33 | GB10 pilots and warm-ups 12 h | json | CH | hours/GB10/train_pilot | 1 | 12 | 0.5 |
 | W34 | RTX 5090 Laptop logged 7 h | json | CH | hours/RTX 5090 Laptop/total | 1 | 7 | 0.5 |
 | W35 | Gate(0,2) moves beta 1.97 times Gate(0,1) (layer mean) | json | D | mech/g3/wide_over_wide1_by_layer/mean | 1 | 1.97 | 0.005 |
+| W35b | retrofit learning-rate pilots on the RTX 5090 Laptop 22 logged h (not counted) | json | CH | hours/RTX 5090 Laptop/retrofit_pilot | 1 | 22 | 0.5 |
 | W36 | GSM8K wait per 1k LoRA 1.09 | json | TS | gsm8k/ctrl/mean/wait_per_1k | 1 | 1.09 | 0.005 |
 | W37 | GSM8K wait per 1k LoRA-r20 0.88 | json | TS | gsm8k/ctrlpm/mean/wait_per_1k | 1 | 0.88 | 0.005 |
 | W38 | GSM8K wait per 1k Gate(0,1) 0.61 | json | TS | gsm8k/wide1/mean/wait_per_1k | 1 | 0.61 | 0.006 |
@@ -1073,3 +1079,62 @@ V rows are generated from paper/data/extra.json (one row per number shown in Tab
 | W60 | 2B read 1 GSM8K area: no effect for Gate(0,2) - Gate(0,1) | json | A2G | effects/wide - wide1/effect | 1 | 0 | 0 |
 | W61 | 1.9% more parameters (+1.91%) | text | PL4 | 10,844,160, +1.91% over wide1 | | | |
 | W62 | answer cap 99th percentile rule, multiple of 256 | text | PL2 | answer_max = the smallest multiple | | | |
+
+## Implementation appendix (Appendix A): settings, prompt template, example traces
+
+Run configurations are each run's frozen `meta.json` (`args` as the trainer received them; `train_sampling` and `opt_at_start` as it recorded them). The Gate(0,1) seed 0 run stands for every 4B arm run (all twelve share these values except arm, seed and, for LoRA-r20, rank; the warm-up has its own row). `paper/data/example_traces.txt` is written by `paper/figs/example_traces.py` from the step-14 GSM8K readout trace files (token ids decoded with the pinned Qwen3.5-4B tokenizer; the script asserts each decoded trace has the readout row's think_len) and holds the rendered prompt template.
+
+| id | paper text | kind | file | path or string | scale | expect | tol |
+|---|---|---|---|---|---|---|---|
+| I1 | 16 prompts per step | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/prompts | 1 | 16 | 0 |
+| I2 | 8 samples per prompt (group size 8) | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/group | 1 | 8 | 0 |
+| I3 | 150 steps | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/steps | 1 | 150 | 0 |
+| I4 | rollout temperature 1.0 | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | train_sampling/temperature | 1 | 1.0 | 0 |
+| I5 | rollout top-p 1.0 | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | train_sampling/top_p | 1 | 1.0 | 0 |
+| I6 | no top-k (0 = off) | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | train_sampling/top_k | 1 | 0 | 0 |
+| I7 | no presence penalty | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | train_sampling/presence_penalty | 1 | 0.0 | 0 |
+| I8 | training cap 512 reasoning tokens | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/cap | 1 | 512 | 0 |
+| I9 | answer cap 1,280 in training | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/answer_max | 1 | 1280 | 0 |
+| I10 | length coefficient 0.2 | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/alpha | 1 | 0.2 | 0 |
+| I11 | lr 2e-5 for LoRA | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/lr | 100000 | 2 | 1e-9 |
+| I12 | lr 2e-5 for the gate | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/w_lr | 100000 | 2 | 1e-9 |
+| I13 | AdamW (0.9, 0.95), weight decay 0 | text | src/gdn_gate/ml7/train_grpo_vllm.py | opt = torch.optim.AdamW(groups, betas=(0.9, 0.95), weight_decay=0.0) | | | |
+| I14 | linear ramp over 5% of steps (int(150 x 0.05) = 7) | text | src/gdn_gate/ml7/train_grpo_vllm.py | warm = max(1, int(a.steps * 0.05)) | | | |
+| I15 | ... first step lr 2e-5 / 7 = 2.857e-6 (ramp of 7 steps) | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | opt_at_start/lr | 1000000 | 2.857 | 0.001 |
+| I16 | gradient-norm clip 1.0 | text | src/gdn_gate/ml7/train_grpo_vllm.py | gn = torch.nn.utils.clip_grad_norm_(params, 1.0) | | | |
+| I17 | LoRA rank 16 | json | results/run_logs/ml7_4b/grpo/wide1_s0_cap512_r_box/meta.json | args/rank | 1 | 16 | 0 |
+| I18 | alpha = 2r, dropout 0, no bias | text | src/gdn_gate/broad/arms.py | cfg = LoraConfig(r=rank, lora_alpha=2 * rank, lora_dropout=0.0, target_modules=LORA_TARGETS, bias="none") | | | |
+| I19 | LoRA modules in_proj_qkv, in_proj_a, in_proj_b, out_proj | text | ml_pipeline_4b/PIPELINE.md | GDN projections (in_proj_qkv, in_proj_a, in_proj_b, out_proj) | | | |
+| I20 | LoRA-r20 rank 20 (alpha 40 = 2r by I18) | json | results/run_logs/ml7_4b/grpo/ctrlpm_s0_cap512_r_box/meta.json | args/rank | 1 | 20 | 0 |
+| I21 | gate: bias-free linear map, FP32 | text | src/gdn_gate/broad/arms.py | layer.gate_w = nn.Linear(hid, heads, bias=False).to(device=device, dtype=torch.float32) | | | |
+| I22 | gate 1,966,080 parameters in all | text | ml_pipeline_4b/PIPELINE.md | wide1 8,675,328 + 1,966,080 = 10,641,408 | | | |
+| I23 | warm-up 40 steps | json | results/run_logs/ml7_4b/grpo/ctrl_s0_cap512_fmt_box/meta.json | args/steps | 1 | 40 | 0 |
+| I24 | warm-up length coefficient 0 | json | results/run_logs/ml7_4b/grpo/ctrl_s0_cap512_fmt_box/meta.json | args/alpha | 1 | 0 | 0 |
+| I25 | warm-up seed 0 | json | results/run_logs/ml7_4b/grpo/ctrl_s0_cap512_fmt_box/meta.json | args/seed | 1 | 0 | 0 |
+| I26 | warm-up LoRA rank 16 | json | results/run_logs/ml7_4b/grpo/ctrl_s0_cap512_fmt_box/meta.json | args/rank | 1 | 16 | 0 |
+| I27 | readout 2 samples per item | json | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | args/samples | 1 | 2 | 0 |
+| I28 | readout engine seed 20261006 | json | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | args/seed | 1 | 20261006 | 0 |
+| I29 | readout answer cap 1,280 | json | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | args/answer_max | 1 | 1280 | 0 |
+| I30 | readout top-p 0.95 | json | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | sampling/top_p | 1 | 0.95 | 0 |
+| I31 | prompt template (rendered) | text | paper/data/example_traces.txt | Please reason step by step, and put your final answer within \boxed{}. | | | |
+| I32 | example: item gsm8k_test:0 is row 0 of the readout | text | paper/data/example_traces.txt | # item gsm8k_test:0, sample 0 | | | |
+| I33 | example problem: 16 eggs per day, $2 per egg | text | paper/data/example_traces.txt | problem: Janet’s ducks lay 16 eggs per day | | | |
+| I34 | example gold answer 18 | text | paper/data/example_traces.txt | gold: 18 | | | |
+| I35 | LoRA seed 0 thinks 837 tokens | json | results/ml7_4b/step14/readout_gsm8k_ctrl_0.json | rows/0/think_len | 1 | 837 | 0 |
+| I36 | ... and is correct at 8,192 | json | results/ml7_4b/step14/readout_gsm8k_ctrl_0.json | rows/0/caps/8192/0 | 1 | 1 | 0 |
+| I37 | Gate(0,1) seed 0 thinks 152 tokens | json | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | rows/0/think_len | 1 | 152 | 0 |
+| I38 | ... and is correct at 8,192 | json | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | rows/0/caps/8192/0 | 1 | 1 | 0 |
+| I39 | trace line "Eat 3 -> 13 left." | text | paper/data/example_traces.txt | *   Eat 3 -> 13 left. | | | |
+| I40 | trace line "$13 - 4 = 9$" | text | paper/data/example_traces.txt | $13 - 4 = 9$ | | | |
+| I41 | trace line "$9 * 2 = 18$" (LoRA) | text | paper/data/example_traces.txt | $9 * 2 = 18$ | | | |
+| I42 | trace line "Remaining eggs = $16 - 7$" | text | paper/data/example_traces.txt | Remaining eggs = $16 - 7$ | | | |
+| I43 | LoRA trace header (837, closed, correct) | text | paper/data/example_traces.txt | # arm ctrl seed 0: reasoning tokens 837, closed 1, correct at 8192 1 | | | |
+| I44 | Gate(0,1) trace header (152, closed, correct) | text | paper/data/example_traces.txt | # arm wide1 seed 0: reasoning tokens 152, closed 1, correct at 8192 1 | | | |
+| I45 | readout row 0 is gsm8k_test:0 sample 0 | text | results/ml7_4b/step14/readout_gsm8k_wide1_0.json | {"id": "gsm8k_test:0", "sample": 0, "think_len": 152 | | | |
+| I46 | 2B answer cap 1,792 and seeds 0 to 5 in the appendix | json | results/ml7/answer_cap.json | answer_max | 1 | 1792 | 0 |
+| I47 | SFT seed 0 on GB10, seeds 1 to 5 on RTX PRO 6000 | text | REPRODUCE.md | seed 0 on GB10, seeds 1 to 5 on RTX PRO 6000 | | | |
+| I48 | 9B LoRA seed 1 scored on an RTX PRO 6000, the other 9B runs on GB10 | text | docs/COMPUTE.md | HumanEval of 9B LoRA seed 1 | | | |
+| I49 | 4B forgetting runs (seeds 0 to 2) trained on a rented RTX PRO 6000 server ... | text | docs/COMPUTE.md | 4B LoRA and Gate(0,2) seeds 0 to 2 | | | |
+| I49b | ... and scored on the RTX 5090 Laptop GPU | text | docs/COMPUTE.md | scoring of the 4B LoRA and Gate(0,2) forgetting runs (seeds 0 to 2) | | | |
+| I50 | 4B Gate(0,1) forgetting runs trained and scored on a rented RTX PRO 6000 server | text | docs/COMPUTE.md | Gate(0,1) forgetting runs, same-server LoRA | | | |
+| I51 | Olmo lesions on the RTX 5090 Laptop GPU | text | docs/COMPUTE.md | Olmo-Hybrid-7B lesions, the 2B validation readouts | | | |

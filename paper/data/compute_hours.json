@@ -9,14 +9,15 @@
   },
   "RTX 5090 Laptop": {
    "readout": 6.242197776039442,
+   "retrofit_pilot": 21.735222222222223,
    "train": 0.9683611111111111,
    "total": 7.210558887150553
   },
   "RTX PRO 6000": {
-   "readout": 91.11683881209956,
-   "train": 79.49569999999996,
+   "readout": 94.0194265421894,
+   "train": 139.0875055555555,
    "train_pilot": 2.436080555555556,
-   "total": 170.6125388120995
+   "total": 233.1069320977449
   }
  },
  "files": {
@@ -27,16 +28,23 @@
   },
   "RTX 5090 Laptop": {
    "readout": 17,
+   "retrofit_pilot": 21,
    "train": 4
   },
   "RTX PRO 6000": {
-   "readout": 185,
-   "train": 63,
+   "readout": 215,
+   "train": 93,
    "train_pilot": 4
   }
  },
  "rented": {
   "boxes": [
+   {
+    "what": "Retrofit 8x, 2026-09-29 21:09 to 09-30 07:31 Israel",
+    "gpus": 8,
+    "hours": 10.366666666666667,
+    "gpu_hours": 82.93333333333334
+   },
    {
     "what": "Phase 1-2 8x, 01:40-11:08 Israel",
     "gpus": 8,
@@ -68,6 +76,6 @@
     "gpu_hours": 17.6
    }
   ],
-  "gpu_hours_total": 209.97333333333336
+  "gpu_hours_total": 292.9066666666667
  }
 }

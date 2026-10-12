@@ -14,10 +14,10 @@ https://huggingface.co/collections/Avifenesh/gate-qwen35-6accb63081800b2f2d583b8
 | [`Avifenesh/gdn-beta-gate-qwen3.5-4b-base-forgetting`](https://huggingface.co/Avifenesh/gdn-beta-gate-qwen3.5-4b-base-forgetting) | `20bb1d22ae83042682c8f024ce9e8628dc4f628e` | forgetting recipe (appendix): LoRA, Gate(0,1), Gate(0,2) x seeds 0 to 2, step 1,200 | 9 | 360 MB |
 | [`Avifenesh/gdn-beta-gate-qwen3.5-9b-base-forgetting`](https://huggingface.co/Avifenesh/gdn-beta-gate-qwen3.5-9b-base-forgetting) | `8be3d70f03f5f6211536a37debbacca7885c728a` | forgetting recipe at 9B (appendix): LoRA, Gate(0,2) x seeds 0 to 2, step 1,200 | 6 | 303 MB |
 
-Total about 2.3 GB. Not published: the
-intermediate checkpoints (every 25 RL steps, every 100 or 300 SFT steps) and the mechanism inputs derived from the
-published checkpoints (the hybrid and dose checkpoints; `src/gdn_gate/mech/hybrid_ckpts.py` and `dose_ckpts.py`
-rebuild them, their sha256 are in `results/mech/hybrid_receipt.json` and `dose_receipt.json`).
+Total about 2.3 GB. Not published: the intermediate checkpoints (every 25 RL steps, every 100 or 300 SFT steps) and
+the mechanism inputs derived from the published checkpoints (the hybrid and dose checkpoints;
+`src/gdn_gate/mech/hybrid_ckpts.py` and `dose_ckpts.py` rebuild them, their sha256 are in
+`results/mech/hybrid_receipt.json` and `dose_receipt.json`).
 
 These are not PEFT adapter folders: the gated arms need the patched Gated DeltaNet forward of this repository (the
 cards set `library_name: pytorch`: plain PyTorch tensors for this code). Each `adapter.safetensors` holds the
@@ -32,8 +32,9 @@ ceiling, base revision and the sha256 of the source checkpoint. `SHA256SUMS` cov
     python src/gdn_gate/ml7/readout_vllm.py --model <Qwen3.5-4B snapshot 851bf6e8> --arm wide1 --ckpt gate01_s0.pt ...
 
 `--arm` per folder: `lora` ctrl, `lora-r20` ctrl with `--rank 20`, `gate01` wide1, `gate02` wide, `warmup` ctrl. The
-forgetting adapters load through `src/gdn_gate/rescore/rescore_4b.py` (9B: `rescore_9b.py`) with the run's `result.json` from
-`results/run_configs/forgetting/` beside `trainable.pt`; the model cards give the exact commands per repository.
+forgetting adapters load through `src/gdn_gate/rescore/rescore_4b.py` (9B: `rescore_9b.py`) with the run's
+`result.json` from `results/run_configs/forgetting/` beside `trainable.pt`; the model cards give the exact commands
+per repository.
 
 ## Export and verification (author, CPU, 2026-10-12)
 
@@ -41,12 +42,12 @@ forgetting adapters load through `src/gdn_gate/rescore/rescore_4b.py` (9B: `resc
     python scripts/adapters.py export --runs <lab run root> --retrofit_runs <lab retrofit run root> --out <dir>
 
 `export` reads each checkpoint with `torch.load(weights_only=True)`, renames the gate tensor to `gate_w`, and writes
-`<record>/<arm>/seed<k>/adapter.safetensors`, `adapter_meta.json` and `<record>/SHA256SUMS`. Checks before upload:
-all 59 exported files equal their source checkpoints tensor by tensor (same keys after the rename, same dtype,
+`<record>/<arm>/seed<k>/adapter.safetensors`, `adapter_meta.json` and `<record>/SHA256SUMS`. Checks before upload: all
+59 exported files equal their source checkpoints tensor by tensor (same keys after the rename, same dtype,
 `torch.equal`), and the round trip `export` then `to-pt` gives back every tensor bit for bit on one gated adapter per
 repository (2B, 4B, chat SFT: Gate(0,1) seed 0; forgetting: Gate(0,2) seed 0). The 9B forgetting repository was
-exported later the same way (`--record qwen3.5-9b-base-forgetting`): its 6 files equal their source checkpoints
-tensor by tensor, and the round trip is bit for bit on LoRA seed 0 and Gate(0,2) seed 0. After upload, each Hub repository's
+exported later the same way (`--record qwen3.5-9b-base-forgetting`): its 6 files equal their source checkpoints tensor
+by tensor, and the round trip is bit for bit on LoRA seed 0 and Gate(0,2) seed 0. After upload, each Hub repository's
 file list and sizes equal the local export (plus the Hub's `.gitattributes`), and one downloaded adapter per
 repository matches the `SHA256SUMS` line of its files.
 
