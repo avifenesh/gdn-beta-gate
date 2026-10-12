@@ -19,9 +19,10 @@ Rental 4 was a spot server and was evicted at about 10:00. The finished readouts
 checked by sha256; four unfinished readouts (two 4B, two 2B) restarted from scratch on rental 5, which started from the
 same disk with the code lock and the done markers intact. No finished readout was rerun.
 
-Owned hardware, not counted above: two NVIDIA DGX Spark (GB10) units trained the 2B runs of seeds 0 to 2, the chat
-SFT runs and the 9B forgetting runs; one RTX 5090 Laptop GPU (24 GB) ran the Olmo-Hybrid-7B lesions, the 2B
-validation readouts and part of the HumanEval scoring.
+Owned hardware, not counted above: two NVIDIA DGX Spark (GB10) units trained the 2B runs of seeds 0 to 2 and the chat
+SFT runs, and scored five of the six 9B forgetting runs; one RTX 5090 Laptop GPU (24 GB) ran the Olmo-Hybrid-7B lesions, the 2B
+validation readouts and part of the HumanEval scoring. The 9B forgetting runs trained before the first rental above,
+one RTX PRO 6000 per run on an 8-GPU server, and are not counted.
 
 The GPU type of every scored readout is recorded in its env block; `results/ENVIRONMENT.json` lists them
 (`python scripts/collect_env.py`).

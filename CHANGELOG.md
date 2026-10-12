@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- The 6 Qwen3.5-9B-Base forgetting adapters (LoRA and Gate(0,2), seeds 0 to 2) on the Hugging Face Hub as
+  `Avifenesh/gdn-beta-gate-qwen3.5-9b-base-forgetting` (docs/ADAPTERS.md), with their run configs in
+  `results/run_configs/forgetting/main9_*` and the 9B record in `scripts/adapters.py`.
+- docs/COMPUTE.md and REPRODUCE.md: the 9B forgetting runs trained on RTX PRO 6000 GPUs, not on the GB10 units
+  (the GB10 units scored them).
+
 ## v1.0.0 (2026-10-12)
 
 First public release, matching the paper draft of October 2026, "Retrofitting a Gate on the Delta-Rule Write

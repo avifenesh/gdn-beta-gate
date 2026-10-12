@@ -9,7 +9,8 @@ in the Hub layout below, and a SHA256SUMS file. `to-pt` turns a downloaded `adap
 
 Hub layout (one repository per training recipe and base model; one folder per arm and seed):
   <record>/<arm>/seed<k>/adapter.safetensors, adapter_meta.json
-  records: qwen3.5-2b-grpo, qwen3.5-4b-grpo, qwen3.5-4b-base-chat-sft, qwen3.5-4b-base-forgetting
+  records: qwen3.5-2b-grpo, qwen3.5-4b-grpo, qwen3.5-4b-base-chat-sft, qwen3.5-4b-base-forgetting,
+           qwen3.5-9b-base-forgetting
   arms (paper names): lora (receipt ctrl), lora-r20 (ctrlpm), gate01 (wide1), gate02 (wide), warmup
 
 Usage:
@@ -34,12 +35,14 @@ BASE = {
     "qwen3.5-4b-grpo": ("Qwen/Qwen3.5-4B", "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"),
     "qwen3.5-4b-base-chat-sft": ("Qwen/Qwen3.5-4B-Base", "1001bb4d826a52d1f399e183466143f4da7b741b"),
     "qwen3.5-4b-base-forgetting": ("Qwen/Qwen3.5-4B-Base", "1001bb4d826a52d1f399e183466143f4da7b741b"),
+    "qwen3.5-9b-base-forgetting": ("Qwen/Qwen3.5-9B-Base", "68c46c4b3498877f3ef123c856ecfde50c39f404"),
 }
 RECIPE = {
     "qwen3.5-2b-grpo": "GRPO, correctness-gated length penalty alpha 0.2, 150 steps from the shared warm-up (paper Section 4)",
     "qwen3.5-4b-grpo": "GRPO, correctness-gated length penalty alpha 0.2, 150 steps from the shared warm-up (paper Section 4)",
     "qwen3.5-4b-base-chat-sft": "chat SFT on Tulu 3 (permissive subsets), 1,200 steps, lr 1e-4 (paper Section 7)",
     "qwen3.5-4b-base-forgetting": "LoRA on synthetic state tracking with WikiText replay, 1,200 steps, lr 1e-4 (paper Section 7)",
+    "qwen3.5-9b-base-forgetting": "LoRA on synthetic state tracking with WikiText replay, 1,200 steps, lr 1e-4 (paper Section 7)",
 }
 
 
@@ -62,6 +65,9 @@ def catalog(runs: Path, retro: Path | None):
         for arm in ("ctrl", "wide"):
             for s in range(3):
                 out.append(("qwen3.5-4b-base-forgetting", arm, s, 1200, retro / f"box/main_{arm}_s{s}/trainable.pt"))
+        for arm in ("ctrl", "wide"):  # no wide1 arm at 9B
+            for s in range(3):
+                out.append(("qwen3.5-9b-base-forgetting", arm, s, 1200, retro / f"box/runs/main9_{arm}_s{s}/trainable.pt"))
     for s in range(3):
         out.append(("qwen3.5-4b-base-forgetting", "wide1", s, 1200, runs / f"w1main/main_wide1_s{s}_box2/trainable.pt"))
     return out
@@ -134,7 +140,7 @@ def main():
     for name in ("list", "export"):
         p = sub.add_parser(name)
         p.add_argument("--runs", required=True, help="lab run root (WG_RUNS)")
-        p.add_argument("--retrofit_runs", default=None, help="run root of the 4B forgetting runs (ctrl, wide)")
+        p.add_argument("--retrofit_runs", default=None, help="run root of the forgetting runs (4B ctrl and wide, 9B)")
         if name == "export":
             p.add_argument("--out", required=True)
             p.add_argument("--record", default=None, choices=sorted(BASE))

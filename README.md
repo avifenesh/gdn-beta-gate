@@ -158,7 +158,7 @@ their timestamps: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md). Trained ad
   readouts is exact.
 - The GPU scheduling, provisioning and transfer scripts of the rented servers are not released; REPRODUCE.md gives
   the per-run and per-readout commands they issued.
-- The raw generation traces and the 9B forgetting adapters are not released (see docs/ADAPTERS.md). The fresh set's
+- The raw generation traces are not released. The fresh set's
   problem text is not redistributed: `scripts/rebuild_data.py` rebuilds it from the public sources by checksum.
 - Untested: other GPUs than the three named above, other vLLM, PyTorch or transformers versions.
 

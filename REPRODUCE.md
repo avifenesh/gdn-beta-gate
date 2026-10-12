@@ -10,6 +10,7 @@ these revisions (docs/ADAPTERS.md):
 | `Avifenesh/gdn-beta-gate-qwen3.5-2b-grpo` | `9bb0c56a6b4b43f10a7f6b2cfe50349c2b80eb6f` |
 | `Avifenesh/gdn-beta-gate-qwen3.5-4b-base-chat-sft` | `333c4445c97aa603e998f5ddb297db71c769fff2` |
 | `Avifenesh/gdn-beta-gate-qwen3.5-4b-base-forgetting` | `20bb1d22ae83042682c8f024ce9e8628dc4f628e` |
+| `Avifenesh/gdn-beta-gate-qwen3.5-9b-base-forgetting` | `8be3d70f03f5f6211536a37debbacca7885c728a` |
 
 There are two levels of reproduction:
 
@@ -301,8 +302,8 @@ released files and compares their output with the receipts.
   GPU scheduling, provisioning and transfer scripts of the rented servers (including `box/orch.py`, which
   `fresh_test_box.sh` and `mech_box.sh` call), and the lab notebook. The released
   `run_configs`, readout argv and receipts carry every argument those scripts passed.
-- **Weights.** The 59 adapters the paper reads are on the Hugging Face Hub as safetensors, revisions at the top of
-  this file (docs/ADAPTERS.md); the 9B forgetting adapters and the intermediate checkpoints are not published.
+- **Weights.** The 65 adapters the paper reads are on the Hugging Face Hub as safetensors, revisions at the top of
+  this file (docs/ADAPTERS.md); the intermediate checkpoints are not published.
 - **Fresh set and mechanism.** The fresh set's problem text is not redistributed (rebuild it with
   `scripts/rebuild_data.py`). `results/mech/` omits the lab's one paired example trace (generated text). Two outputs
   the lab computed inline have release scripts that reproduce them: `src/gdn_gate/mech/hybrid_ckpts.py` (same sha256
@@ -313,7 +314,8 @@ released files and compares their output with the receipts.
   lists every edited line.
 - **Nondeterminism.** Readouts and rollouts sample; two readouts shared each GPU in the lab. vLLM reproduces outputs
   only on the same hardware and version. The analysis bootstrap uses a fixed seed (20261009) and is exact.
-- **Hardware.** Training of the 2B seeds 0 to 2, the chat SFT and the 9B forgetting runs used DGX Spark (GB10) units;
+- **Hardware.** Training of the 2B seeds 0 to 2 and the chat SFT used DGX Spark (GB10) units; the 9B forgetting runs
+  trained on one RTX PRO 6000 each and were scored on GB10 (LoRA seed 1 on an RTX PRO 6000);
   the Olmo lesions and the 2B validation readouts used an RTX 5090 Laptop GPU (24 GB). Hardware per receipt is in its
   env block (`results/ENVIRONMENT.json` for the RL readouts).
 - **Quick mode.** There is no shrunk GPU workload with its own reference values. `readout_vllm.py --limit N

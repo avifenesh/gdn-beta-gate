@@ -6420,6 +6420,54 @@
    "sha256_released": "11b61dfec61cc6d951ab50b07a0b39a58b8c495b4adb8f8856adc7160d102e81",
    "scrubbed": true,
    "hand_edited": false
+  },
+  {
+   "released": "results/run_configs/forgetting/main9_ctrl_s0/result.json",
+   "sha256_original": "1048ba48e224768f655cca1d25a7e719a7cfcb741f81537f2376d67a359fd4e0",
+   "sha256_released": "22a14c14de37ce2bc4514dcaff40d467bb3944fbf2b453d87731da293d257903",
+   "scrubbed": true,
+   "hand_edited": true,
+   "role": "run config"
+  },
+  {
+   "released": "results/run_configs/forgetting/main9_ctrl_s1/result.json",
+   "sha256_original": "16783fc8236561173aa557c14fcbc87a511442089bf988d4db03cb442e0fc291",
+   "sha256_released": "8269b049798e8ac25ab85c09e7c91d389f605b233ffe0664de23cd0d5d942985",
+   "scrubbed": true,
+   "hand_edited": true,
+   "role": "run config"
+  },
+  {
+   "released": "results/run_configs/forgetting/main9_ctrl_s2/result.json",
+   "sha256_original": "93fb4c030551453346695db6cf48ab3b5338d06446a9d5fdc8d20e34a56f9846",
+   "sha256_released": "aa17188791983c3cd25df707afa7f0f2d852f845fc2b7ffabcf07f3f674f8902",
+   "scrubbed": true,
+   "hand_edited": true,
+   "role": "run config"
+  },
+  {
+   "released": "results/run_configs/forgetting/main9_wide_s0/result.json",
+   "sha256_original": "291241b4be91e25d06487a46396081faa90e83f62c79f800e48fe5d5c60107c4",
+   "sha256_released": "aa41196f4432e266eb32371204d516399aae01aa4607b301a914dda0aca446d6",
+   "scrubbed": true,
+   "hand_edited": true,
+   "role": "run config"
+  },
+  {
+   "released": "results/run_configs/forgetting/main9_wide_s1/result.json",
+   "sha256_original": "db56246dd0284c7b190a04e402a07def046b3c2237d445209a5afab4b2928d52",
+   "sha256_released": "0fc2fbf65fcd62f4cebbb2286f54fe6a18f0f0d46301038e3d3baa1c564e4cda",
+   "scrubbed": true,
+   "hand_edited": true,
+   "role": "run config"
+  },
+  {
+   "released": "results/run_configs/forgetting/main9_wide_s2/result.json",
+   "sha256_original": "c2d83f59905922792322fc603c3c8150af70f721af4f3c05cd148e3c3ceda5ae",
+   "sha256_released": "444ae86d6603017d3b24a3cae29a678e16839a22cd3be5a32d92661e614465a8",
+   "scrubbed": true,
+   "hand_edited": true,
+   "role": "run config"
   }
  ]
 }
