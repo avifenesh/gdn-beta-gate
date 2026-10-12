@@ -31,5 +31,9 @@ data/MANIFEST.json under `$WG_RUNS/broad`. The code-lock checks (LoRA-r20 P0, fr
 compare the instrument files with the lab's code lock through `results/SCRUB_LEDGER.json`, and the LoRA-r20 P2 check
 accepts the published warm-up by a digest of its tensors.
 
+With the trace archive ([10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255)) extracted at the repository root, `scripts/rerun_traces.py --verify` adds
+the scripts that read generated text (seven comparisons with released files; README.md, Generation traces). It is not
+part of tier A because the traces are not in the repository.
+
 GPU behavior (kernels, engine parity, numerics) is not covered by these tests: every training run and readout
 checks engine-trainer parity on its own GPU before it starts, and records the result in its receipt (`parity`).

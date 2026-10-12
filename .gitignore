@@ -2,6 +2,10 @@
 runs/
 results/runs/
 .venv*/
+# generation traces from the separate archive (README.md, Generation traces); the parity fixtures stay tracked
+results/**/*.traces.jsonl.gz
+!results/ml7/readout_parity/*.traces.jsonl.gz
+results/TRACES_README.md
 # caches
 __pycache__/
 *.pyc

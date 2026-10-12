@@ -8,8 +8,8 @@
   traj_extra.py     results/mech/traj.json -> traj_extra.json
 
 Each script runs on CPU in a scratch directory; its JSON output must equal the released file. The GPU readouts
-(ablate, dose, gate_stats), traj.py (needs the unreleased rollout logs), text_stats.py (needs the unreleased
-generation traces), w_stats.py and param_drift.py (need the checkpoints, published as adapters) are not rerun here.
+(ablate, dose, gate_stats), traj.py (needs the unreleased rollout logs), text_stats.py (needs the generation
+traces, a separate archive: scripts/rerun_traces.py), w_stats.py and param_drift.py (need the checkpoints, published as adapters) are not rerun here.
 Usage: python scripts/rerun_mech.py      Exit 1 on any difference. Needs: numpy, matplotlib, tokenizers.
 """
 import gzip

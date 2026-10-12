@@ -18,6 +18,15 @@ keywords:
   - reasoning length
   - LoRA
   - Qwen3.5
+references:
+  - type: dataset
+    title: "Generation traces for 'Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues'"
+    authors:
+      - family-names: "Fenesh"
+        given-names: "Avi"
+    year: 2026
+    doi: "10.5281/zenodo.23340255"
+    license: CC-BY-NC-SA-4.0
 preferred-citation:
   type: article
   title: "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues"

@@ -34,10 +34,12 @@ The readouts in `mech/ablate/` and `mech/dose/` are plain JSON (no generated tex
 `src/gdn_gate/mech/g1g2_summary.py`. `mech/example_val_trace.json`, the lab's one paired example of generated text,
 is not released.
 
-Not here: the generation traces (`*.traces.jsonl.gz`, about 830 MB in total for the RL records, more for the fresh set
-and the mechanism readouts) that hold the sampled reasoning tokens
-and answer texts; they are planned as a separate archive. The four small trace files in `ml7/readout_parity/` are
-test fixtures.
+Not here: the generation traces (`*.traces.jsonl.gz`, 229 files, 1.40 GB, one per readout of the RL records, the
+fresh set and the G1 and G2 mechanism readouts) that hold the sampled reasoning tokens and answer texts. They are a
+separate archive on Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255), that unpacks into this directory next to the readouts.
+`TRACES_LEDGER.json` lists each file with its trace count, its readout and the sha256 of the file and of its
+uncompressed content; the publication scrub changed none of them. `scripts/rerun_traces.py` reruns the scripts that
+read them. The four small trace files in `ml7/readout_parity/` are test fixtures.
 
 ## Publication scrub
 

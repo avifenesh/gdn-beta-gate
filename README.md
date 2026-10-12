@@ -6,7 +6,7 @@ they exist). This repository is a frozen research artifact: it holds the exact t
 paper ran, the pre-registration records, every analysis receipt and per-item readout the paper's numbers come from, a
 claims checker that ties each number in the paper to a JSON field, and the figure scripts. It does not hold model
 weights (the trained adapters are on the Hugging Face Hub, see [docs/ADAPTERS.md](docs/ADAPTERS.md)), dataset text
-(rebuilt from the public sources by checksum), the raw generation traces (planned as a separate archive), or the lab's
+(rebuilt from the public sources by checksum), the raw generation traces (a separate archive on Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255)), or the lab's
 GPU scheduling and server provisioning scripts.
 
 The method in one line: a zero-initialized linear map `W` per Gated DeltaNet layer moves the write strength `beta`
@@ -85,6 +85,24 @@ Paths: `WG_RUNS` (default `./runs`, git-ignored) holds data files, checkpoints a
 `step14_analysis.py` / `ctrlpm_analysis.py` (through `fresh_analysis.py` for the fresh set) with the command line
 recorded in each receipt, and compares every key.
 
+## Generation traces
+
+The sampled reasoning tokens and answer texts of every readout (`*.traces.jsonl.gz`, 229 files, 290,306 traces, 1.40
+GB) are a separate archive under CC-BY-NC-SA-4.0: [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255).
+It comes in 34 parts of 40 MiB; join them and check the result against the record's `SHA256SUMS`. It unpacks at the
+repository root, each file next to its readout; `results/TRACES_LEDGER.json` lists every file with its sha256.
+
+    cat gdn-beta-gate-traces.zip.part* > gdn-beta-gate-traces.zip
+    unzip -n gdn-beta-gate-traces.zip                    # at the repository root; -n keeps tracked copies
+    uv run python scripts/rebuild_data.py --skip_fresh
+    uv run --with transformers==5.17.0 --with jinja2==3.1.6 python scripts/rerun_traces.py --verify
+
+`scripts/rerun_traces.py` reruns the five scripts that read generated text and compares their output with the
+released files: `text_stats.py` (`results/mech/text_stats.json`), `answer_cap.py` (both `answer_cap.json`),
+`paper/figs/example_traces.py` (`paper/data/example_traces.txt`), `truncate_curve.py` (the step 9 curves at the chosen
+answer caps) and `build_inputs.py` (the G3 teacher-forcing inputs). The last two import `rl_common.py` and need the pins
+of `env/train.txt`; a script whose imports are missing is reported as SKIP.
+
 ## Reproduce the paper
 
 About 293 GPU-hours on RTX PRO 6000 GPUs: 83 for the 4B and 9B forgetting runs, 173 for the RL records and 37 for the
@@ -140,7 +158,8 @@ their timestamps: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md). Trained ad
     results/               analysis receipts, per-item readouts (gz), run configs and logs; see results/README.md
     paper/                 CLAIMS.md, check_claims.py, derive.py, figure scripts and figures
     data/                  MANIFEST.json (sources, revisions, checksums), split id lists
-    scripts/               CPU tools: rerun analyses and mechanism summaries, rebuild data, collect env, export adapters
+    scripts/               CPU tools: rerun analyses, mechanism summaries and trace analyses, rebuild data, collect env,
+                           export adapters
     env/                   pinned GPU environments
     docs/                  compute, pre-registration notes, adapters on the Hub
     hf/                    the model cards of the five Hub repositories
@@ -159,7 +178,7 @@ their timestamps: [docs/PREREGISTRATION.md](docs/PREREGISTRATION.md). Trained ad
   readouts is exact.
 - The GPU scheduling, provisioning and transfer scripts of the rented servers are not released; REPRODUCE.md gives
   the per-run and per-readout commands they issued.
-- The raw generation traces are not released; `paper/data/example_traces.txt` holds the one decoded pair the paper's
+- The raw generation traces are a separate archive (see Generation traces); `paper/data/example_traces.txt` holds the one decoded pair the paper's
   implementation appendix quotes, with its GSM8K test problem (MIT license). The fresh set's problem text is not redistributed: `scripts/rebuild_data.py`
   rebuilds it from the public sources by checksum.
 - Untested: other GPUs than the three named above, other vLLM, PyTorch or transformers versions.

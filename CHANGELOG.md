@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- The generation traces of every readout are a separate archive on Zenodo ([10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255), CC-BY-NC-SA-4.0, 229 files,
+  290,306 traces). `results/TRACES_LEDGER.json` lists them with their sha256; `scripts/rerun_traces.py` reruns
+  `text_stats.py`, `answer_cap.py`, `truncate_curve.py`, `build_inputs.py` and `paper/figs/example_traces.py` from them
+  and compares with the released files.
+
 ## v1.1.0 (2026-10-12)
 
 Corrections and additions for the paper draft now titled "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative

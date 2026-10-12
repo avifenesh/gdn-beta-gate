@@ -57,10 +57,10 @@ receipts. The tolerance for a GPU rerun is the decision rule (3 of 3 seeds with 
     uv run pytest tests/                          # 8 passed: the checks above as tests (tests/README.md)
     bash tests/run_cpu_checks.sh                  # the same, plus tier B with the GPU environment (see tests/README.md)
 
-Two paper scripts need lab files that are not released and are kept as records of how their outputs were made:
-`paper/figs/compute_hours.py` (sums the timing logs of the run trees into `paper/data/compute_hours.json`) and
-`paper/figs/example_traces.py` (decodes the paired example traces of the implementation appendix into
-`paper/data/example_traces.txt` from the raw trace files).
+`paper/figs/compute_hours.py` needs lab files that are not released (the timing logs of the run trees) and is kept
+as a record of how `paper/data/compute_hours.json` was made. `paper/figs/example_traces.py` decodes the paired example
+traces of the implementation appendix into `paper/data/example_traces.txt` from the raw trace files; with the trace
+archive extracted, `scripts/rerun_traces.py` reruns it (section 2.11).
 
 Expected output of `rerun_analysis.py` on any machine:
 
@@ -279,14 +279,19 @@ G1 conditions: `full` is the trained checkpoint, `strip` the same LoRA without t
 engine), `hybrid` the warm-up's LoRA with the trained gate. The released `results/mech/hybrid_receipt.json` and
 `dose_receipt.json` give the sha256 of every input checkpoint. G3 (teacher-forced beta statistics, 43 checkpoints) runs
 `mech_box.sh g3 a` and `g3 b`, that is `src/gdn_gate/mech/gate_stats.py` on 64 warm-up validation traces x 2,048
-tokens (`build_inputs.py` builds `inputs.json` from the saved traces, which are not released), then
+tokens (`build_inputs.py` builds `inputs.json` from the saved traces, in the trace archive), then
 `gs_summary.py results/mech/gate_stats results/mech/gate_stats_summary fixed` on CPU.
 
-CPU analyses of saved data: `text_stats.py` (where the reasoning tokens go; needs the generation traces, not released),
+CPU analyses of saved data: `text_stats.py` (where the reasoning tokens go; needs the generation traces of the trace archive),
 `item_match.py` (item-matched accuracy from the released 4B test readouts), `traj.py` and `traj_extra.py` (training
 dynamics from the run logs), `w_stats.py` and `param_drift.py` (gate and LoRA weights; need the checkpoints, published as
 adapters). `scripts/rerun_mech.py` reruns `g1g2_summary.py`, `gs_summary.py`, `item_match.py` and `traj_extra.py` from
-released files and compares their output with the receipts.
+released files and compares their output with the receipts. With the trace archive ([10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255))
+extracted at the repository root and the data rebuilt (`scripts/rebuild_data.py --skip_fresh`),
+`scripts/rerun_traces.py --verify` checks every trace file against `results/TRACES_LEDGER.json` and reruns
+`text_stats.py`, `answer_cap.py` (2B and 4B), `truncate_curve.py` (2B and 4B), `build_inputs.py` and
+`paper/figs/example_traces.py`: seven comparisons, each must equal the released file (`build_inputs.py`: 64 sequences,
+99,769 reasoning tokens and the lab file's sha256).
 
 ## 3. Check your results
 
@@ -304,7 +309,9 @@ released files and compares their output with the receipts.
   env blocks refer to the lab files; `results/SCRUB_LEDGER.json` maps each lab file hash to its published hash.
 - **Receipts.** Paths and host names inside the receipts were replaced the same way; values are untouched.
   `rerun_analysis.py` shows the analyses still reproduce from the published readouts.
-- **Not released:** the raw generation traces (`*.traces.jsonl.gz`, about 830 MB; planned as a separate archive), the
+- **Separate archive:** the raw generation traces (`*.traces.jsonl.gz`, 229 files, 1.40 GB, CC-BY-NC-SA-4.0) are on
+  Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255); see README.md, Generation traces.
+- **Not released:** the
   GPU scheduling, provisioning and transfer scripts of the rented servers (including `box/orch.py`, which
   `fresh_test_box.sh` and `mech_box.sh` call), and the lab notebook. The released
   `run_configs`, readout argv and receipts carry every argument those scripts passed.
