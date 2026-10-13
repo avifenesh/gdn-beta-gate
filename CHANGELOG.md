@@ -1,11 +1,12 @@
 # Changelog
 
-## Unreleased
+## v1.1.1 (2026-10-13)
 
 - The generation traces of every readout are a separate archive on Zenodo ([10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255), CC-BY-NC-SA-4.0, 229 files,
   290,306 traces). `results/TRACES_LEDGER.json` lists them with their sha256; `scripts/rerun_traces.py` reruns
   `text_stats.py`, `answer_cap.py`, `truncate_curve.py`, `build_inputs.py` and `paper/figs/example_traces.py` from them
   and compares with the released files.
+- Dev dependency: pytest 9.0.3 (GHSA-6w46-j5rx-g56g).
 
 ## v1.1.0 (2026-10-12)
 
