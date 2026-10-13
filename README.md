@@ -1,13 +1,14 @@
 # Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues
 
 Code, receipts and checks for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi
-Fenesh, Tiyuvta.ai, 2026; the arXiv identifier and the archive DOI are added to this README and `CITATION.cff` when
-they exist). This repository is a frozen research artifact: it holds the exact training, readout and analysis code the
+Fenesh, Tiyuvta.ai, 2026; the arXiv identifier is added to this README and `CITATION.cff` when it exists). This repository is a frozen research artifact: it holds the exact training, readout and analysis code the
 paper ran, the pre-registration records, every analysis receipt and per-item readout the paper's numbers come from, a
 claims checker that ties each number in the paper to a JSON field, and the figure scripts. It does not hold model
 weights (the trained adapters are on the Hugging Face Hub, see [docs/ADAPTERS.md](docs/ADAPTERS.md)), dataset text
 (rebuilt from the public sources by checksum), the raw generation traces (a separate archive on Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255)), or the lab's
 GPU scheduling and server provisioning scripts.
+
+Write-ups: [Hugging Face blog](https://huggingface.co/blog/Avifenesh/beta-gate-qwen35) and [tiyuvta.ai](https://tiyuvta.ai/research/beta-gate-length-rl/).
 
 The method in one line: a zero-initialized linear map `W` per Gated DeltaNet layer moves the write strength `beta`
 toward its floor or its ceiling, `tau = tanh(W x)`; ceiling 1 is Gate(0,1), ceiling 2 opens the negative-eigenvalue

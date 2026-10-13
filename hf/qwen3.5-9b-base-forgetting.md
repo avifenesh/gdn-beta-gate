@@ -25,7 +25,7 @@ Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Witho
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the adapters of the paper's forgetting check at 9B: Qwen3.5-9B-Base trained with LoRA on synthetic state-tracking tasks with WikiText replay, in two arms (LoRA, and LoRA plus the β gate with ceiling 2), 3 seeds each. No Gate(0,1) arm was trained at 9B. The gated arm keeps more of the base model's HumanEval score than LoRA in every seed.
 
-Code, receipts and the claims checker: https://github.com/avifenesh/gdn-beta-gate. arXiv: to be added.
+Code, receipts and the claims checker: https://github.com/avifenesh/gdn-beta-gate. Write-up: https://huggingface.co/blog/Avifenesh/beta-gate-qwen35. arXiv: to be added.
 
 Base model: [`Qwen/Qwen3.5-9B-Base`](https://huggingface.co/Qwen/Qwen3.5-9B-Base) at revision `68c46c4b3498877f3ef123c856ecfde50c39f404` (Apache-2.0).
 6 adapters, 303 MB in total.

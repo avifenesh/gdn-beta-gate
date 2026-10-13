@@ -25,7 +25,7 @@ Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Witho
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the chat SFT adapters of the paper's supervised check: Qwen3.5-4B-Base fine-tuned on a Tulu 3 mixture in three arms (LoRA, and LoRA plus the β gate with ceiling 1 or 2), 6 seeds each. Gate(0,1) lowers held-out loss in every seed; opening the negative-eigenvalue range (ceiling 2) gives back about half of that gain.
 
-Code, receipts and the claims checker: https://github.com/avifenesh/gdn-beta-gate. arXiv: to be added.
+Code, receipts and the claims checker: https://github.com/avifenesh/gdn-beta-gate. Write-up: https://huggingface.co/blog/Avifenesh/beta-gate-qwen35. arXiv: to be added.
 
 Base model: [`Qwen/Qwen3.5-4B-Base`](https://huggingface.co/Qwen/Qwen3.5-4B-Base) at revision `1001bb4d826a52d1f399e183466143f4da7b741b` (Apache-2.0).
 18 adapters, 720 MB in total.
