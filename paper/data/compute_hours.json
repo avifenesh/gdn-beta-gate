@@ -2,10 +2,13 @@
  "note": "Logged GPU time per device class for the compute statement. CPU only.",
  "hours": {
   "GB10": {
-   "readout": 14.130586528049575,
-   "train": 110.40857222222223,
-   "train_pilot": 11.967944444444443,
-   "total": 124.53915875027181
+   "r9b_readout": 28.14512779408031,
+   "r9b_train": 71.15104444444445,
+   "readout": 42.275714322129886,
+   "train": 181.55961666666664,
+   "train_pilot": 14.80623611111111,
+   "total": 223.83533098879653,
+   "r9b_total": 99.29617223852476
   },
   "RTX 5090 Laptop": {
    "readout": 6.242197776039442,
@@ -22,9 +25,11 @@
  },
  "files": {
   "GB10": {
-   "readout": 9,
-   "train": 24,
-   "train_pilot": 8
+   "r9b_readout": 14,
+   "r9b_train": 7,
+   "readout": 23,
+   "train": 31,
+   "train_pilot": 9
   },
   "RTX 5090 Laptop": {
    "readout": 17,

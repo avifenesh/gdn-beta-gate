@@ -1,8 +1,8 @@
 {
- "note": "Generation traces of the readouts in results/, one gzipped JSONL sidecar per readout (OUT.traces.jsonl.gz beside OUT.json or OUT.json.gz). Record keys: id, sample, think (reasoning token ids, Qwen3.5 tokenizer), answers (answer text per budget). No problem or gold-answer text. The files are the lab files byte for byte: the publication scrub rules of results/SCRUB_LEDGER.json match nothing in them, so sha256 (the file) is also the lab file's hash and sha256_released is the uncompressed content. See results/TRACES_README.md.",
- "n_files": 229,
- "n_records": 290306,
- "bytes": 1400244355,
+ "note": "Generation traces of the readouts in results/, one gzipped JSONL sidecar per readout (OUT.traces.jsonl.gz beside OUT.json or OUT.json.gz). Record keys: id, sample, think (reasoning token ids, Qwen3.5 tokenizer), answers (answer text per budget). No problem or gold-answer text. The files are the lab files byte for byte: the publication scrub rules of results/SCRUB_LEDGER.json match nothing in them, so sha256 (the file) is also the lab file's hash and sha256_released is the uncompressed content. See results/TRACES_README.md. The 14 files under results/ml7_9b/ (Qwen3.5-9B record, release v1.2.0) are in the second archive of the record, gdn-beta-gate-traces-9b.zip; the other 229 are in gdn-beta-gate-traces.zip.",
+ "n_files": 243,
+ "n_records": 298986,
+ "bytes": 1437807480,
  "files": [
   {
    "path": "results/ml7/step9_curve_Qwen3.5-2B_gb10.traces.jsonl.gz",
@@ -2063,6 +2063,132 @@
    "bytes": 199818,
    "sha256": "abbc6aeaba76a2b8c4a65de5ef4c7e3bd43d89841ca9c0211e65c3b2a9bf328f",
    "sha256_released": "48644aecd2a61997ed4408103d5d3f95b89bdf808ea35ba8f72fefc958cc3f6e",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_curve_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_curve_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 4254409,
+   "sha256": "ca645b4d9830821f1b38c9ccbaad551c27968d882dcaedd879d9c1bd433944b9",
+   "sha256_released": "fef9c4d6aadccfefbc1cda04cc51af8950322eb1d293709072352de685cea126",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_pilot_ctrl_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_pilot_ctrl_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 2707647,
+   "sha256": "6516527e8ada031fd05b67db3f4df0fc4ab608213748cced5a7dc4f233601c3e",
+   "sha256_released": "1b8940475e3a16d8d80f3dd6613a541f0fb2a6d47f3b26abe6fc42d2343e5a48",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_pilot_ctrl_s1_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_pilot_ctrl_s1_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 2786172,
+   "sha256": "edc01963b76dd4ff531211052ab55b8f9663804b71978970b4b71aa913e2ae55",
+   "sha256_released": "9dff5760790bd864b8b86324afa45fe712b2ec9fcf4d08dcf8308d3e3e5970c6",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_pilot_ctrl_s2_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_pilot_ctrl_s2_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 2662782,
+   "sha256": "12e749971faf9f80aa55776d06b60b6a1145c7cf18008a70acabe2e380bdf3f8",
+   "sha256_released": "f686ef94c1d86e93b7be95a45287512c3ddfaccc5857d400eba22401516573b4",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_pilot_wide1_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_pilot_wide1_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 812634,
+   "sha256": "f1888ef4ce271a261545c496ec4f1ff34305bdefaace6fd767bd74a1426e8139",
+   "sha256_released": "20712a7f4574de6f960d4924f9a16845862aae420dfe72a95d48bb0c23652f17",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_pilot_wide1_s1_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_pilot_wide1_s1_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 1181161,
+   "sha256": "4dcffb7599860238198722c90fee5e8bb333e2058d9f801d74f3018638999b37",
+   "sha256_released": "347ddf9b8c2c4923c8815bcb8d8e64e884ad9cc32bca13bd4070586e85c23f32",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/step9_pilot_wide1_s2_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.traces.jsonl.gz",
+   "records": 1000,
+   "readout": "results/ml7_9b/step9_pilot_wide1_s2_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json",
+   "bytes": 686935,
+   "sha256": "1061ba6a246b10220afffb1e467b99b8206c9bde63b674a0d10c20d18dca19b4",
+   "sha256_released": "7cdbc86522dc447590fe9643138a19eef5977f5fef95138d187ce4e494ed93cc",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_ctrl_0.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_ctrl_0.json.gz",
+   "bytes": 3320912,
+   "sha256": "c4ba9bec904861cfb95d95f364eb939c0dfe234a6a1560fed7479fbda6c50403",
+   "sha256_released": "f82f667b99b6eecfb47170c101882db293adc732bf02373f20a4e2a0079d9cd8",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_ctrl_1.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_ctrl_1.json.gz",
+   "bytes": 3340546,
+   "sha256": "bee33c9432f24bb9c3990ea99324d3e99be2b30e092edbbbc15b989f80ce670c",
+   "sha256_released": "0462ab535e9ae93b3568da16d05a5c23f7365b9b66cfc851d79bb785162219ee",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_ctrl_2.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_ctrl_2.json.gz",
+   "bytes": 3352025,
+   "sha256": "74bc4d11ea3b55a1788f2432387eab284535c70342cf6e6d641926b55f3820c9",
+   "sha256_released": "a370336a44521815d649696ce66538b070fe427bef47878b8c0741a74f68e460",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_untouched.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_untouched.json.gz",
+   "bytes": 3423161,
+   "sha256": "87477c546f1f2c5539372aa62fda4b230ff8da8ae1875db926d63afabace85cd",
+   "sha256_released": "dded1cf10f5fcb6ebca03963758fcad4c3a1eb808ef60f118e669fbf050c678e",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_wide1_0.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_wide1_0.json.gz",
+   "bytes": 2970257,
+   "sha256": "4e9b7c9ecdefa69158105effae91fa1545354fdf6c61badd0f94a32a380976f3",
+   "sha256_released": "db275aa2e5a51da959dfc4f2ba3fcce17b3b273f44cdb8c9e05779154eae6b17",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_wide1_1.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_wide1_1.json.gz",
+   "bytes": 3149591,
+   "sha256": "ebe7b5dc2a441df1fecd3954da9669f72a8e5b312f100757bae3915e6c22264a",
+   "sha256_released": "e2ac376954a9b7be7f80afa9edf3160a1be554191868483109c60137b0fd9b8b",
+   "scrubbed": false
+  },
+  {
+   "path": "results/ml7_9b/aime2025/readout_aime2025_wide1_2.json.traces.jsonl.gz",
+   "records": 240,
+   "readout": "results/ml7_9b/aime2025/readout_aime2025_wide1_2.json.gz",
+   "bytes": 2914893,
+   "sha256": "c88dd2959d5094eb2bbf5fd68f57d3bd82e020401ef03d71ae07c3f3c9023561",
+   "sha256_released": "0ce8492ca524aff344be7db5392fee78c0e161dbf00cb161f0f15f7ca30f7583",
    "scrubbed": false
   }
  ]

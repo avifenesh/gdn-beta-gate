@@ -51,6 +51,11 @@ SHORT = {
     "IM": "results/mech/item_match.json",
     "TJ": "results/mech/traj.json",
     "WS": "results/mech/w_stats.json",
+    "A9": "results/ml7_9b/aime2025/analysis_fresh_9b.json",
+    "FFIN9": "results/ml7_9b/aime2025/final.json",
+    "SL9": "results/ml7_9b/aime2025/steps.log",
+    "PL9": "ml_pipeline_9b/PIPELINE.md",
+    "D9": "paper/data/r9b.json",
 }
 
 # Numbers allowed without a row, each with its reason.

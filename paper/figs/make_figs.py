@@ -1,7 +1,7 @@
 """Draw every paper figure from the JSON receipts (CPU only, matplotlib, PDF output).
 
 Run: python3 paper/figs/derive.py && python3 paper/figs/make_figs.py
-Inputs: results/** analysis and receipt JSON, paper/data/derived.json.
+Inputs: results/** analysis and receipt JSON, paper/data/derived.json, paper/data/r9b.json.
 Outputs: paper/figs/*.pdf
 """
 import json
@@ -392,6 +392,49 @@ def fig_mech():
     plt.close(fig)
 
 
+def fig_9b():
+    """Qwen3.5-9B: AIME 2025 accuracy vs budget, GSM8K validation length per seed, training share cut at the cap."""
+    a9 = load("ml7_9b/aime2025/analysis_fresh_9b.json")
+    r9 = json.load(open(ROOT / "paper/data/r9b.json"))
+    arms = ["ctrl", "wide1"]
+    fig, axes = plt.subplots(1, 3, figsize=(7.0, 2.6), gridspec_kw={"width_ratios": [1.15, 0.8, 1.05]})
+    budget_panel_fresh(axes[0], a9, arms, "AIME 2025 (30 items, read once)")
+    ax = axes[1]
+    v = r9["val"]["arms"]
+    for i, arm in enumerate(arms):
+        ps = v[arm]["length"]["per_seed"]
+        ax.bar(i, np.mean(ps), width=0.7, color=COL[arm], alpha=0.35, edgecolor="none")
+        scat(ax, [i] * len(ps), ps, arm)
+    ax.plot([-0.45, 1.45], [v["untouched"]["length"]] * 2, "--", color=GRAY["baseline"], lw=1)
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels([LBL[a] for a in arms])
+    ax.set_xlim(-0.7, 1.7)
+    ax.set_ylim(0, 3200)
+    ax.grid(axis="x", visible=False)
+    ax.set_ylabel("reasoning length\n(mean tokens at the 8,192 budget)")
+    ax.set_title("GSM8K validation slice")
+    ax = axes[2]
+    runs = r9["train"]["runs"]
+    for arm in arms:
+        per = np.array([runs[f"{arm}_s{s}_cap512_r9b_gb10"]["forced_per_step"] for s in (0, 1, 2)])
+        steps = np.arange(per.shape[1])
+        k = 10
+        for row in per:
+            ax.plot(steps[k - 1:], np.convolve(row, np.ones(k) / k, "valid"), color=COL[arm], lw=0.5, alpha=0.45)
+        ax.plot(steps[k - 1:], np.convolve(per.mean(0), np.ones(k) / k, "valid"), color=COL[arm], lw=1.6,
+                label=LBL[arm])
+    ax.set_ylim(0, 1.05)
+    ax.set_xlabel("GRPO step")
+    ax.set_ylabel("share of rollouts cut at 512\n(10-step mean)")
+    ax.set_title("Training")
+    handles = [plt.Line2D([], [], color=COL[a], marker=MRK[a], mfc=MFC[a], mec=COL[a], label=LBL[a]) for a in arms]
+    handles.append(plt.Line2D([], [], color=GRAY["baseline"], ls="--", label="base model"))
+    fig.legend(handles=handles, loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, -0.02))
+    fig.tight_layout(rect=(0, 0.08, 1, 1))
+    fig.savefig(FIG / "fig_9b.pdf")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_budget()
     fig_length()
@@ -400,4 +443,5 @@ if __name__ == "__main__":
     fig_sft_forget()
     fig_fresh()
     fig_mech()
+    fig_9b()
     print("figures written to", FIG)

@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Rebuild the five frozen data files from their public sources and check them against the split manifests.
+"""Rebuild the six frozen data files from their public sources and check them against the split manifests.
 
 The repository ships only item ids (data/splits/*.ids, file order) and checksums, not problem text. This script
 downloads GSM8K and MATH-500 at the pinned revisions in data/MANIFEST.json and writes rl_pool.jsonl, val.jsonl,
 test_gsm8k.jsonl and test_math500.jsonl in the exact byte format the runs used, checked against
 ml_pipeline/split_manifest.json. It then downloads AIME 2024, AIME 2025, AIME 2026 and AMC 2023 at their pinned
 revisions and writes the fresh held-out set test_fresh.jsonl (the row rules of src/gdn_gate/ml7/fresh/build_fresh.py;
-its dedup scan dropped no item), checked against ml_pipeline_4b/fresh_test/split_manifest.json. Exit 1 on any
-mismatch.
+its dedup scan dropped no item), checked against ml_pipeline_4b/fresh_test/split_manifest.json, and the 9B record's
+test_aime2025.jsonl (the 30 AIME 2025 lines of test_fresh.jsonl, bytes and order unchanged, as
+src/gdn_gate/ml7/test9b/build_aime2025.py cut it), checked against ml_pipeline_9b/aime2025_test/split_manifest.json.
+Exit 1 on any mismatch.
 
 Usage: python scripts/rebuild_data.py [--out DIR] [--skip_fresh]   (default $WG_RUNS/ml7/data, WG_RUNS defaults to ./runs)
 Needs: huggingface_hub, pyarrow (CPU only, about 3 MB of downloads).
@@ -116,6 +118,17 @@ def main():
         fwant = json.loads((ROOT / "ml_pipeline_4b/fresh_test/split_manifest.json").read_text())["files"]
         if not write_check(out, "test_fresh", fresh_rows(man), fwant):
             bad.append("test_fresh")
+        else:  # the 9B record's AIME 2025 file: the fresh file's aime2025 lines, bytes and order unchanged
+            awant = json.loads((ROOT / "ml_pipeline_9b/aime2025_test/split_manifest.json").read_text())["files"]
+            lines = [ln for ln in (out / "test_fresh.jsonl").read_text().splitlines(keepends=True)
+                     if json.loads(ln)["id"].startswith("fresh:aime2025-")]
+            (out / "test_aime2025.jsonl").write_text("".join(lines))
+            h = hashlib.sha256("".join(lines).encode()).hexdigest()
+            ok = h == awant["test_aime2025.jsonl"]
+            print(f"{'OK  ' if ok else 'FAIL'} test_aime2025.jsonl rows {len(lines)} sha256 {h[:16]} "
+                  f"(manifest {awant['test_aime2025.jsonl'][:16]})")
+            if not ok:
+                bad.append("test_aime2025")
     sys.exit(1 if bad else 0)
 
 

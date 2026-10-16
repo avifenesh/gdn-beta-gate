@@ -1,0 +1,67 @@
+{
+ "what": "AIME 2025 (30 items) read by the 9B record (Qwen3.5-9B: untouched, LoRA ctrl and Gate(0,1) wide1 x 3)",
+ "metric": "fresh_rows_read_by_all_models",
+ "score": 1.0,
+ "test_touches": 1,
+ "models": 7,
+ "samples": 8,
+ "records": [
+  "9b"
+ ],
+ "created_utc": "2026-10-16T09:50:59+00:00",
+ "analysis": {
+  "9b": {
+   "file": "<repo>/results/ml7_9b/aime2025/analysis_fresh_9b.json",
+   "sha256": "0e7900ddcdc63c1b35fc4ab94a60a39f76dc195c11e265ec6809f6305e5d0cf4"
+  }
+ },
+ "readouts": {
+  "untouched": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_untouched.json",
+   "sha256": "27e0e7f9ae2a969946caa6b5e753ad46f364ff9d506c9a957eaafbf3cfd4c784",
+   "arm": "stock",
+   "ckpt": "none"
+  },
+  "ctrl_0": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_ctrl_0.json",
+   "sha256": "994b00ecd4d613a220c974060a7e380f7765b08fc560aae33bb2d0a17a081a0c",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s0_cap512_r9b_gb10/ckpt_step150.pt"
+  },
+  "ctrl_1": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_ctrl_1.json",
+   "sha256": "ce1ab89c297f01428c17c22729c5e1cd6677c32e366023307ceb54381986069d",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s1_cap512_r9b_gb10/ckpt_step150.pt"
+  },
+  "ctrl_2": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_ctrl_2.json",
+   "sha256": "1180d4d33374e60424d61099b79e516af57c7bb81b86a7cdd72bbd2be70500a2",
+   "arm": "ctrl",
+   "ckpt": "<runs>/ml7/grpo/ctrl_s2_cap512_r9b_gb10/ckpt_step150.pt"
+  },
+  "wide1_0": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_wide1_0.json",
+   "sha256": "089e82a6437b57e36a93f2268c7fef02687b432f5a5a4dd067a028fcbe8d26c5",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s0_cap512_r9b_gb10/ckpt_step150.pt"
+  },
+  "wide1_1": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_wide1_1.json",
+   "sha256": "59366a4fc8131a12d4b0af76b60f1e5c1fb384f5a290f8aabdf50cbfbdb512a0",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s1_cap512_r9b_gb10/ckpt_step150.pt"
+  },
+  "wide1_2": {
+   "file": "<repo>/results/ml7_9b/aime2025/readout_aime2025_wide1_2.json",
+   "sha256": "0076dd8eb3c53839c95343a134963d90c5d7bd2897a0e5c0f0812fe3fd3f9cf9",
+   "arm": "wide1",
+   "ckpt": "<runs>/ml7/grpo/wide1_s2_cap512_r9b_gb10/ckpt_step150.pt"
+  }
+ },
+ "record_9b": {
+  "file": "test_aime2025.jsonl",
+  "guard_dir": "<repo>/ml_pipeline_9b/aime2025_test",
+  "pipeline_md": "<repo>/ml_pipeline_9b/PIPELINE.md"
+ }
+}

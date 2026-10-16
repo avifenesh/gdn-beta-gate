@@ -1,5 +1,40 @@
 # Changelog
 
+## v1.2.0 (2026-10-16)
+
+The Qwen3.5-9B RL record. Code, receipts and analyses of v1.1.1 are unchanged; the new record runs the same trainer,
+readout and frozen analyses.
+
+Added
+
+- The 9B record: the 4B recipe on Qwen3.5-9B (revision c2022362) on two DGX Spark (GB10) units, one 40-step warm-up
+  and LoRA and Gate(0,1) x seeds 0 to 2 for 150 steps (micro-row 4,096, a memory setting). Validation reads on the
+  GSM8K validation slice (`results/ml7_9b/step9_*.json`): Gate(0,1) reasons 502 tokens against 1,825 for LoRA (seed
+  means, 63 to 79% shorter per seed) at the same accuracy at 8,192 (0.976).
+- The single read of AIME 2025 at 9B (30 problems, 8 samples), pre-registered in `ml_pipeline_9b/PIPELINE.md` with
+  H5-9B and H6-9B under the 4B fresh-set rule: both supported. Gate(0,1) - LoRA area +0.103 [+0.061, +0.147], length
+  -659 [-1,036, -323] tokens, accuracy at 8,192 0.482 against 0.275. Receipts in `results/ml7_9b/aime2025/`
+  (7 per-item readouts, the analysis, `final.json`, the code lock); the guard state in `ml_pipeline_9b/aime2025_test/`.
+- `src/gdn_gate/ml7/test9b/`: the AIME 2025 file cut (`build_aime2025.py`), the analysis wrapper over the frozen
+  `fresh_analysis.py` and `step14_analysis.py` (`test9b_analysis.py`), the guard (`test9b_guard.py`), the GB10 runner
+  (`test9b_spark.sh`, `t9b_remote.sh`), the checkpoint sha256 list, and 32 CPU checks (`test_test9b_cpu.py`, tier B).
+- Run configs and logs of the seven 9B runs (`results/run_configs/9B_rl/`, `results/run_logs/ml7_9b/grpo/`).
+- The 7 adapters on the Hugging Face Hub as `Avifenesh/gdn-beta-gate-qwen3.5-9b-grpo` (`warmup/seed0`,
+  `lora/seed0` to `seed2`, `gate01/seed0` to `seed2`), the 9B GRPO record in `scripts/adapters.py`, and the model card
+  `hf/qwen3.5-9b-grpo.md`. 72 adapters in six repositories.
+- The 14 trace files of the 9B record in version 1.1.0 of the Zenodo trace record (`gdn-beta-gate-traces-9b.zip`);
+  `results/TRACES_LEDGER.json` lists 243 files.
+- The paper's 9B numbers: rows in `paper/CLAIMS.md` (1181 rows, all checked), `paper/figs/derive_9b.py` and its output
+  `paper/data/r9b.json`, the figure `paper/figs/fig_9b.pdf`, and the GB10 hours in `paper/data/compute_hours.json`.
+
+Changed
+
+- `scripts/rebuild_data.py` also writes `test_aime2025.jsonl` and checks it (6 files). `scripts/rerun_analysis.py`
+  reruns the 9B AIME 2025 analysis (16 receipts). `results/ENVIRONMENT.json` lists the 9B readouts.
+- README.md, REPRODUCE.md (section 2.12), docs/ADAPTERS.md, docs/COMPUTE.md (about 99 GB10-hours for the 9B record),
+  docs/PREREGISTRATION.md, results/README.md and tests/README.md describe the 9B record. The other five model cards
+  say the RL results cover 2B, 4B and 9B.
+
 ## v1.1.1 (2026-10-13)
 
 - The generation traces of every readout are a separate archive on Zenodo ([10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255), CC-BY-NC-SA-4.0, 229 files,

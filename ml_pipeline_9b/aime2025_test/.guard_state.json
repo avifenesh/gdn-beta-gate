@@ -1,0 +1,10 @@
+{
+  "test_fingerprint": "3aa2a7d749c5315ff7a1747257143e10ae05d47df2c51f3350c0beed78f035d9",
+  "n_test": 30,
+  "test_touches": 1,
+  "duplicates_dropped": 0,
+  "split": "fixed_external_test (AIME 2025, cut from the Phase 5 fresh set)",
+  "created": "2026-10-15",
+  "test_frame": "columns id, problem, answer; rows of test_aime2025.jsonl, file order",
+  "record": "ml_pipeline_9b (Qwen3.5-9B, lane wg): AIME 2025 read once by the 9B record, touch count 0"
+}

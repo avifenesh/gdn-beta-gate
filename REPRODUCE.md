@@ -1,12 +1,13 @@
 # Reproducing the paper
 
-Paper version, tag and archive: the draft of October 2026 maps to tag `v1.0.0` of this repository. The arXiv
-identifier and the archive DOI are added here when they exist. The trained adapters are on the Hugging Face Hub at
+Paper version, tag and archive: the draft of October 2026 maps to tag `v1.0.0` of this repository; tag `v1.2.0` adds
+the Qwen3.5-9B record (section 2.12). The arXiv identifier is added here when it exists. The trained adapters are on the Hugging Face Hub at
 these revisions (docs/ADAPTERS.md):
 
 | Hub repository | Revision (commit) |
 |---|---|
 | `Avifenesh/gdn-beta-gate-qwen3.5-4b-grpo` | `ee1e6c0b031b13f009b50009278cc03f5b1d07ec` |
+| `Avifenesh/gdn-beta-gate-qwen3.5-9b-grpo` | `3e9fbcdb39716267d8062f3b159b21ea05dc58f2` |
 | `Avifenesh/gdn-beta-gate-qwen3.5-2b-grpo` | `9bb0c56a6b4b43f10a7f6b2cfe50349c2b80eb6f` |
 | `Avifenesh/gdn-beta-gate-qwen3.5-4b-base-chat-sft` | `333c4445c97aa603e998f5ddb297db71c769fff2` |
 | `Avifenesh/gdn-beta-gate-qwen3.5-4b-base-forgetting` | `20bb1d22ae83042682c8f024ce9e8628dc4f628e` |
@@ -34,6 +35,8 @@ receipts. The tolerance for a GPU rerun is the decision rule (3 of 3 seeds with 
 | Effect holds on the fresh held-out set at 4B (H5, H6) | Abstract, Results (fresh set), Fig. 2 | `results/fresh/analysis_fresh_4b.json` | section 2.10 | 1 RTX PRO 6000 per readout | ~1.3 h per readout, 14 readouts (~18 GPU-h) | H5 +0.110 [+0.089, +0.132]; H6 -1,329 [-1,585, -1,081] tokens; both supported | rule holds; seed-mean area within 0.03 |
 | 2B replication on the fresh set (secondary) | Results (fresh set) | `results/fresh/analysis_fresh_2b.json` | section 2.10 | same | ~1 h per readout, 19 readouts | H5-2B +0.012, H6-2B -126 tokens; not supported | verdicts hold |
 | Effect at 2B, read 1 and fresh seeds | Results (Qwen3.5-2B) | `results/ml7/step14/`, `results/ml7/step14_ext/` | section 2.6 | GB10 or RTX PRO 6000 per run | ~4.8 h per 2B run on GB10, ~0.9 h on RTX PRO 6000 | +0.027 [+0.019, +0.035]; +0.025 [+0.016, +0.034] | rule holds |
+| The effect holds at 9B on AIME 2025 (H5-9B, H6-9B) | Results (Qwen3.5-9B), Table 3, Fig. 3 | `results/ml7_9b/aime2025/analysis_fresh_9b.json` | section 2.12 | 1 DGX Spark (GB10) per run or readout | 6 runs of 10.8 to 12.0 h and a 2.8 h warm-up, + 7 readouts of 2.4 to 4.5 h | H5-9B +0.103 [+0.061, +0.147]; H6-9B -659 [-1,036, -323] tokens; both supported | rule holds |
+| The gate shortens 9B reasoning on GSM8K validation | Results (Qwen3.5-9B) | `results/ml7_9b/step9_pilot_*_r9b_gb10_*.json` | section 2.12 | same | 6 readouts, 0.5 to 1.8 h each | LoRA 1,825, Gate(0,1) 502 tokens; accuracy at 8,192 0.976 both | Gate(0,1) shorter in every seed |
 | Range adds nothing in RL | Results (range) | `effects/wide - wide1` in the four test analyses | as above | as above | as above | +0.006, +0.003, -0.002, all no effect | no effect |
 | The trained gate carries the shortening (G1) | Mechanism, Fig. 3a | `results/mech/g1g2_summary.json` (`g1_condition_means`) | section 2.11 | 1 RTX PRO 6000 per readout | 22 readouts, 0.03 to 0.4 h each | Gate(0,1) length: trained 307, gate removed 665, gate only 970; LoRA 1,600, warm-up 2,916 | order holds per seed |
 | Length falls with the gate scale (G2) | Mechanism, Fig. 3b | `results/mech/g1g2_summary.json` (`g2_dose`), `results/mech/dose_receipt.json` | section 2.11 | same | 12 readouts | monotone in all 3 seeds; area 0.949 to 0.963 | monotone per seed |
@@ -43,13 +46,13 @@ receipts. The tolerance for a GPU rerun is the decision rule (3 of 3 seeds with 
 | Gate reduces forgetting | Appendix (SFT and forgetting), Fig. 7 right | `results/rescore/`, `results/w1main/` | section 2.8 | 1 RTX PRO 6000 (training), 1 GPU 24 GB+ (scoring) | training about 1.9 h per 4B run and 2.5 h per 9B run on one RTX PRO 6000 (`train_seconds` in the run configs); scoring not recorded | HumanEval LoRA 0.152, Gate(0,2) 0.264, Gate(0,1) 0.409 (4B seed means) | order holds per seed |
 | Clamp costs counting in Olmo-Hybrid-7B | Appendix (Olmo-Hybrid-7B), Fig. 8 | `results/olmo/vllm2/counting_paired.json`, `counting_localization.json`, `ruler_paired.json` | section 2.9 | 1 GPU, 24 GB+ (RTX 5090 Laptop in the lab) | ~2 h per arm for the 500-item cells (estimate from the battery timing) | CWE -3.8 / -6.3 / -6.0 points at 4k / 8k / 16k | sign and p < 0.05 per cell |
 | Clamp leaves the broad battery | Appendix (Olmo-Hybrid-7B) | `results/olmo/lesion_nll_base_summary.json`, `results/olmo/vllm2/battery/*/lmeval_lm.json` | section 2.9 | same | ~3 h per arm for the vLLM battery (receipt `timing_s`) | NLL +0.020 [0.017, 0.023]; GSM8K 0.747 vs 0.745 | within 2 points |
-| Every number in the paper | all | `paper/CLAIMS.md` (1044 rows) | `uv run python paper/figs/check_claims.py` | CPU | seconds | 0 failed | per row |
+| Every number in the paper | all | `paper/CLAIMS.md` (1181 rows) | `uv run python paper/figs/check_claims.py` | CPU | seconds | 0 failed | per row |
 
 ## 1. Getting started (CPU, about 10 minutes)
 
     uv sync --locked
-    uv run python paper/figs/check_claims.py      # prints "1044 rows checked, 0 failed"
-    uv run python scripts/rerun_analysis.py       # 15 lines, each "OK"; exit 0
+    uv run python paper/figs/check_claims.py      # prints "1181 rows checked, 0 failed"
+    uv run python scripts/rerun_analysis.py       # 16 lines, each "OK"; exit 0
     uv run python scripts/rerun_mech.py           # 4 lines, each "OK" (G1/G2, G3, item match, training windows)
     uv run python paper/figs/derive.py            # rewrites paper/data/derived.json from results/ (git diff: empty)
     uv run python paper/figs/stats_extra.py       # rewrites paper/data/extra.json: intervals, censoring-aware lengths (git diff: empty)
@@ -83,9 +86,9 @@ Set the roots once (paths are examples):
 
 ### 2.1 Data
 
-    uv run python scripts/rebuild_data.py            # writes $WG_RUNS/ml7/data/{rl_pool,val,test_gsm8k,test_math500,test_fresh}.jsonl
-                                                     # and checks each sha256 against ml_pipeline/split_manifest.json
-                                                     # and ml_pipeline_4b/fresh_test/split_manifest.json (byte for byte)
+    uv run python scripts/rebuild_data.py            # writes $WG_RUNS/ml7/data/{rl_pool,val,test_gsm8k,test_math500,test_fresh,test_aime2025}.jsonl
+                                                     # and checks each sha256 against ml_pipeline/split_manifest.json,
+                                                     # ml_pipeline_4b/fresh_test/ and ml_pipeline_9b/aime2025_test/ (byte for byte)
 
 The split rules, the sibling removal (8 training problems) and the grader self-check are in `ml_pipeline/02_prep.py`
 (a marimo notebook; `python ml_pipeline/02_prep.py` regenerates its artifacts) and `ml_pipeline/PIPELINE.md`. The
@@ -293,13 +296,77 @@ extracted at the repository root and the data rebuilt (`scripts/rebuild_data.py 
 `paper/figs/example_traces.py`: seven comparisons, each must equal the released file (`build_inputs.py`: 64 sequences,
 99,769 reasoning tokens and the lab file's sha256).
 
+### 2.12 Qwen3.5-9B record (DGX Spark GB10)
+
+The 4B recipe on Qwen3.5-9B (revision c2022362), two arms (LoRA, Gate(0,1)) x seeds 0 to 2 from one shared warm-up;
+no Gate(0,2) and no LoRA-r20 arm. Every run and readout used one NVIDIA DGX Spark (GB10, 128 GB unified memory). The
+only recipe change is the training micro-row (`MICRO=4096`), a memory setting: the loss is a token sum over the batch,
+so the micro-row split does not change the update. The 2B record's split manifest serves the RL pool and the
+validation slice (the 4B record's copy is byte-identical). The runs' arguments are in
+`results/run_configs/9B_rl/<run>/meta.json`, their logs in `results/run_logs/ml7_9b/grpo/`.
+
+    huggingface-cli download Qwen/Qwen3.5-9B --revision c202236235762e1c871ad0ccb60c8ee5ba337b9a
+    M9=$WG_HF_CACHE/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a
+    export GRPO_MODEL=$M9 GRPO_MANIFEST=$PWD/ml_pipeline/split_manifest.json GPU_MEM=0.30 MICRO=4096 CUDA_VISIBLE_DEVICES=0
+    export GRPO_VPY=$PWD/.venv-vllm/bin/python GRPO_PYLIB=$WG_ML7_PYLIB
+    bash src/gdn_gate/ml7/run_grpo.sh ctrl 0 512 fmt9b_gb10 --length_on reasoning --alpha 0.0 --steps 40 \
+         --answer_max 1280 --probe_effect 0.05
+    W9=$WG_RUNS/ml7/grpo/ctrl_s0_cap512_fmt9b_gb10/ckpt_step40.pt
+    for ARM in ctrl wide1; do for S in 0 1 2; do
+      bash src/gdn_gate/ml7/run_grpo.sh $ARM $S 512 r9b_gb10 --length_on reasoning --alpha 0.2 --steps 150 \
+           --answer_max 1280 --probe_effect 0.05 --init_from $W9
+    done; done
+
+One 150-step run took 10.8 to 12.0 h of logged training steps on one GB10 (the warm-up 2.8 h). In the lab the runs
+were launched on the two GB10 units through the lab's Spark launcher (lease, staging and copy-back; not released), which
+issued the same trainer command line as `run_grpo.sh`. Gate(0,1) seed 0 hit the launcher's 12 h job limit and resumed
+from its step-125 checkpoint (`--resume`; its `DONE` file records `ran [125, 150]`).
+
+Validation reads (GSM8K validation slice, 500 items x 2 samples), one per checkpoint, the readout of the 4B record
+with `--gpu_mem 0.35`; the untouched model runs `--arm stock` without a checkpoint:
+
+    D=$WG_RUNS/ml7/data
+    python src/gdn_gate/ml7/readout_vllm.py --model $M9 --data $D/val.jsonl --arm wide1 \
+           --ckpt $WG_RUNS/ml7/grpo/wide1_s0_cap512_r9b_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 \
+           --answer_max 1280 --samples 2 --seed 20261006 --gpu_mem 0.35 --probe_effect 0.05 \
+           --out results/runs/step9_pilot_wide1_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json
+
+The receipts are `results/ml7_9b/step9_*.json`; the length and accuracy fields the 9B rows quote are
+`summary.natural.reasoning_mean_at_max`, `summary.per_cap["8192"].acc` and `summary.norm_auc_log2`.
+
+AIME 2025 test read (pre-registered in `ml_pipeline_9b/PIPELINE.md`, "AIME 2025 test read at 9B", before any 9B
+readout of the file; read once, guard touch 1). The file is the 30 AIME 2025 lines of `test_fresh.jsonl`, bytes and
+order unchanged; `scripts/rebuild_data.py` writes it and checks it against `ml_pipeline_9b/aime2025_test/`. The lab cut
+it with `src/gdn_gate/ml7/test9b/build_aime2025.py --data $WG_RUNS/ml7/data --guard ml_pipeline_9b/aime2025_test`.
+Seven readouts (untouched, LoRA and Gate(0,1) x seeds 0 to 2; checkpoint sha256 in
+`src/gdn_gate/ml7/test9b/ckpt_expect_9b.json`), 8 samples per problem:
+
+    python src/gdn_gate/ml7/readout_vllm.py --model $M9 --data $D/test_aime2025.jsonl --arm wide1 \
+           --ckpt $WG_RUNS/ml7/grpo/wide1_s0_cap512_r9b_gb10/ckpt_step150.pt --caps 256,512,1024,2048,4096,8192 \
+           --answer_max 1280 --samples 8 --seed 20261006 --gpu_mem 0.35 --probe_effect 0.05 --rank 16 \
+           --out results/runs/aime2025/readout_aime2025_wide1_0.json
+    # untouched: --arm stock, no --ckpt; LoRA: --arm ctrl --ckpt <ctrl run ckpt_step150.pt>
+    python src/gdn_gate/ml7/test9b/test9b_analysis.py --baseline results/runs/aime2025/readout_aime2025_untouched.json \
+           ctrl_0=... ctrl_1=... ctrl_2=... wide1_0=... wide1_1=... wide1_2=... \
+           --manifest ml_pipeline_9b/aime2025_test/split_manifest.json --out results/runs/aime2025/analysis_fresh_9b.json
+
+`test9b_analysis.py` imports the frozen `fresh_analysis.py` and `step14_analysis.py` unchanged and sets only their
+module constants (test file, arms, contrast, H5-9B and H6-9B); it refuses any readout without rank 16, probe 0.05,
+answer cap 1,280, 8 samples and AIME 2025 ids only. In the lab `src/gdn_gate/ml7/test9b/test9b_spark.sh` queued the
+seven readouts on the two GB10 units under one `test9b_guard.py final` call (it reuses `fresh_guard.py` unchanged),
+which counted the single read; it calls the lab's Spark helpers (`sparklock`, `spark/son.sh`, `spark/spark_job.sh`),
+which are not released. Its CPU tests, `src/gdn_gate/ml7/test9b/test_test9b_cpu.py` (tier B of
+`tests/run_cpu_checks.sh`), run it end to end against fake helpers. The released receipt reruns exactly from the
+released readouts (`scripts/rerun_analysis.py`).
+
 ## 3. Check your results
 
 - Analysis rerun on your readouts: put them in one directory and run the analysis script with the slots as in 2.5;
   compare the `effects`, `length_effects` and `preregistered_hypotheses` blocks with the released receipts.
 - Numbers in the paper: `check_claims.py` reads the paths in `paper/CLAIMS.md`; point a row at your file to compare.
 - A pass on the reference hardware (one RTX PRO 6000 per run, vLLM 0.31.0): the four RL-record hypotheses keep
-  their verdicts, H5 and H6 stay supported at 4B, and the seed means fall inside the observed seed ranges. On other GPUs, compare orderings and verdicts,
+  their verdicts, H5 and H6 stay supported at 4B, and the seed means fall inside the observed seed ranges. At 9B the
+  reference hardware is one GB10 per run or readout: H5-9B and H6-9B stay supported. On other GPUs, compare orderings and verdicts,
   not values.
 
 ## 4. What differs or cannot be shipped
@@ -309,13 +376,16 @@ extracted at the repository root and the data rebuilt (`scripts/rebuild_data.py 
   env blocks refer to the lab files; `results/SCRUB_LEDGER.json` maps each lab file hash to its published hash.
 - **Receipts.** Paths and host names inside the receipts were replaced the same way; values are untouched.
   `rerun_analysis.py` shows the analyses still reproduce from the published readouts.
-- **Separate archive:** the raw generation traces (`*.traces.jsonl.gz`, 229 files, 1.40 GB, CC-BY-NC-SA-4.0) are on
-  Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255); see README.md, Generation traces.
+- **Separate archive:** the raw generation traces (`*.traces.jsonl.gz`, 243 files, 1.44 GB, CC-BY-NC-SA-4.0) are on
+  Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255), the 14 files of the 9B record in version
+  1.1.0 of that record; see README.md, Generation traces.
 - **Not released:** the
   GPU scheduling, provisioning and transfer scripts of the rented servers (including `box/orch.py`, which
-  `fresh_test_box.sh` and `mech_box.sh` call), and the lab notebook. The released
+  `fresh_test_box.sh` and `mech_box.sh` call), the lab's GB10 launchers and helpers (the Spark launcher of the 2B
+  GB10 runs and of every 9B run and validation readout, `sparklock` and the `spark/` helpers that `test9b_spark.sh`
+  calls), and the lab notebook. The released
   `run_configs`, readout argv and receipts carry every argument those scripts passed.
-- **Weights.** The 65 adapters the paper reads are on the Hugging Face Hub as safetensors, revisions at the top of
+- **Weights.** The 72 adapters the paper reads are on the Hugging Face Hub as safetensors, revisions at the top of
   this file (docs/ADAPTERS.md); the intermediate checkpoints are not published.
 - **Fresh set and mechanism.** The fresh set's problem text is not redistributed (rebuild it with
   `scripts/rebuild_data.py`). `results/mech/` omits the lab's one paired example trace (generated text). Two outputs
@@ -331,7 +401,7 @@ extracted at the repository root and the data rebuilt (`scripts/rebuild_data.py 
   LoRA seeds 4 and 5 used DGX Spark (GB10) units; the 9B forgetting runs, the 4B forgetting runs of seeds 0 to 2 and
   chat SFT seeds 1 to 5 trained on rented RTX PRO 6000 GPUs. The Olmo lesions, the 2B validation readouts and the
   HumanEval scoring of the 4B LoRA and Gate(0,2) forgetting runs used an RTX 5090 Laptop GPU (24 GB); the 9B
-  forgetting runs were scored on GB10 (LoRA seed 1 on an RTX PRO 6000). Hardware per receipt is in its env block
-  (`results/ENVIRONMENT.json` for the RL readouts).
+  forgetting runs were scored on GB10 (LoRA seed 1 on an RTX PRO 6000). Every run and readout of the 9B RL record
+  used one GB10 unit. Hardware per receipt is in its env block (`results/ENVIRONMENT.json` for the RL readouts).
 - **Quick mode.** There is no shrunk GPU workload with its own reference values. `readout_vllm.py --limit N
   --stride K` reads a subset for a smoke test; the CPU level above is the fast path.

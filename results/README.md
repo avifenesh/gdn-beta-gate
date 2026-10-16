@@ -9,10 +9,11 @@ repository), `<runs>` (the run root, `WG_RUNS`), `<hf-cache>` (the Hugging Face 
 |---|---|---|
 | `ml7/` | Qwen3.5-2B record: answer and training cap receipts, validation reads (`step12*`), test read 1 (`step14`), test read 2 for seeds 3 to 5 (`step14_ext`), readout parity fixtures for the CPU tests (`readout_parity`) | Results (Qwen3.5-2B, range) |
 | `ml7_4b/` | Qwen3.5-4B record: caps, cap pilots, validation (`step12_box`, `step12_ctrlpm`), test read 1 (`step14`), test read 2 with LoRA-r20 (`step14_ctrlpm`) | Results (Qwen3.5-4B, range), Table 1 |
+| `ml7_9b/` | Qwen3.5-9B record (v1.2.0, two DGX Spark GB10 units): validation reads of the untouched model and the six step-150 checkpoints (`step9_*Qwen3.5-9B_gb10.json`, GSM8K validation slice), and the single AIME 2025 read (`aime2025/`: 7 per-item readouts, `analysis_fresh_9b.json`, `final.json`, the code lock, plan and step log) | Results (Qwen3.5-9B) |
 | `fresh/` | fresh held-out set (AIME 2024/2025/2026, AMC 2023): 33 per-item readouts (14 at 4B, 19 at 2B), both analyses (`analysis_fresh_4b.json`, `analysis_fresh_2b.json`), `final.json` (the single guarded read), `fresh_table.md`, the code lock before and after the amendment, two failed self-test records | Results (fresh set) |
 | `mech/` | mechanism, Qwen3.5-4B, GSM8K validation slice: G1 ablation readouts (`ablate/`), G2 dose readouts (`dose/`, inputs in `dose_receipt.json`; G1 hybrid inputs in `hybrid_receipt.json`), G3 teacher-forced beta statistics (`gate_stats/`, summary in `gate_stats_summary/`), `g1g2_summary.json`, text statistics, item-matched accuracy, training dynamics, gate weights, CPU probe checks | Mechanism |
-| `run_configs/` | the full argument set of every paper training run (`meta.json` / `result.json`), with its startup parity self-test | Protocol, Implementation details, appendix (SFT and forgetting) |
-| `run_logs/` | training logs of the RL runs, validation logs of the chat SFT runs, the Olmo MMLU-Pro cloze results; read by `paper/figs/derive.py`. Also the frozen `meta.json` of three 4B runs (warm-up, Gate(0,1) seed 0, LoRA-r20 seed 0) and the launch logs of the forgetting server (`retrofit/box/main*.log`), which the implementation appendix rows of `paper/CLAIMS.md` read | Results (Qwen3.5-4B), appendices (SFT and forgetting, Olmo-Hybrid-7B) |
+| `run_configs/` | the full argument set of every paper training run (`meta.json` / `result.json`), with its startup parity self-test (`9B_rl/` for the 9B record) | Protocol, Implementation details, appendix (SFT and forgetting) |
+| `run_logs/` | training logs of the RL runs, validation logs of the chat SFT runs, the Olmo MMLU-Pro cloze results; read by `paper/figs/derive.py`. Also the frozen `meta.json` of three 4B runs (warm-up, Gate(0,1) seed 0, LoRA-r20 seed 0) and the launch logs of the forgetting server (`retrofit/box/main*.log`), which the implementation appendix rows of `paper/CLAIMS.md` read. `ml7_9b/grpo/<run>/`: the 9B runs' `train_log.jsonl`, `meta.json`, `DONE` and the resume record of Gate(0,1) seed 0 (`meta_resume125.json`), read by `paper/figs/derive_9b.py` | Results (Qwen3.5-4B, Qwen3.5-9B), appendices (SFT and forgetting, Olmo-Hybrid-7B) |
 | `rescore/`, `w1main/`, `vllm/step6_s0/` | HumanEval and battery scores of the forgetting and chat SFT adapters, item level; the Gate(0,1) comparison | Appendix (SFT and forgetting) |
 | `unsloth/` | the check that the Unsloth SFT stack matches the plain trainer (losses and gradients within calibrated bounds, red arms) | Appendix (SFT and forgetting) |
 | `olmo/` | Olmo-Hybrid-7B lesions: per-chunk NLL sums (`arms.jsonl`) and summary, CPU/GPU patch checks, vLLM battery (`vllm2/battery`), paired RULER receipts, beta usage | Appendix (Olmo-Hybrid-7B) |
@@ -34,9 +35,10 @@ The readouts in `mech/ablate/` and `mech/dose/` are plain JSON (no generated tex
 `src/gdn_gate/mech/g1g2_summary.py`. `mech/example_val_trace.json`, the lab's one paired example of generated text,
 is not released.
 
-Not here: the generation traces (`*.traces.jsonl.gz`, 229 files, 1.40 GB, one per readout of the RL records, the
-fresh set and the G1 and G2 mechanism readouts) that hold the sampled reasoning tokens and answer texts. They are a
-separate archive on Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255), that unpacks into this directory next to the readouts.
+Not here: the generation traces (`*.traces.jsonl.gz`, 243 files, 1.44 GB, one per readout of the RL records, the
+fresh set, the 9B record and the G1 and G2 mechanism readouts) that hold the sampled reasoning tokens and answer texts.
+They are a separate archive on Zenodo, [10.5281/zenodo.23340255](https://doi.org/10.5281/zenodo.23340255) (the 14 9B files in version 1.1.0 of the record,
+`gdn-beta-gate-traces-9b.zip`), that unpacks into this directory next to the readouts.
 `TRACES_LEDGER.json` lists each file with its trace count, its readout and the sha256 of the file and of its
 uncompressed content; the publication scrub changed none of them. `scripts/rerun_traces.py` reruns the scripts that
 read them. The four small trace files in `ml7/readout_parity/` are test fixtures.

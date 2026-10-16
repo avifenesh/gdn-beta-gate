@@ -22,7 +22,11 @@ same disk with the code lock and the done markers intact. No finished readout wa
 
 Owned hardware, not counted above: two NVIDIA DGX Spark (GB10) units trained the 2B warm-up, its pilots and the 2B
 runs of seeds 0 to 2, the chat SFT seed 0 runs (three arms) and LoRA seeds 4 and 5 of the 4B forgetting recipe, and
-scored the 9B forgetting runs (except LoRA seed 1) and those two LoRA seeds. One RTX 5090 Laptop GPU (24 GB) ran the
+scored the 9B forgetting runs (except LoRA seed 1) and those two LoRA seeds. The same two units ran the whole
+Qwen3.5-9B RL record (v1.2.0): the warm-up and the six arm runs (71 h of logged training steps; 2.8 h for the warm-up,
+10.8 to 12.0 h per 150-step run), the seven validation readouts (9.7 h) and the seven AIME 2025 readouts (18.5 h of
+readout time; the read took 11.9 h of wall time on the two units, 2026-10-16 00:58 to 12:51 Israel time), about 99
+GB10-hours in all (`paper/data/compute_hours.json`, `r9b_*`). One RTX 5090 Laptop GPU (24 GB) ran the
 Olmo-Hybrid-7B lesions, the 2B validation readouts, the learning-rate pilots of the forgetting recipe, the HumanEval
 scoring of the 4B LoRA and Gate(0,2) forgetting runs (seeds 0 to 2), and the counting probe and HumanEval battery of
 the chat SFT seed 0 runs.

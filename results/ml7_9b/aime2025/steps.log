@@ -1,0 +1,24 @@
+=== readouts 2026-10-16T00:58:15+03:00: gb10a [untouched ctrl_0 wide1_0] gb10b [ctrl_1 wide1_1 ctrl_2 wide1_2]
+=== worker gb10a: untouched (own queue) 2026-10-16T00:58:15+03:00
+=== worker gb10b: ctrl_1 (own queue) 2026-10-16T00:58:15+03:00
+=== untouched start 2026-10-16T00:58:21+03:00 on gb10a job t9b-aime2025-untouched-1016005821
+=== ctrl_1 start 2026-10-16T00:58:26+03:00 on gb10b job t9b-aime2025-ctrl_1-1016005826
+=== untouched ok on gb10a wall=9259s job t9b-aime2025-untouched-1016005821
+=== worker gb10a: ctrl_0 (own queue) 2026-10-16T03:32:35+03:00
+=== ctrl_0 start 2026-10-16T03:32:42+03:00 on gb10a job t9b-aime2025-ctrl_0-1016033242
+=== ctrl_1 ok on gb10b wall=10266s job t9b-aime2025-ctrl_1-1016005826
+=== worker gb10b: wide1_1 (own queue) 2026-10-16T03:49:23+03:00
+=== wide1_1 start 2026-10-16T03:49:34+03:00 on gb10b job t9b-aime2025-wide1_1-1016034934
+=== wide1_1 ok on gb10b wall=15131s job t9b-aime2025-wide1_1-1016034934
+=== worker gb10b: ctrl_2 (own queue) 2026-10-16T08:01:35+03:00
+=== ctrl_0 ok on gb10a wall=16142s job t9b-aime2025-ctrl_0-1016033242
+=== worker gb10a: wide1_0 (own queue) 2026-10-16T08:01:38+03:00
+=== wide1_0 start 2026-10-16T08:01:49+03:00 on gb10a job t9b-aime2025-wide1_0-1016080149
+=== ctrl_2 start 2026-10-16T08:01:49+03:00 on gb10b job t9b-aime2025-ctrl_2-1016080149
+=== wide1_0 ok on gb10a wall=8804s job t9b-aime2025-wide1_0-1016080149
+=== worker gb10a: wide1_2 (other queue) 2026-10-16T10:28:23+03:00
+=== wide1_2 start 2026-10-16T10:28:30+03:00 on gb10a job t9b-aime2025-wide1_2-1016102830
+=== ctrl_2 ok on gb10b wall=10118s job t9b-aime2025-ctrl_2-1016080149
+=== wide1_2 ok on gb10a wall=8555s job t9b-aime2025-wide1_2-1016102830
+=== analysis start 2026-10-16T12:50:59+03:00
+=== analysis ok (<repo>/results/ml7_9b/aime2025/analysis_fresh_9b.json)

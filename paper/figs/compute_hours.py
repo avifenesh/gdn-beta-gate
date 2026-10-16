@@ -21,7 +21,9 @@ RUNS = Path(os.environ.get("WG_RUNS", "runs"))
 RETRO = RUNS / "retrofit"
 OUT = ROOT / "paper/data/compute_hours.json"
 # pilots, cap pilots, warm-ups and smoke runs (a subset of "train", reported separately)
-PILOT = re.compile(r"pilot|cap1024|cap2048|_fmt_|smoke")
+PILOT = re.compile(r"pilot|cap1024|cap2048|_fmt_|_fmt9b_|smoke")
+# the Qwen3.5-9B RL runs and readouts (Section 4.4), reported as their own subset of the GB10 total
+R9B = re.compile(r"_r9b_|_fmt9b_|ml7_9b|Qwen3\.5-9B_gb10")
 
 
 def dev_of(gpu: str | None, path: Path) -> str:
@@ -105,6 +107,9 @@ def main():
         if PILOT.search(str(p.parent)):
             tot[("train_pilot", d)] += sec
             n[("train_pilot", d)] += 1
+        if R9B.search(str(p.parent)):
+            tot[("r9b_train", d)] += sec
+            n[("r9b_train", d)] += 1
     # The retrofit box: every train log and the general battery timings of each run (analysis_root holds copies).
     for p in sorted((RETRO / "box").rglob("train_log.json")):
         if "analysis_root" in p.parts:
@@ -144,12 +149,17 @@ def main():
             dv = dev_of(env_gpu(d), p)
             tot[("readout", dv)] += float(w)
             n[("readout", dv)] += 1
+            if R9B.search(str(p)):
+                tot[("r9b_readout", dv)] += float(w)
+                n[("r9b_readout", dv)] += 1
     out = {"note": __doc__.strip().splitlines()[0], "hours": {}, "files": {}}
     for (kind, dv), s in sorted(tot.items()):
         out["hours"].setdefault(dv, {})[kind] = s / 3600
         out["files"].setdefault(dv, {})[kind] = n[(kind, dv)]
     for dv, h in out["hours"].items():
         h["total"] = sum(v for k, v in h.items() if k in ("train", "readout"))
+        if "r9b_train" in h or "r9b_readout" in h:
+            h["r9b_total"] = h.get("r9b_train", 0.0) + h.get("r9b_readout", 0.0)
     out["rented"] = {"boxes": [{"what": w, "gpus": g, "hours": h, "gpu_hours": g * h, "findings_string": f}
                                for w, g, h, f in RENTED],
                      "gpu_hours_total": sum(g * h for _, g, h, _ in RENTED)}

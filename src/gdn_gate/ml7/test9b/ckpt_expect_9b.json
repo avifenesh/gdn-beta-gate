@@ -1,0 +1,66 @@
+{
+ "_note": "Qwen3.5-9B record checkpoints for the AIME 2025 read (lane wg). sha256 = the value the 9B validation readout of that checkpoint recorded (results/ml7/step9_pilot_<run>_step150_ans1280_Qwen3.5-9B_gb10.json env.sha256.ckpt), checked equal 2026-10-15 to the workstation copy (path) and the copy on the unit that trained it (unit_path on holder). warmup: the shared seed-0 format warm-up every arm's meta.json init_from names (sha256 only; it is not read here).",
+ "warmup": {
+  "run": "ctrl_s0_cap512_fmt9b_gb10",
+  "step": 40,
+  "path": "<runs>/ml7/grpo/ctrl_s0_cap512_fmt9b_gb10/ckpt_step40.pt",
+  "sha256": "b109f3779eab01f737a723e43dde3f9627aea20091b756484ae8519baa2b66c5",
+  "holder": "gb10a",
+  "unit_path": "gdn-gate/runs/ml7/grpo/ctrl_s0_cap512_fmt9b_gb10/ckpt_step40.pt",
+  "source": "workstation copy; equal to every arm's meta.json init_from.sha256"
+ },
+ "ctrl_0": {
+  "run": "ctrl_s0_cap512_r9b_gb10",
+  "step": 150,
+  "path": "<runs>/ml7/grpo/ctrl_s0_cap512_r9b_gb10/ckpt_step150.pt",
+  "sha256": "1b9d5bf44cbec392ac82d9dc29b04b822d55b09b0efc679b1e4823bdedcc793c",
+  "holder": "gb10a",
+  "unit_path": "gdn-gate/runs/ml7/grpo/ctrl_s0_cap512_r9b_gb10/ckpt_step150.pt",
+  "source": "results/ml7/step9_pilot_ctrl_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json"
+ },
+ "ctrl_1": {
+  "run": "ctrl_s1_cap512_r9b_gb10",
+  "step": 150,
+  "path": "<runs>/ml7/grpo/ctrl_s1_cap512_r9b_gb10/ckpt_step150.pt",
+  "sha256": "e5af15dee2da4f406987c41384c0607ffb761677bb9ce16cf93125cc2495310a",
+  "holder": "gb10a",
+  "unit_path": "gdn-gate/runs/ml7/grpo/ctrl_s1_cap512_r9b_gb10/ckpt_step150.pt",
+  "source": "results/ml7/step9_pilot_ctrl_s1_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json"
+ },
+ "ctrl_2": {
+  "run": "ctrl_s2_cap512_r9b_gb10",
+  "step": 150,
+  "path": "<runs>/ml7/grpo/ctrl_s2_cap512_r9b_gb10/ckpt_step150.pt",
+  "sha256": "b148f313002681b80e307272d940a81657d525dd83f7aa855d9459c6e46d4632",
+  "holder": "gb10a",
+  "unit_path": "gdn-gate/runs/ml7/grpo/ctrl_s2_cap512_r9b_gb10/ckpt_step150.pt",
+  "source": "results/ml7/step9_pilot_ctrl_s2_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json"
+ },
+ "wide1_0": {
+  "run": "wide1_s0_cap512_r9b_gb10",
+  "step": 150,
+  "path": "<runs>/ml7/grpo/wide1_s0_cap512_r9b_gb10/ckpt_step150.pt",
+  "sha256": "78abb4db6403b7af164a93f148286175bdce30152efcf81790d8c78ac04c779c",
+  "holder": "gb10b",
+  "unit_path": "gdn-gate/runs/ml7/grpo/wide1_s0_cap512_r9b_gb10/ckpt_step150.pt",
+  "source": "results/ml7/step9_pilot_wide1_s0_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json"
+ },
+ "wide1_1": {
+  "run": "wide1_s1_cap512_r9b_gb10",
+  "step": 150,
+  "path": "<runs>/ml7/grpo/wide1_s1_cap512_r9b_gb10/ckpt_step150.pt",
+  "sha256": "e545e4b934654733c183b6cd257df75be4215d4ba7ba19dc9cd17b449d521b35",
+  "holder": "gb10b",
+  "unit_path": "gdn-gate/runs/ml7/grpo/wide1_s1_cap512_r9b_gb10/ckpt_step150.pt",
+  "source": "results/ml7/step9_pilot_wide1_s1_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json"
+ },
+ "wide1_2": {
+  "run": "wide1_s2_cap512_r9b_gb10",
+  "step": 150,
+  "path": "<runs>/ml7/grpo/wide1_s2_cap512_r9b_gb10/ckpt_step150.pt",
+  "sha256": "b4a6524c26afa4dced8ac223711b2d74a8dadfc27e7b1def24bf07f9a0788c80",
+  "holder": "gb10b",
+  "unit_path": "gdn-gate/runs/ml7/grpo/wide1_s2_cap512_r9b_gb10/ckpt_step150.pt",
+  "source": "results/ml7/step9_pilot_wide1_s2_cap512_r9b_gb10_step150_ans1280_Qwen3.5-9B_gb10.json"
+ }
+}

@@ -1,0 +1,273 @@
+{
+ "args": {
+  "model": "<models>/Qwen3.5-9B",
+  "pool": "<work>/data/ml7/rl_pool.jsonl",
+  "manifest": "<work>/data/ml7/split_manifest.json",
+  "arm": "ctrl",
+  "seed": 2,
+  "out": "<runs>/ml7/grpo/ctrl_s2_cap512_r9b_gb10",
+  "cap": 512,
+  "gpu_mem": 0.3,
+  "micro_tokens": 4096,
+  "steps": 150,
+  "prompts": 16,
+  "group": 8,
+  "answer_max": 1280,
+  "alpha": 0.2,
+  "length_on": "reasoning",
+  "init_from": "<runs>/ml7/init/b109f3779eab01f7_ckpt_step40.pt",
+  "lr": 2e-05,
+  "w_lr": 2e-05,
+  "rank": 16,
+  "pack": true,
+  "max_num_seqs": 128,
+  "max_batched_tokens": 8192,
+  "ckpt_every": 25,
+  "stop_after": 0,
+  "resume": true,
+  "val_data": "<work>/data/ml7/val.jsonl",
+  "val_every": 0,
+  "val_n": 128,
+  "parity_prompts": 8,
+  "parity_samples": 2,
+  "parity_tokens": 256,
+  "parity_k": 2.0,
+  "parity_floor": 0.001,
+  "probe_effect": 0.05,
+  "effect_corr": 0.9,
+  "effect_slope_tol": 0.1,
+  "effect_visible": 5.0,
+  "mem_probe_len": 0,
+  "mem_probe_tokens": 0,
+  "mem_probe_soft": false,
+  "bench_pack": false,
+  "device": "cuda"
+ },
+ "data": {
+  "pool": {
+   "file": "<work>/data/ml7/rl_pool.jsonl",
+   "sha256": "1cc1ef6b8f8339cd84847ced1c52f799db0095984def0afbe6142d5afec6c448",
+   "rows": 6965,
+   "manifest": "<work>/data/ml7/split_manifest.json"
+  }
+ },
+ "math_verify": "0.9.0",
+ "train_sampling": {
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "presence_penalty": 0.0
+ },
+ "length_on": "reasoning",
+ "init_from": {
+  "path": "<runs>/ml7/init/b109f3779eab01f7_ckpt_step40.pt",
+  "sha256": "b109f3779eab01f737a723e43dde3f9627aea20091b756484ae8519baa2b66c5",
+  "applied": true,
+  "tensors": 192,
+  "numel": 11034624,
+  "norm": 22.634328310718764
+ },
+ "opt_at_start": {
+  "state_entries": 0,
+  "sched_last_epoch": 0,
+  "start_step": 0,
+  "lr": 2.8571428571428573e-06
+ },
+ "resumed_from": 0,
+ "dropped_log_lines": {
+  "train_log.jsonl": 0,
+  "rollouts.jsonl": 0,
+  "val_log.jsonl": 0
+ },
+ "engine": {
+  "engine_kwargs": {
+   "dtype": "bfloat16",
+   "enable_prefix_caching": false,
+   "mamba_ssm_cache_dtype": "float32",
+   "additional_config": {
+    "gdn_prefill_backend": "triton"
+   },
+   "limit_mm_per_prompt": {
+    "image": 0,
+    "video": 0
+   },
+   "max_logprobs": 256,
+   "seed": 2,
+   "max_num_seqs": 128,
+   "gpu_memory_utilization": 0.3,
+   "max_model_len": 2049,
+   "max_num_batched_tokens": 8192
+  },
+  "engine_s": 76.27510499954224,
+  "layout": {
+   "layout_tensors_checked": 72,
+   "gdn_layers": 24
+  },
+  "installed": [
+   "stock",
+   false,
+   16
+  ],
+  "gate_calls": {
+   "gate": 0,
+   "post_conv": 0,
+   "sigmoid_gating": 0,
+   "packed_decode": 0
+  },
+  "torch_allocated_after_engine_gib": 50.6,
+  "num_gpu_blocks": 1045,
+  "block_size": 528
+ },
+ "gdn_train": {
+  "kernel": "fla",
+  "dtype": "bf16"
+ },
+ "parity": {
+  "k": 2.0,
+  "floor_abs": 0.001,
+  "prompts": 8,
+  "samples": 2,
+  "tokens": 256,
+  "effect_corr_min": 0.9,
+  "effect_slope_tol": 0.1,
+  "effect_visible_x": 5.0,
+  "floor_decode": {
+   "n": 4096,
+   "mean": 0.005729764889457362,
+   "p99": 0.10165971517562872,
+   "max": 0.17835259437561035,
+   "bias": -0.0004203052395693272
+  },
+  "floor_prefill": {
+   "n": 4096,
+   "mean": 0.006275574200112646,
+   "p99": 0.1079128026962282,
+   "max": 0.22231078147888184,
+   "bias": 0.00011708920926040318
+  },
+  "probe": {
+   "target": 0.05,
+   "lora_B": {
+    "scale": 0.022402293534094286,
+    "effect": 0.04847243322697313
+   }
+  },
+  "probe_decode": {
+   "n": 4096,
+   "mean": 0.00628553958738785,
+   "p99": 0.11156831979751594,
+   "max": 0.33251047134399414,
+   "bias": -0.00039310176264333724
+  },
+  "prefill_floor_probe_tokens": {
+   "n": 4096,
+   "mean": 0.0058488241451126015,
+   "p99": 0.10791335701942453,
+   "max": 0.24808311462402344,
+   "bias": 0.00030425125615700377
+  },
+  "prefill_lora": {
+   "n": 4096,
+   "mean": 0.006048798927368006,
+   "p99": 0.11036539077758818,
+   "max": 0.24152040481567383,
+   "bias": 6.245742254467473e-05
+  },
+  "lora_effect": {
+   "n": 4096,
+   "slope": 0.9855567537833576,
+   "corr": 0.9756663868921311,
+   "err_mean": 0.009461021889420121,
+   "effect_mean": 0.043857364180364455,
+   "engine_effect_mean": 0.04395849704582465
+  },
+  "red_lora_zeroed": {
+   "n": 4096,
+   "slope": 0.0,
+   "corr": 0.0,
+   "err_mean": 0.043857364180364455,
+   "effect_mean": 0.043857364180364455,
+   "engine_effect_mean": 0.0
+  },
+  "bound_decode": 0.011459529778914724,
+  "bound_prefill": 0.012551148400225292,
+  "visible_min": 0.03137787100056323,
+  "checks": {
+   "probe_decode": true,
+   "prefill_lora": true,
+   "lora_visible": true,
+   "lora_effect_agrees": true,
+   "red_lora_fails": true
+  },
+  "pass": true,
+  "start": {
+   "n": 4096,
+   "mean": 0.005492075438462243,
+   "p99": 0.10114486217498783,
+   "max": 0.16872286796569824,
+   "bias": 6.301627808523967e-05
+  },
+  "start_effect": {
+   "n": 4096,
+   "slope": 0.3769950267379927,
+   "corr": 0.35401632974050334,
+   "err_mean": 0.008061825811838164,
+   "effect_mean": 0.0063413185671639186,
+   "engine_effect_mean": 0.0067323782058371084,
+   "visible": false
+  },
+  "start_pass": true,
+  "seconds": 93.6
+ },
+ "n_lora": 11034624,
+ "n_w": 0,
+ "pool_rows": 6965,
+ "max_model_len": 2049,
+ "env": {
+  "torch": "2.13.0+cu130",
+  "transformers": "5.17.0",
+  "python": "3.12.13",
+  "host": "<host>",
+  "pylib": "<work>/pylib_ml7",
+  "code_sha256": {
+   "train_grpo_vllm.py": "fd43756063484b04",
+   "rl_common.py": "f64d634ea7820d2a",
+   "gate_vllm.py": "efb694059e39f4ea",
+   "arms.py": "a4303e9a39474466",
+   "packing.py": "4d567ac5bc2dc950"
+  },
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "vllm": "0.31.0",
+  "peft": "0.21.0",
+  "fla-core": "0.5.2",
+  "math-verify": "0.9.0",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GB10",
+  "git_describe": ""
+ },
+ "startup_s": 243.5,
+ "mem_probe": {
+  "seqs": 2,
+  "seq_len": 2048,
+  "micro_tokens": 4096,
+  "oom": false,
+  "fwd_bwd_s": 5.47,
+  "max_allocated_gib": 80.26,
+  "max_reserved_gib": 80.5,
+  "device_free_gib": 8.78,
+  "device_total_gib": 121.69
+ },
+ "mem_probe_ladder": [
+  {
+   "seqs": 2,
+   "seq_len": 2048,
+   "micro_tokens": 4096,
+   "oom": false,
+   "fwd_bwd_s": 5.47,
+   "max_allocated_gib": 80.26,
+   "max_reserved_gib": 80.5,
+   "device_free_gib": 8.78,
+   "device_total_gib": 121.69
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+untouched	9b	stock	none	<repo>/results/ml7_9b/aime2025/readout_aime2025_untouched.json	$NN/models/Qwen3.5-9B	1280	0.05	16
+ctrl_0	9b	ctrl	<runs>/ml7/grpo/ctrl_s0_cap512_r9b_gb10/ckpt_step150.pt	<repo>/results/ml7_9b/aime2025/readout_aime2025_ctrl_0.json	$NN/models/Qwen3.5-9B	1280	0.05	16
+ctrl_1	9b	ctrl	<runs>/ml7/grpo/ctrl_s1_cap512_r9b_gb10/ckpt_step150.pt	<repo>/results/ml7_9b/aime2025/readout_aime2025_ctrl_1.json	$NN/models/Qwen3.5-9B	1280	0.05	16
+ctrl_2	9b	ctrl	<runs>/ml7/grpo/ctrl_s2_cap512_r9b_gb10/ckpt_step150.pt	<repo>/results/ml7_9b/aime2025/readout_aime2025_ctrl_2.json	$NN/models/Qwen3.5-9B	1280	0.05	16
+wide1_0	9b	wide1	<runs>/ml7/grpo/wide1_s0_cap512_r9b_gb10/ckpt_step150.pt	<repo>/results/ml7_9b/aime2025/readout_aime2025_wide1_0.json	$NN/models/Qwen3.5-9B	1280	0.05	16
+wide1_1	9b	wide1	<runs>/ml7/grpo/wide1_s1_cap512_r9b_gb10/ckpt_step150.pt	<repo>/results/ml7_9b/aime2025/readout_aime2025_wide1_1.json	$NN/models/Qwen3.5-9B	1280	0.05	16
+wide1_2	9b	wide1	<runs>/ml7/grpo/wide1_s2_cap512_r9b_gb10/ckpt_step150.pt	<repo>/results/ml7_9b/aime2025/readout_aime2025_wide1_2.json	$NN/models/Qwen3.5-9B	1280	0.05	16

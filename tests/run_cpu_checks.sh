@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # CPU checks of the release. Tier A needs only the uv environment (uv sync --locked) and reproduces every receipt the
-# paper reads from released data (RL analyses incl. the fresh held-out set, RULER pairing, mechanism summaries).
+# paper reads from released data (RL analyses incl. the fresh held-out set and the 9B AIME 2025 read, RULER pairing,
+# mechanism summaries).
 # Tier B runs the lab's CPU tests of the trainer, readout and analysis code; it needs
 # the GPU environment env/vllm.txt (CPU use only), the model config and tokenizer files of the pinned revisions in
 # $WG_HF_CACHE, and the rebuilt data in $WG_RUNS/ml7/data (scripts/rebuild_data.py).
@@ -37,5 +38,6 @@ if [ "${1:-}" = b ]; then
   step bash -c "cd src/gdn_gate/ml7 && \"$B\" test_ctrlpm_cpu.py --out $(mktemp -d)/test_ctrlpm_cpu.json"
   step bash -c "cd src/gdn_gate/ml7/fresh && \"$B\" test_effect_visible_cpu.py"
   step bash -c "cd src/gdn_gate/ml7/fresh && \"$B\" test_fresh_cpu.py"
+  step bash -c "cd src/gdn_gate/ml7/test9b && \"$B\" test_test9b_cpu.py"
 fi
 [ $fail = 0 ] && echo "ALL CPU CHECKS PASSED" || { echo "SOME CHECKS FAILED"; exit 1; }

@@ -25,7 +25,7 @@ def test_environment_summary():
 
 def test_rl_analyses_rerun():
     out = run("scripts/rerun_analysis.py")
-    assert out.count("OK") == 15, out
+    assert out.count("OK") == 16, out
 
 
 def test_ruler_pairing_rerun():

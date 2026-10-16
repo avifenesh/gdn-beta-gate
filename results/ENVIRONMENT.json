@@ -256,6 +256,29 @@
    "model_revision": [
     "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
    ]
+  },
+  "results/ml7_9b/aime2025": {
+   "vllm": [
+    "0.31.0"
+   ],
+   "torch": [
+    "2.13.0+cu130"
+   ],
+   "transformers": [
+    "5.17.0"
+   ],
+   "math_verify": [
+    "0.9.0"
+   ],
+   "python": [
+    "3.12.13"
+   ],
+   "gpu": [
+    "NVIDIA GB10"
+   ],
+   "model_revision": [
+    "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+   ]
   }
  },
  "readouts": {
@@ -3233,6 +3256,118 @@
     "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
     "data": "3283af634ac823b31a6e5d0d7bdbc7c5350ce90a81f94217007b916c3a3bb337",
     "ckpt": "537b7e4b969faf2d41f39cd8e54f877c7bcade5f79de5ce2317c7af663e827c3"
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_ctrl_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": "1b9d5bf44cbec392ac82d9dc29b04b822d55b09b0efc679b1e4823bdedcc793c"
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_ctrl_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": "e5af15dee2da4f406987c41384c0607ffb761677bb9ce16cf93125cc2495310a"
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_ctrl_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": "b148f313002681b80e307272d940a81657d525dd83f7aa855d9459c6e46d4632"
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_untouched.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": null
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_wide1_0.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": "78abb4db6403b7af164a93f148286175bdce30152efcf81790d8c78ac04c779c"
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_wide1_1.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": "e545e4b934654733c183b6cd257df75be4215d4ba7ba19dc9cd17b449d521b35"
+   }
+  },
+  "results/ml7_9b/aime2025/readout_aime2025_wide1_2.json.gz": {
+   "vllm": "0.31.0",
+   "torch": "2.13.0+cu130",
+   "transformers": "5.17.0",
+   "math_verify": "0.9.0",
+   "python": "3.12.13",
+   "gpu": "NVIDIA GB10",
+   "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "code_sha256": {
+    "readout_vllm.py": "b7c477c2d6a168a586672767c9fc79b92cc10a3e85334ef5f93bce72b660698b",
+    "rl_common.py": "f64d634ea7820d2a034a0f2480744983dcbbbbe8f1852525489cb91d26d1a1d1",
+    "gate_vllm.py": "efb694059e39f4eab8f241e077519c921780022055a0d8c353ea3b3d3fc29e6a",
+    "data": "f45253f801b78bf81e462061f7f3b618ab2d0b55d77734d4dfecf590f78baa43",
+    "ckpt": "b4a6524c26afa4dced8ac223711b2d74a8dadfc27e7b1def24bf07f9a0788c80"
    }
   }
  }

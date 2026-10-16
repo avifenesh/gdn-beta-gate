@@ -9,8 +9,8 @@ in the Hub layout below, and a SHA256SUMS file. `to-pt` turns a downloaded `adap
 
 Hub layout (one repository per training recipe and base model; one folder per arm and seed):
   <record>/<arm>/seed<k>/adapter.safetensors, adapter_meta.json
-  records: qwen3.5-2b-grpo, qwen3.5-4b-grpo, qwen3.5-4b-base-chat-sft, qwen3.5-4b-base-forgetting,
-           qwen3.5-9b-base-forgetting
+  records: qwen3.5-2b-grpo, qwen3.5-4b-grpo, qwen3.5-9b-grpo, qwen3.5-4b-base-chat-sft,
+           qwen3.5-4b-base-forgetting, qwen3.5-9b-base-forgetting
   arms (paper names): lora (receipt ctrl), lora-r20 (ctrlpm), gate01 (wide1), gate02 (wide), warmup
 
 Usage:
@@ -33,6 +33,7 @@ GATE_KEY = re.compile(r"(\.linear_attn\.)[a-z]+_w(\.weight)$")  # the gate matri
 BASE = {
     "qwen3.5-2b-grpo": ("Qwen/Qwen3.5-2B", "15852e8c16360a2fea060d615a32b45270f8a8fc"),
     "qwen3.5-4b-grpo": ("Qwen/Qwen3.5-4B", "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"),
+    "qwen3.5-9b-grpo": ("Qwen/Qwen3.5-9B", "c202236235762e1c871ad0ccb60c8ee5ba337b9a"),
     "qwen3.5-4b-base-chat-sft": ("Qwen/Qwen3.5-4B-Base", "1001bb4d826a52d1f399e183466143f4da7b741b"),
     "qwen3.5-4b-base-forgetting": ("Qwen/Qwen3.5-4B-Base", "1001bb4d826a52d1f399e183466143f4da7b741b"),
     "qwen3.5-9b-base-forgetting": ("Qwen/Qwen3.5-9B-Base", "68c46c4b3498877f3ef123c856ecfde50c39f404"),
@@ -40,6 +41,7 @@ BASE = {
 RECIPE = {
     "qwen3.5-2b-grpo": "GRPO, correctness-gated length penalty alpha 0.2, 150 steps from the shared warm-up (paper Section 4)",
     "qwen3.5-4b-grpo": "GRPO, correctness-gated length penalty alpha 0.2, 150 steps from the shared warm-up (paper Section 4)",
+    "qwen3.5-9b-grpo": "GRPO, correctness-gated length penalty alpha 0.2, 150 steps from the shared warm-up (the 4B recipe at 9B, DGX Spark GB10)",
     "qwen3.5-4b-base-chat-sft": "chat SFT on Tulu 3 (permissive subsets), 1,200 steps, lr 1e-4 (paper Section 7)",
     "qwen3.5-4b-base-forgetting": "LoRA on synthetic state tracking with WikiText replay, 1,200 steps, lr 1e-4 (paper Section 7)",
     "qwen3.5-9b-base-forgetting": "LoRA on synthetic state tracking with WikiText replay, 1,200 steps, lr 1e-4 (paper Section 7)",
@@ -58,6 +60,10 @@ def catalog(runs: Path, retro: Path | None):
         for s in range(3):
             out.append(("qwen3.5-4b-grpo", arm, s, 150, runs / f"ml7_4b/grpo/{arm}_s{s}_cap512_r_box/ckpt_step150.pt"))
     out.append(("qwen3.5-4b-grpo", "warmup", 0, 40, runs / "ml7_4b/grpo/ctrl_s0_cap512_fmt_box/ckpt_step40.pt"))
+    for arm in ("ctrl", "wide1"):  # no wide or ctrlpm arm at 9B
+        for s in range(3):
+            out.append(("qwen3.5-9b-grpo", arm, s, 150, runs / f"ml7/grpo/{arm}_s{s}_cap512_r9b_gb10/ckpt_step150.pt"))
+    out.append(("qwen3.5-9b-grpo", "warmup", 0, 40, runs / "ml7/grpo/ctrl_s0_cap512_fmt9b_gb10/ckpt_step40.pt"))
     for arm in ("ctrl", "wide1", "wide"):
         for s in range(6):
             out.append(("qwen3.5-4b-base-chat-sft", arm, s, 1200, runs / f"broad/step6/{arm}_s{s}/ckpt_step1200.pt"))

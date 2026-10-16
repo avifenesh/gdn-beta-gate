@@ -78,7 +78,7 @@ Every number maps to a receipt and a check in the code repository (`paper/CLAIMS
 - Research artifacts for reproducing and probing the paper's results. They are not tuned for deployment or safety
   and inherit the base model's limitations.
 - At 9B the forgetting check has two arms (no Gate(0,1)) and 3 seeds per arm, scored on HumanEval only in the paper.
-- The RL results cover one model family (Qwen3.5) at 2B and 4B, 3 to 6 seeds per arm, GSM8K training prompts only,
+- The RL results cover one model family (Qwen3.5) at 2B, 4B and 9B, 3 to 6 seeds per arm, GSM8K training prompts only,
   and thinking budgets up to 8,192 tokens.
 - Tested with vLLM 0.31.0, PyTorch 2.13 and transformers 5.17 on NVIDIA RTX PRO 6000, GB10 and RTX 5090 GPUs.
 

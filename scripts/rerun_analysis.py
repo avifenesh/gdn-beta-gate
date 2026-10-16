@@ -3,14 +3,15 @@
 
 For each analysis receipt (results/**/analysis_*.json) this script takes the command line recorded in its
 `receipt.argv` (`receipt_fresh.argv` for the fresh held-out set, whose analysis fresh_analysis.py imports the frozen
-step 14 analyses), decompresses the readouts it names (readout_*.json.gz, into a scratch directory), reruns the same
+step 14 analyses; the 9B AIME 2025 receipt names test9b/test9b_analysis.py, which imports both), decompresses the readouts it names (readout_*.json.gz, into a scratch directory), reruns the same
 analysis script from src/gdn_gate/ml7/ on CPU, and compares the new output with the released file key by key. The
 `receipt` block (timestamps, hashes, paths) is excluded; every other key must be equal, except that a sha256 of an
 input file may differ when results/SCRUB_LEDGER.json maps the released value (the lab file) to the new value (the
 published, path-scrubbed file). Exit 1 on any other difference.
 
 Usage: python scripts/rerun_analysis.py [RECORD ...]
-  RECORD defaults to the four test reads, the fresh held-out set and the validation reads, e.g. results/fresh
+  RECORD defaults to the four test reads, the fresh held-out set, the 9B AIME 2025 read and the validation reads,
+  e.g. results/fresh
 Needs: numpy (CPU only, a few minutes in total).
 """
 import gzip
@@ -23,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT = ["results/ml7/step14", "results/ml7/step14_ext", "results/ml7_4b/step14", "results/ml7_4b/step14_ctrlpm",
-           "results/fresh",
+           "results/fresh", "results/ml7_9b/aime2025",
            "results/ml7/step12", "results/ml7/step12_box", "results/ml7/step12_box_ext", "results/ml7_4b/step12_box",
            "results/ml7_4b/step12_ctrlpm"]
 
