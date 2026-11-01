@@ -153,7 +153,7 @@ pandas==3.0.6
 partial-json-parser==0.2.1.1.post7
 pathvalidate==3.3.1
 peft==0.21.0
-pillow==12.3.0
+pillow==13.0.0
 portalocker==4.4.0
 prometheus-client==0.26.0
 prometheus-fastapi-instrumentator==8.1.0
