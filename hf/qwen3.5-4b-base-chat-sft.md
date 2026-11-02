@@ -21,7 +21,7 @@ tags:
 
 # β gate adapters: Qwen3.5-4B-Base, chat SFT
 
-Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, Tiyuvta.ai, 2026; appendix on supervised fine-tuning and forgetting). The β gate is a zero-initialized
+Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, 2026; appendix on supervised fine-tuning and forgetting). The β gate is a zero-initialized
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the chat SFT adapters of the paper's supervised check: Qwen3.5-4B-Base fine-tuned on a Tulu 3 mixture in three arms (LoRA, and LoRA plus the β gate with ceiling 1 or 2), 6 seeds each. Gate(0,1) lowers held-out loss in every seed; opening the negative-eigenvalue range (ceiling 2) gives back about half of that gain.
 

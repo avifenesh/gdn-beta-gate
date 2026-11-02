@@ -21,7 +21,7 @@ tags:
 
 # β gate adapters: Qwen3.5-4B-Base, forgetting recipe
 
-Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, Tiyuvta.ai, 2026; appendix on supervised fine-tuning and forgetting). The β gate is a zero-initialized
+Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, 2026; appendix on supervised fine-tuning and forgetting). The β gate is a zero-initialized
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the adapters of the paper's forgetting check: Qwen3.5-4B-Base trained with LoRA on synthetic state-tracking tasks with WikiText replay, in three arms (LoRA, and LoRA plus the β gate with ceiling 1 or 2), 3 seeds each. The gated arms keep more of the base model's HumanEval score; Gate(0,1) keeps the most.
 

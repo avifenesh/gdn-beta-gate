@@ -9,8 +9,6 @@ license: Apache-2.0
 authors:
   - family-names: "Fenesh"
     given-names: "Avi"
-    affiliation: "Tiyuvta.ai"
-    email: "avifenesh@tiyuvta.ai"
 keywords:
   - Gated DeltaNet
   - delta rule
@@ -33,7 +31,5 @@ preferred-citation:
   authors:
     - family-names: "Fenesh"
       given-names: "Avi"
-      affiliation: "Tiyuvta.ai"
-      email: "avifenesh@tiyuvta.ai"
   year: 2026
   url: "https://github.com/avifenesh/gdn-beta-gate"
