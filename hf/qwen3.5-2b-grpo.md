@@ -22,7 +22,7 @@ tags:
 
 # β gate adapters: Qwen3.5-2B, GRPO
 
-Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, 2026; Results section). The β gate is a zero-initialized
+Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, Tiyuvta.ai, 2026; Results section). The β gate is a zero-initialized
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the adapters of the paper's Qwen3.5-2B record: GRPO on GSM8K under a correctness-gated length penalty, in three arms (LoRA, and LoRA plus the β gate with ceiling 1 or 2) with 6 seeds each, plus the shared warm-up. At 2B the gate raises MATH-500 area by a smaller margin than at 4B; on the fresh competition set the 2B effect does not meet the decision rule.
 
