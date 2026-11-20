@@ -22,11 +22,11 @@ tags:
 
 # β gate adapters: Qwen3.5-9B, GRPO
 
-Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, Tiyuvta.ai, 2026; Results section, Qwen3.5-9B; code release v1.2.0). The β gate is a zero-initialized
+Trained adapters for the paper "Beta Gate: Shorter RL Reasoning in Qwen3.5 Without Negative Eigenvalues" (Avi Fenesh, [Tiyuvta](https://tiyuvta.ai/research/), 2026; Results section, Qwen3.5-9B; code release v1.2.0). The β gate is a zero-initialized
 matrix `W` per Gated DeltaNet layer that moves the delta-rule write strength `beta` toward its floor or its ceiling,
 `tau = tanh(W x)`. These are the adapters of the paper's 9B record: Qwen3.5-9B trained with GRPO on GSM8K under a correctness-gated length penalty, in two arms (LoRA, and LoRA plus the β gate with ceiling 1) with 3 seeds each, plus the shared warm-up both arms start from. The gated arm is more accurate than LoRA on AIME 2025 at every thinking budget and reasons shorter; on GSM8K validation it reasons 63 to 79% shorter at the same accuracy.
 
-Code, receipts and the claims checker: https://github.com/avifenesh/gdn-beta-gate. Write-up: https://huggingface.co/blog/Avifenesh/beta-gate-qwen35. arXiv: to be added.
+Code, receipts and the claims checker: https://github.com/avifenesh/gdn-beta-gate. Write-up: https://huggingface.co/blog/Avifenesh/beta-gate-qwen35. Research notes: https://tiyuvta.ai/research/. Partner deployment recipe studies: https://tiyuvta.ai/partners/. arXiv: to be added.
 
 Base model: [`Qwen/Qwen3.5-9B`](https://huggingface.co/Qwen/Qwen3.5-9B) at revision `c202236235762e1c871ad0ccb60c8ee5ba337b9a` (Apache-2.0).
 7 adapters, 347 MB in total.
